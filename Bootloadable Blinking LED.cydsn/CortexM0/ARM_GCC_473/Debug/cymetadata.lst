@@ -1,0 +1,411 @@
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccrOW8Ox.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"cymetadata.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	cy_meta_loadable
+  18              		.section	.cyloadablemeta,"a",%progbits
+  19              		.align	2
+  20              		.type	cy_meta_loadable, %object
+  21              		.size	cy_meta_loadable, 64
+  22              	cy_meta_loadable:
+  23 0000 00       		.byte	0
+  24 0001 00       		.byte	0
+  25 0002 00       		.byte	0
+  26 0003 00       		.byte	0
+  27 0004 00       		.byte	0
+  28 0005 00       		.byte	0
+  29 0006 00       		.byte	0
+  30 0007 00       		.byte	0
+  31 0008 00       		.byte	0
+  32 0009 00       		.byte	0
+  33 000a 00       		.byte	0
+  34 000b 00       		.byte	0
+  35 000c 00       		.byte	0
+  36 000d 00       		.byte	0
+  37 000e 00       		.byte	0
+  38 000f 00       		.byte	0
+  39 0010 00       		.byte	0
+  40 0011 00       		.byte	0
+  41 0012 00       		.byte	0
+  42 0013 00       		.byte	0
+  43 0014 00       		.byte	0
+  44 0015 00       		.byte	0
+  45 0016 01       		.byte	1
+  46 0017 00       		.byte	0
+  47 0018 00       		.byte	0
+  48 0019 00       		.byte	0
+  49 001a 00       		.byte	0
+  50 001b 00       		.byte	0
+  51 001c 00       		.byte	0
+  52 001d 00       		.byte	0
+  53 001e 00       		.byte	0
+  54 001f 00       		.byte	0
+  55 0020 00       		.byte	0
+  56 0021 00       		.byte	0
+  57 0022 00       		.byte	0
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccrOW8Ox.s 			page 2
+
+
+  58 0023 00       		.byte	0
+  59 0024 00       		.byte	0
+  60 0025 00       		.byte	0
+  61 0026 00       		.byte	0
+  62 0027 00       		.byte	0
+  63 0028 00       		.byte	0
+  64 0029 00       		.byte	0
+  65 002a 00       		.byte	0
+  66 002b 00       		.byte	0
+  67 002c 00       		.byte	0
+  68 002d 00       		.byte	0
+  69 002e 00       		.byte	0
+  70 002f 00       		.byte	0
+  71 0030 00       		.byte	0
+  72 0031 00       		.byte	0
+  73 0032 00       		.byte	0
+  74 0033 00       		.byte	0
+  75 0034 00       		.byte	0
+  76 0035 00       		.byte	0
+  77 0036 00       		.byte	0
+  78 0037 00       		.byte	0
+  79 0038 00       		.byte	0
+  80 0039 00       		.byte	0
+  81 003a 00       		.byte	0
+  82 003b 00       		.byte	0
+  83 003c 00       		.byte	0
+  84 003d 00       		.byte	0
+  85 003e 00       		.byte	0
+  86 003f 00       		.byte	0
+  87              		.text
+  88              	.Letext0:
+  89              		.file 1 ".\\Generated_Source\\PSoC4\\cytypes.h"
+  90              		.file 2 ".\\Generated_Source\\PSoC4\\cymetadata.c"
+  91              		.section	.debug_info,"",%progbits
+  92              	.Ldebug_info0:
+  93 0000 AE000000 		.4byte	0xae
+  94 0004 0200     		.2byte	0x2
+  95 0006 00000000 		.4byte	.Ldebug_abbrev0
+  96 000a 04       		.byte	0x4
+  97 000b 01       		.uleb128 0x1
+  98 000c C7000000 		.4byte	.LASF13
+  99 0010 01       		.byte	0x1
+ 100 0011 40000000 		.4byte	.LASF14
+ 101 0015 19010000 		.4byte	.LASF15
+ 102 0019 00000000 		.4byte	.Ldebug_line0
+ 103 001d 02       		.uleb128 0x2
+ 104 001e 01       		.byte	0x1
+ 105 001f 06       		.byte	0x6
+ 106 0020 76010000 		.4byte	.LASF0
+ 107 0024 02       		.uleb128 0x2
+ 108 0025 01       		.byte	0x1
+ 109 0026 08       		.byte	0x8
+ 110 0027 06000000 		.4byte	.LASF1
+ 111 002b 02       		.uleb128 0x2
+ 112 002c 02       		.byte	0x2
+ 113 002d 05       		.byte	0x5
+ 114 002e B7000000 		.4byte	.LASF2
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccrOW8Ox.s 			page 3
+
+
+ 115 0032 02       		.uleb128 0x2
+ 116 0033 02       		.byte	0x2
+ 117 0034 07       		.byte	0x7
+ 118 0035 26000000 		.4byte	.LASF3
+ 119 0039 02       		.uleb128 0x2
+ 120 003a 04       		.byte	0x4
+ 121 003b 05       		.byte	0x5
+ 122 003c 10010000 		.4byte	.LASF4
+ 123 0040 02       		.uleb128 0x2
+ 124 0041 04       		.byte	0x4
+ 125 0042 07       		.byte	0x7
+ 126 0043 14000000 		.4byte	.LASF5
+ 127 0047 02       		.uleb128 0x2
+ 128 0048 08       		.byte	0x8
+ 129 0049 05       		.byte	0x5
+ 130 004a A4000000 		.4byte	.LASF6
+ 131 004e 02       		.uleb128 0x2
+ 132 004f 08       		.byte	0x8
+ 133 0050 07       		.byte	0x7
+ 134 0051 73000000 		.4byte	.LASF7
+ 135 0055 03       		.uleb128 0x3
+ 136 0056 04       		.byte	0x4
+ 137 0057 05       		.byte	0x5
+ 138 0058 696E7400 		.ascii	"int\000"
+ 139 005c 02       		.uleb128 0x2
+ 140 005d 04       		.byte	0x4
+ 141 005e 07       		.byte	0x7
+ 142 005f 66000000 		.4byte	.LASF8
+ 143 0063 04       		.uleb128 0x4
+ 144 0064 C1000000 		.4byte	.LASF16
+ 145 0068 01       		.byte	0x1
+ 146 0069 5B       		.byte	0x5b
+ 147 006a 24000000 		.4byte	0x24
+ 148 006e 02       		.uleb128 0x2
+ 149 006f 04       		.byte	0x4
+ 150 0070 04       		.byte	0x4
+ 151 0071 00000000 		.4byte	.LASF9
+ 152 0075 02       		.uleb128 0x2
+ 153 0076 08       		.byte	0x8
+ 154 0077 04       		.byte	0x4
+ 155 0078 39000000 		.4byte	.LASF10
+ 156 007c 02       		.uleb128 0x2
+ 157 007d 01       		.byte	0x1
+ 158 007e 08       		.byte	0x8
+ 159 007f B2000000 		.4byte	.LASF11
+ 160 0083 05       		.uleb128 0x5
+ 161 0084 63000000 		.4byte	0x63
+ 162 0088 93000000 		.4byte	0x93
+ 163 008c 06       		.uleb128 0x6
+ 164 008d 93000000 		.4byte	0x93
+ 165 0091 3F       		.byte	0x3f
+ 166 0092 00       		.byte	0
+ 167 0093 02       		.uleb128 0x2
+ 168 0094 04       		.byte	0x4
+ 169 0095 07       		.byte	0x7
+ 170 0096 9B000000 		.4byte	.LASF12
+ 171 009a 07       		.uleb128 0x7
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccrOW8Ox.s 			page 4
+
+
+ 172 009b 8A000000 		.4byte	.LASF17
+ 173 009f 02       		.byte	0x2
+ 174 00a0 1C       		.byte	0x1c
+ 175 00a1 AC000000 		.4byte	0xac
+ 176 00a5 01       		.byte	0x1
+ 177 00a6 05       		.byte	0x5
+ 178 00a7 03       		.byte	0x3
+ 179 00a8 00000000 		.4byte	cy_meta_loadable
+ 180 00ac 08       		.uleb128 0x8
+ 181 00ad 83000000 		.4byte	0x83
+ 182 00b1 00       		.byte	0
+ 183              		.section	.debug_abbrev,"",%progbits
+ 184              	.Ldebug_abbrev0:
+ 185 0000 01       		.uleb128 0x1
+ 186 0001 11       		.uleb128 0x11
+ 187 0002 01       		.byte	0x1
+ 188 0003 25       		.uleb128 0x25
+ 189 0004 0E       		.uleb128 0xe
+ 190 0005 13       		.uleb128 0x13
+ 191 0006 0B       		.uleb128 0xb
+ 192 0007 03       		.uleb128 0x3
+ 193 0008 0E       		.uleb128 0xe
+ 194 0009 1B       		.uleb128 0x1b
+ 195 000a 0E       		.uleb128 0xe
+ 196 000b 10       		.uleb128 0x10
+ 197 000c 06       		.uleb128 0x6
+ 198 000d 00       		.byte	0
+ 199 000e 00       		.byte	0
+ 200 000f 02       		.uleb128 0x2
+ 201 0010 24       		.uleb128 0x24
+ 202 0011 00       		.byte	0
+ 203 0012 0B       		.uleb128 0xb
+ 204 0013 0B       		.uleb128 0xb
+ 205 0014 3E       		.uleb128 0x3e
+ 206 0015 0B       		.uleb128 0xb
+ 207 0016 03       		.uleb128 0x3
+ 208 0017 0E       		.uleb128 0xe
+ 209 0018 00       		.byte	0
+ 210 0019 00       		.byte	0
+ 211 001a 03       		.uleb128 0x3
+ 212 001b 24       		.uleb128 0x24
+ 213 001c 00       		.byte	0
+ 214 001d 0B       		.uleb128 0xb
+ 215 001e 0B       		.uleb128 0xb
+ 216 001f 3E       		.uleb128 0x3e
+ 217 0020 0B       		.uleb128 0xb
+ 218 0021 03       		.uleb128 0x3
+ 219 0022 08       		.uleb128 0x8
+ 220 0023 00       		.byte	0
+ 221 0024 00       		.byte	0
+ 222 0025 04       		.uleb128 0x4
+ 223 0026 16       		.uleb128 0x16
+ 224 0027 00       		.byte	0
+ 225 0028 03       		.uleb128 0x3
+ 226 0029 0E       		.uleb128 0xe
+ 227 002a 3A       		.uleb128 0x3a
+ 228 002b 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccrOW8Ox.s 			page 5
+
+
+ 229 002c 3B       		.uleb128 0x3b
+ 230 002d 0B       		.uleb128 0xb
+ 231 002e 49       		.uleb128 0x49
+ 232 002f 13       		.uleb128 0x13
+ 233 0030 00       		.byte	0
+ 234 0031 00       		.byte	0
+ 235 0032 05       		.uleb128 0x5
+ 236 0033 01       		.uleb128 0x1
+ 237 0034 01       		.byte	0x1
+ 238 0035 49       		.uleb128 0x49
+ 239 0036 13       		.uleb128 0x13
+ 240 0037 01       		.uleb128 0x1
+ 241 0038 13       		.uleb128 0x13
+ 242 0039 00       		.byte	0
+ 243 003a 00       		.byte	0
+ 244 003b 06       		.uleb128 0x6
+ 245 003c 21       		.uleb128 0x21
+ 246 003d 00       		.byte	0
+ 247 003e 49       		.uleb128 0x49
+ 248 003f 13       		.uleb128 0x13
+ 249 0040 2F       		.uleb128 0x2f
+ 250 0041 0B       		.uleb128 0xb
+ 251 0042 00       		.byte	0
+ 252 0043 00       		.byte	0
+ 253 0044 07       		.uleb128 0x7
+ 254 0045 34       		.uleb128 0x34
+ 255 0046 00       		.byte	0
+ 256 0047 03       		.uleb128 0x3
+ 257 0048 0E       		.uleb128 0xe
+ 258 0049 3A       		.uleb128 0x3a
+ 259 004a 0B       		.uleb128 0xb
+ 260 004b 3B       		.uleb128 0x3b
+ 261 004c 0B       		.uleb128 0xb
+ 262 004d 49       		.uleb128 0x49
+ 263 004e 13       		.uleb128 0x13
+ 264 004f 3F       		.uleb128 0x3f
+ 265 0050 0C       		.uleb128 0xc
+ 266 0051 02       		.uleb128 0x2
+ 267 0052 0A       		.uleb128 0xa
+ 268 0053 00       		.byte	0
+ 269 0054 00       		.byte	0
+ 270 0055 08       		.uleb128 0x8
+ 271 0056 26       		.uleb128 0x26
+ 272 0057 00       		.byte	0
+ 273 0058 49       		.uleb128 0x49
+ 274 0059 13       		.uleb128 0x13
+ 275 005a 00       		.byte	0
+ 276 005b 00       		.byte	0
+ 277 005c 00       		.byte	0
+ 278              		.section	.debug_aranges,"",%progbits
+ 279 0000 14000000 		.4byte	0x14
+ 280 0004 0200     		.2byte	0x2
+ 281 0006 00000000 		.4byte	.Ldebug_info0
+ 282 000a 04       		.byte	0x4
+ 283 000b 00       		.byte	0
+ 284 000c 0000     		.2byte	0
+ 285 000e 0000     		.2byte	0
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccrOW8Ox.s 			page 6
+
+
+ 286 0010 00000000 		.4byte	0
+ 287 0014 00000000 		.4byte	0
+ 288              		.section	.debug_line,"",%progbits
+ 289              	.Ldebug_line0:
+ 290 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 290      02004900 
+ 290      00000201 
+ 290      FB0E0D00 
+ 290      01010101 
+ 291              	.LASF9:
+ 292 0000 666C6F61 		.ascii	"float\000"
+ 292      7400
+ 293              	.LASF1:
+ 294 0006 756E7369 		.ascii	"unsigned char\000"
+ 294      676E6564 
+ 294      20636861 
+ 294      7200
+ 295              	.LASF5:
+ 296 0014 6C6F6E67 		.ascii	"long unsigned int\000"
+ 296      20756E73 
+ 296      69676E65 
+ 296      6420696E 
+ 296      7400
+ 297              	.LASF3:
+ 298 0026 73686F72 		.ascii	"short unsigned int\000"
+ 298      7420756E 
+ 298      7369676E 
+ 298      65642069 
+ 298      6E7400
+ 299              	.LASF10:
+ 300 0039 646F7562 		.ascii	"double\000"
+ 300      6C6500
+ 301              	.LASF14:
+ 302 0040 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\cymetadata.c\000"
+ 302      6E657261 
+ 302      7465645F 
+ 302      536F7572 
+ 302      63655C50 
+ 303              	.LASF8:
+ 304 0066 756E7369 		.ascii	"unsigned int\000"
+ 304      676E6564 
+ 304      20696E74 
+ 304      00
+ 305              	.LASF7:
+ 306 0073 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 306      206C6F6E 
+ 306      6720756E 
+ 306      7369676E 
+ 306      65642069 
+ 307              	.LASF17:
+ 308 008a 63795F6D 		.ascii	"cy_meta_loadable\000"
+ 308      6574615F 
+ 308      6C6F6164 
+ 308      61626C65 
+ 308      00
+ 309              	.LASF12:
+ 310 009b 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccrOW8Ox.s 			page 7
+
+
+ 310      74797065 
+ 310      00
+ 311              	.LASF6:
+ 312 00a4 6C6F6E67 		.ascii	"long long int\000"
+ 312      206C6F6E 
+ 312      6720696E 
+ 312      7400
+ 313              	.LASF11:
+ 314 00b2 63686172 		.ascii	"char\000"
+ 314      00
+ 315              	.LASF2:
+ 316 00b7 73686F72 		.ascii	"short int\000"
+ 316      7420696E 
+ 316      7400
+ 317              	.LASF16:
+ 318 00c1 75696E74 		.ascii	"uint8\000"
+ 318      3800
+ 319              	.LASF13:
+ 320 00c7 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 320      4320342E 
+ 320      372E3320 
+ 320      32303133 
+ 320      30333132 
+ 321 00fa 616E6368 		.ascii	"anch revision 196615]\000"
+ 321      20726576 
+ 321      6973696F 
+ 321      6E203139 
+ 321      36363135 
+ 322              	.LASF4:
+ 323 0110 6C6F6E67 		.ascii	"long int\000"
+ 323      20696E74 
+ 323      00
+ 324              	.LASF15:
+ 325 0119 433A5C55 		.ascii	"C:\\Users\\Terrance\\Documents\\PSoC Creator\\SCB_B"
+ 325      73657273 
+ 325      5C546572 
+ 325      72616E63 
+ 325      655C446F 
+ 326 0147 6F6F746C 		.ascii	"ootloader_42xx\\Bootloadable Blinking LED.cydsn\000"
+ 326      6F616465 
+ 326      725F3432 
+ 326      78785C42 
+ 326      6F6F746C 
+ 327              	.LASF0:
+ 328 0176 7369676E 		.ascii	"signed char\000"
+ 328      65642063 
+ 328      68617200 
+ 329              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

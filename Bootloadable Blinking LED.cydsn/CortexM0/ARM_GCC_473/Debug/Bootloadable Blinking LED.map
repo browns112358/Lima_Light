@@ -1,0 +1,868 @@
+Archive member included because of file (symbol)
+
+.\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+                              .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o (cyfitter_cfg)
+.\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyBootAsmGnu.o)
+                              .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o) (CyDelayCycles)
+.\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+                              .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o) (CyDelayUs)
+.\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                              .\CortexM0\ARM_GCC_473\Debug\main.o (PWM_Red_Start)
+.\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                              .\CortexM0\ARM_GCC_473\Debug\main.o (PWM_GreenYellow_Start)
+.\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                              .\CortexM0\ARM_GCC_473\Debug\main.o (PWM_BlueWhite_Start)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+                              .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o) (__aeabi_uidiv)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
+                              .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o (__aeabi_idiv)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                              c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
+                              c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (__register_exitproc)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
+                              c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (exit)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
+                              c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (__libc_fini_array)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+                              c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o) (_global_impure_ptr)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+                              c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (__libc_init_array)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+                              .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o) (memcpy)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+                              c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (memset)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .text          0x00000000       0x74 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .text._exit    0x00000000       0x28 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .text.CYCONFIGCPY
+                0x00000000       0x24 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .text.CYCONFIGCPYCODE
+                0x00000000       0x24 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyBootAsmGnu.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyBootAsmGnu.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysClkImoStart
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysClkImoStop
+                0x00000000       0x18 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysClkIloStart
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysClkIloStop
+                0x00000000       0x18 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysClkWriteHfclkDirect
+                0x00000000       0x44 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysClkWriteSysclkDiv
+                0x00000000       0x44 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysClkWriteImoFreq
+                0x00000000      0x200 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtLock
+                0x00000000       0x44 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtUnlock
+                0x00000000       0x5c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtReadEnabledStatus
+                0x00000000       0x30 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtWriteMode
+                0x00000000       0x70 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtReadMode
+                0x00000000       0x24 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtWriteClearOnMatch
+                0x00000000       0x68 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtReadClearOnMatch
+                0x00000000       0x40 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtEnable
+                0x00000000       0x30 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtDisable
+                0x00000000       0x30 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtWriteCascade
+                0x00000000       0x68 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtReadCascade
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtWriteMatch
+                0x00000000       0x74 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtWriteToggleBit
+                0x00000000       0x54 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtReadToggleBit
+                0x00000000       0x18 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtReadMatch
+                0x00000000       0x44 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtReadCount
+                0x00000000       0x54 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtGetInterruptSource
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtClearInterrupt
+                0x00000000       0xb8 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysWdtResetCounters
+                0x00000000       0x38 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysLvdEnable
+                0x00000000       0x48 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysLvdDisable
+                0x00000000       0x28 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysLvdGetInterruptSource
+                0x00000000       0x18 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysLvdClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySysGetResetReason
+                0x00000000       0x30 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyDisableInts
+                0x00000000       0x24 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyEnableInts
+                0x00000000       0x18 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntSetSysVector
+                0x00000000       0x48 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntGetSysVector
+                0x00000000       0x34 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntSetVector
+                0x00000000       0x4c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntGetVector
+                0x00000000       0x38 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntSetPriority
+                0x00000000       0xa8 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntGetPriority
+                0x00000000       0x58 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntEnable
+                0x00000000       0x2c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntGetState
+                0x00000000       0x34 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntDisable
+                0x00000000       0x2c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntSetPending
+                0x00000000       0x2c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyIntClearPending
+                0x00000000       0x2c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyHalt   0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CySoftwareReset
+                0x00000000       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyDelay  0x00000000       0x48 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text.CyDelayFreq
+                0x00000000       0x80 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .rodata        0x00000000       0x30 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .text.PWM_Red_Stop
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .text.PWM_Red_ReadCounter
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .text.PWM_Red_ReadControlRegister
+                0x00000000       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .text.PWM_Red_WriteControlRegister
+                0x00000000       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .text.PWM_Red_ReadCompare
+                0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .text.PWM_Red_ReadPeriod
+                0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .text.PWM_GreenYellow_Stop
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .text.PWM_GreenYellow_ReadCounter
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .text.PWM_GreenYellow_ReadControlRegister
+                0x00000000       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .text.PWM_GreenYellow_WriteControlRegister
+                0x00000000       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .text.PWM_GreenYellow_ReadCompare1
+                0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .text.PWM_GreenYellow_ReadCompare2
+                0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .text.PWM_GreenYellow_ReadPeriod
+                0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .text.PWM_BlueWhite_Stop
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .text.PWM_BlueWhite_ReadCounter
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .text.PWM_BlueWhite_ReadControlRegister
+                0x00000000       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .text.PWM_BlueWhite_WriteControlRegister
+                0x00000000       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .text.PWM_BlueWhite_ReadCompare1
+                0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .text.PWM_BlueWhite_ReadCompare2
+                0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .text.PWM_BlueWhite_ReadPeriod
+                0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .text          0x00000000       0x9c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+ .text          0x00000000       0xc0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
+ .text          0x00000000        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
+ .text.__register_exitproc
+                0x00000000       0x18 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x30 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
+ .text.__libc_fini_array
+                0x00000000       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+ .data.impure_data
+                0x00000000       0x64 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+ .rodata.str1.1
+                0x00000000        0x2 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00000000        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+ .text.memcpy   0x00000000       0x12 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00008000         xr
+ram              0x20000000         0x00001000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+START GROUP
+LOAD .\CortexM0\ARM_GCC_473\Debug\main.o
+LOAD .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+LOAD .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+LOAD .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+LOAD .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a
+LOAD C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_473\Debug\CyComponentLibrary.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a
+END GROUP
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+START GROUP
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc.a
+LOAD c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a
+END GROUP
+                0x00000000                CY_APPL_ORIGIN = 0x0
+                0x00000080                CY_FLASH_ROW_SIZE = 0x80
+                0x00000001                CY_APPL_NUM = 0x1
+                0x00000040                CY_METADATA_SIZE = 0x40
+                0x20000108                PROVIDE (__cy_heap_start, _end)
+                0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
+                0x20001000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x1000))
+                0x20000c00                PROVIDE (__cy_heap_end, (__cy_stack - 0x400))
+
+.cybootloader   0x00000000      0xf80
+ *(.cybootloader)
+ .cybootloader  0x00000000      0xf80 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+                0x00000000                cy_bootloader
+                0x00000f80                appl1_start = CY_APPL_ORIGIN?CY_APPL_ORIGIN:ALIGN (CY_FLASH_ROW_SIZE)
+                0x00004780                appl2_start = (appl1_start + ALIGN ((((0x8000 - appl1_start) - (0x2 * CY_FLASH_ROW_SIZE)) / 0x2), CY_FLASH_ROW_SIZE))
+                0x00000f80                appl_start = (CY_APPL_NUM == 0x1)?appl1_start:appl2_start
+
+.text           0x00000f80      0xb2a
+ CREATE_OBJECT_SYMBOLS
+                0x00000f80                PROVIDE (__cy_interrupt_vector, RomVectors)
+ *(.romvectors)
+ .romvectors    0x00000f80       0x10 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x00000f80                RomVectors
+                0x00000001                ASSERT ((. != __cy_interrupt_vector), No interrupt vector)
+                0x00000001                ASSERT (CY_APPL_ORIGIN?(SIZEOF (.cybootloader) <= CY_APPL_ORIGIN):0x1, Wrong image location)
+                0x00000f90                PROVIDE (__cy_reset, Reset)
+ *(.text.Reset)
+ .text.Reset    0x00000f90       0x14 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x00000f90                Reset
+                0x00000001                ASSERT ((. != __cy_reset), No reset code)
+ *(.psocinit)
+ .psocinit      0x00000fa4      0x2a8 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+                0x00001104                cyfitter_cfg
+                0x0000124c                . = MAX (., 0x100)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x0000124c       0x60 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .text.main     0x000012ac       0x84 .\CortexM0\ARM_GCC_473\Debug\main.o
+                0x000012ac                main
+ .text.IntDefaultHandler
+                0x00001330        0x8 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x00001330                IntDefaultHandler
+ .text.Start_c  0x00001338       0xa4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x00001338                Start_c
+ .text.initialize_psoc
+                0x000013dc       0x74 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x000013dc                initialize_psoc
+ .text.CYMEMZERO
+                0x00001450       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .text.cfg_write_bytes32
+                0x00001470       0x80 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .text.AnalogSetDefault
+                0x000014f0        0x8 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .text          0x000014f8       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyBootAsmGnu.o)
+                0x000014f8                CyDelayCycles
+                0x0000150a                CyEnterCriticalSection
+                0x00001512                CyExitCriticalSection
+ .text.CyDelayUs
+                0x00001518       0x28 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+                0x00001518                CyDelayUs
+ .text.PWM_Red_Start
+                0x00001540       0x24 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x00001540                PWM_Red_Start
+ .text.PWM_Red_Init
+                0x00001564       0x80 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x00001564                PWM_Red_Init
+ .text.PWM_Red_Enable
+                0x000015e4       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x000015e4                PWM_Red_Enable
+ .text.PWM_Red_WriteCounter
+                0x00001604       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x00001604                PWM_Red_WriteCounter
+ .text.PWM_Red_ClearFIFO
+                0x00001624       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x00001624                PWM_Red_ClearFIFO
+ .text.PWM_Red_WritePeriod
+                0x00001640       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x00001640                PWM_Red_WritePeriod
+ .text.PWM_Red_WriteCompare
+                0x00001660       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x00001660                PWM_Red_WriteCompare
+ .text.PWM_Red_SetInterruptMode
+                0x00001680       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x00001680                PWM_Red_SetInterruptMode
+ .text.PWM_Red_ReadStatusRegister
+                0x000016a0       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x000016a0                PWM_Red_ReadStatusRegister
+ .text.PWM_Red_ReadCapture
+                0x000016c0       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x000016c0                PWM_Red_ReadCapture
+ .text.PWM_GreenYellow_Start
+                0x000016d4       0x24 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x000016d4                PWM_GreenYellow_Start
+ .text.PWM_GreenYellow_Init
+                0x000016f8       0x88 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x000016f8                PWM_GreenYellow_Init
+ .text.PWM_GreenYellow_Enable
+                0x00001780       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x00001780                PWM_GreenYellow_Enable
+ .text.PWM_GreenYellow_WriteCounter
+                0x000017a0       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x000017a0                PWM_GreenYellow_WriteCounter
+ .text.PWM_GreenYellow_ClearFIFO
+                0x000017c0       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x000017c0                PWM_GreenYellow_ClearFIFO
+ .text.PWM_GreenYellow_WritePeriod
+                0x000017dc       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x000017dc                PWM_GreenYellow_WritePeriod
+ .text.PWM_GreenYellow_WriteCompare1
+                0x000017fc       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x000017fc                PWM_GreenYellow_WriteCompare1
+ .text.PWM_GreenYellow_WriteCompare2
+                0x0000181c       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x0000181c                PWM_GreenYellow_WriteCompare2
+ .text.PWM_GreenYellow_SetInterruptMode
+                0x0000183c       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x0000183c                PWM_GreenYellow_SetInterruptMode
+ .text.PWM_GreenYellow_ReadStatusRegister
+                0x0000185c       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x0000185c                PWM_GreenYellow_ReadStatusRegister
+ .text.PWM_GreenYellow_ReadCapture
+                0x0000187c       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x0000187c                PWM_GreenYellow_ReadCapture
+ .text.PWM_BlueWhite_Start
+                0x00001890       0x24 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x00001890                PWM_BlueWhite_Start
+ .text.PWM_BlueWhite_Init
+                0x000018b4       0x88 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x000018b4                PWM_BlueWhite_Init
+ .text.PWM_BlueWhite_Enable
+                0x0000193c       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x0000193c                PWM_BlueWhite_Enable
+ .text.PWM_BlueWhite_WriteCounter
+                0x0000195c       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x0000195c                PWM_BlueWhite_WriteCounter
+ .text.PWM_BlueWhite_ClearFIFO
+                0x0000197c       0x1c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x0000197c                PWM_BlueWhite_ClearFIFO
+ .text.PWM_BlueWhite_WritePeriod
+                0x00001998       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x00001998                PWM_BlueWhite_WritePeriod
+ .text.PWM_BlueWhite_WriteCompare1
+                0x000019b8       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x000019b8                PWM_BlueWhite_WriteCompare1
+ .text.PWM_BlueWhite_WriteCompare2
+                0x000019d8       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x000019d8                PWM_BlueWhite_WriteCompare2
+ .text.PWM_BlueWhite_SetInterruptMode
+                0x000019f8       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x000019f8                PWM_BlueWhite_SetInterruptMode
+ .text.PWM_BlueWhite_ReadStatusRegister
+                0x00001a18       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x00001a18                PWM_BlueWhite_ReadStatusRegister
+ .text.PWM_BlueWhite_ReadCapture
+                0x00001a38       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x00001a38                PWM_BlueWhite_ReadCapture
+ .text.__libc_init_array
+                0x00001a4c       0x4c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+                0x00001a4c                __libc_init_array
+ .text.memset   0x00001a98       0x12 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+                0x00001a98                memset
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.bootloader)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+
+.v4_bx          0x00001aac        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00001aac        0x0
+ .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x00001aac        0x4
+ *(.eh_frame)
+ .eh_frame      0x00001aac        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .eh_frame      0x00001aac        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+                0x00001ab0                PROVIDE (__exidx_start, .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00001ab0                __exidx_end = .
+
+.rodata         0x00001ab0      0x270
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x00001ab0      0x23c .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+                0x00001cec                . = ALIGN (0x4)
+ *(.init)
+ .init          0x00001cec        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
+                0x00001cec                _init
+ .init          0x00001cf0        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+                0x00001cf8                . = ALIGN (0x4)
+                0x00001cf8                __preinit_array_start = .
+ *(.preinit_array)
+                0x00001cf8                __preinit_array_end = .
+                0x00001cf8                . = ALIGN (0x4)
+                0x00001cf8                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x00001cf8        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .init_array    0x00001cfc        0x4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x00001d00                __init_array_end = .
+                0x00001d00                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x00001d00        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
+                0x00001d00                _fini
+ .fini          0x00001d04        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+                0x00001d0c                . = ALIGN (0x4)
+                0x00001d0c                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x00001d0c        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x00001d10                __fini_array_end = .
+                0x00001d10                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x00001d10                . = ALIGN (0x4)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x00001d10                . = ALIGN (0x4)
+                0x00001d10                __cy_regions = .
+                0x00001d10        0x4 LONG 0x1d20 __cy_region_init_ram
+                0x00001d14        0x4 LONG 0x200000d0 __cy_region_start_data
+                0x00001d18        0x4 LONG 0x18 __cy_region_init_size_ram
+                0x00001d1c        0x4 LONG 0x20 __cy_region_zero_size_ram
+                0x00001d20                __cy_regions_end = .
+                0x00001d20                . = ALIGN (0x8)
+                0x00001d20                _etext = .
+
+.ramvectors     0x20000000       0xc0
+                0x20000000                __cy_region_start_ram = .
+ *(.ramvectors)
+ .ramvectors    0x20000000       0xc0 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x20000000                CyRamVectors
+
+.btldr_run      0x200000c0        0x4
+ *(.bootloaderruntype)
+ .bootloaderruntype
+                0x200000c0        0x4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x200000c0                cyBtldrRunType
+
+.noinit         0x200000c8        0x4
+ *(.noinit)
+ .noinit        0x200000c8        0x4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+
+.data           0x200000d0       0x18 load address 0x00001d20
+                0x200000d0                __cy_region_start_data = .
+ *(.jcr)
+ .jcr           0x200000d0        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .jcr           0x200000d0        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x200000d4        0x4 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .data          0x200000d8       0x10 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+                0x200000d8                cydelayFreqHz
+                0x200000dc                cydelayFreqKhz
+                0x200000e0                cydelayFreqMhz
+                0x200000e4                cydelay32kMs
+                0x200000e8                . = ALIGN (0x8)
+ *(.ram)
+                0x200000e8                _edata = .
+
+.igot.plt       0x200000e8        0x0 load address 0x00001d38
+ .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+
+.bss            0x200000e8       0x20 load address 0x00001d38
+                0x200000e8                PROVIDE (__bss_start__, .)
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x200000e8       0x1c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .bss           0x20000104        0x1 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                0x20000104                PWM_Red_initVar
+ .bss           0x20000105        0x1 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                0x20000105                PWM_GreenYellow_initVar
+ .bss           0x20000106        0x1 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                0x20000106                PWM_BlueWhite_initVar
+ *(COMMON)
+                0x20000108                . = ALIGN (0x8)
+ *fill*         0x20000107        0x1 00
+ *(.ram.b)
+                0x20000108                _end = .
+                0x20000108                __end = .
+                0x20000108                PROVIDE (end, .)
+                0x20000108                PROVIDE (__bss_end__, .)
+                0x00001d20                __cy_region_init_ram = LOADADDR (.data)
+                0x00000018                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000020                __cy_region_zero_size_ram = (_end - _edata)
+
+.heap           0x20000108      0x100 load address 0x00001d38
+                0x20000108                . = _end
+                0x20000208                . = (. + 0x100)
+ *fill*         0x20000108      0x100 00
+                0x20000208                __cy_heap_limit = .
+
+.stack          0x20000c00      0x400
+                0x20000c00                __cy_stack_limit = .
+                0x20001000                . = (. + 0x400)
+ *fill*         0x20000c00      0x400 00
+                0x00000001                ASSERT ((__cy_stack_limit >= __cy_heap_limit), region RAM overflowed with stack)
+
+.cyloadermeta   0xf0000000       0x40
+ *(.cyloadermeta)
+ .cyloadermeta  0xf0000000       0x40 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+                0xf0000000                cy_meta_loader
+
+.cyloadablemeta
+                0x00007fc0       0x40
+ *(.cyloadablemeta)
+ .cyloadablemeta
+                0x00007fc0       0x40 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+                0x00007fc0                cy_meta_loadable
+
+.cyflashprotect
+                0x90400000       0x20
+ *(.cyflashprotect)
+ .cyflashprotect
+                0x90400000       0x20 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+                0x90400000                cy_meta_flashprotect
+
+.cymeta         0x90500000        0xc
+ *(.cymeta)
+ .cymeta        0x90500000        0xc .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+                0x90500000                cy_metadata
+
+.cychipprotect  0x90600000        0x4
+ *(.cychipprotect)
+ .cychipprotect
+                0x90600000        0x4 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+                0x90600000                cy_meta_chipprotect
+
+.rel.dyn        0x00008000        0x0 load address 0x90600004
+ .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x490
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_aranges
+                0x00000020       0x18 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+ .debug_aranges
+                0x00000038       0x18 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .debug_aranges
+                0x00000050       0x40 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_aranges
+                0x00000090       0x58 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .debug_aranges
+                0x000000e8       0x20 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x00000108      0x1a0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .debug_aranges
+                0x000002a8       0x98 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .debug_aranges
+                0x00000340       0xa8 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .debug_aranges
+                0x000003e8       0xa8 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x1eff
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0xf7 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_info    0x000000f7      0x152 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+ .debug_info    0x00000249       0xb2 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .debug_info    0x000002fb      0x2d2 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_info    0x000005cd      0x476 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .debug_info    0x00000a43       0xad .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyBootAsmGnu.o)
+ .debug_info    0x00000af0      0xac5 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .debug_info    0x000015b5      0x2ea .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .debug_info    0x0000189f      0x330 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .debug_info    0x00001bcf      0x330 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+
+.debug_abbrev   0x00000000      0x984
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x60 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_abbrev  0x00000060       0x77 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+ .debug_abbrev  0x000000d7       0x5d .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .debug_abbrev  0x00000134      0x175 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_abbrev  0x000002a9      0x195 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .debug_abbrev  0x0000043e       0x14 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00000452      0x1a2 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .debug_abbrev  0x000005f4      0x130 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .debug_abbrev  0x00000724      0x130 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .debug_abbrev  0x00000854      0x130 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+
+.debug_line     0x00000000      0xf29
+ *(.debug_line)
+ .debug_line    0x00000000       0x84 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_line    0x00000084       0x55 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+ .debug_line    0x000000d9       0x53 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .debug_line    0x0000012c      0x19c .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_line    0x000002c8      0x1b7 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .debug_line    0x0000047f       0x68 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyBootAsmGnu.o)
+ .debug_line    0x000004e7      0x541 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .debug_line    0x00000a28      0x18f .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .debug_line    0x00000bb7      0x1ba .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .debug_line    0x00000d71      0x1b8 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+
+.debug_frame    0x00000000      0xf94
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x30 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_frame   0x00000030       0xa8 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_frame   0x000000d8      0x108 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .debug_frame   0x000001e0      0x628 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .debug_frame   0x00000808      0x1f4 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .debug_frame   0x000009fc      0x230 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .debug_frame   0x00000c2c      0x230 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .debug_frame   0x00000e5c       0x20 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000e7c       0x20 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x00000e9c       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
+ .debug_frame   0x00000ec4       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
+ .debug_frame   0x00000eec       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
+ .debug_frame   0x00000f18       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+ .debug_frame   0x00000f44       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+ .debug_frame   0x00000f6c       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+
+.debug_str      0x00000000     0x1014
+ *(.debug_str)
+ .debug_str     0x00000000      0x155 .\CortexM0\ARM_GCC_473\Debug\main.o
+                                0x18e (size before relaxing)
+ .debug_str     0x00000155       0x7a .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+                                0x1c5 (size before relaxing)
+ .debug_str     0x000001cf       0x37 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+                                0x182 (size before relaxing)
+ .debug_str     0x00000206      0x126 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                                0x27e (size before relaxing)
+ .debug_str     0x0000032c      0x1a0 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+                                0x32e (size before relaxing)
+ .debug_str     0x000004cc      0x4e8 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+                                0x682 (size before relaxing)
+ .debug_str     0x000009b4      0x1c6 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+                                0x316 (size before relaxing)
+ .debug_str     0x00000b7a      0x262 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+                                0x3eb (size before relaxing)
+ .debug_str     0x00000ddc      0x238 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+                                0x3c1 (size before relaxing)
+
+.debug_loc      0x00000000     0x173c
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x38 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_loc     0x00000038      0x100 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_loc     0x00000138      0x1a8 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .debug_loc     0x000002e0      0xa34 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .debug_loc     0x00000d14      0x320 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .debug_loc     0x00001034      0x384 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .debug_loc     0x000013b8      0x384 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   0x00000000      0x3d0
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x10 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_ranges  0x00000010       0x30 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_ranges  0x00000040       0x48 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .debug_ranges  0x00000088      0x190 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .debug_ranges  0x00000218       0x88 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .debug_ranges  0x000002a0       0x98 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .debug_ranges  0x00000338       0x98 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 .\CortexM0\ARM_GCC_473\Debug\main.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x28
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
+ .ARM.attributes
+                0x0000001e       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x1c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.attributes
+                0x00000066       0x31 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .ARM.attributes
+                0x00000097       0x31 .\CortexM0\ARM_GCC_473\Debug\cybootloader.o
+ .ARM.attributes
+                0x000000c8       0x31 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .ARM.attributes
+                0x000000f9       0x31 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .ARM.attributes
+                0x0000012a       0x31 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(cyfitter_cfg.o)
+ .ARM.attributes
+                0x0000015b       0x21 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyBootAsmGnu.o)
+ .ARM.attributes
+                0x0000017c       0x31 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(CyLib.o)
+ .ARM.attributes
+                0x000001ad       0x31 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_Red.o)
+ .ARM.attributes
+                0x000001de       0x31 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_GreenYellow.o)
+ .ARM.attributes
+                0x0000020f       0x31 .\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.a(PWM_BlueWhite.o)
+ .ARM.attributes
+                0x00000240       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x0000025e       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x0000027c       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000029a       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
+ .ARM.attributes
+                0x000002c6       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000002f2       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
+ .ARM.attributes
+                0x0000031e       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000034a       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000376       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x000003a2       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000003ce       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+ .ARM.attributes
+                0x000003fa       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(.\CortexM0\ARM_GCC_473\Debug\Bootloadable Blinking LED.elf elf32-littlearm)

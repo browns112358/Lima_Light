@@ -1,0 +1,13 @@
+# Bootloadable Blinking LED
+# 2014-08-01 15:59:14Z
+
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_io "Blue(0)" iocell 1 4
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "Green(0)" iocell 2 1
+set_io "Red(0)" iocell 1 6
+set_io "White(0)" iocell 1 7
+set_io "Yellow(0)" iocell 2 3

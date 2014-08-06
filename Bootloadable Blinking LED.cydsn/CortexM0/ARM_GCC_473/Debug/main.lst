@@ -1,0 +1,611 @@
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.main,"ax",%progbits
+  18              		.align	2
+  19              		.global	main
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	main, %function
+  23              	main:
+  24              	.LFB33:
+  25              		.file 1 ".\\main.c"
+   1:.\main.c      **** /******************************************************************************
+   2:.\main.c      **** * Project Name		: Bootloadable Blinking LED
+   3:.\main.c      **** * File Name			: main.c
+   4:.\main.c      **** * Version 			: 1.0
+   5:.\main.c      **** * Device Used		: CY8C4245AXI-483
+   6:.\main.c      **** * Software Used		: PSoC Creator 3.0
+   7:.\main.c      **** * Compiler    		: ARMGCC 4.7.3, ARM RVDS Generic, ARM MDK Generic
+   8:.\main.c      **** * Related Hardware	: CY8CKIT-049-42xx PSoC 4 Prototyping Kit 
+   9:.\main.c      **** *
+  10:.\main.c      **** ********************************************************************************
+  11:.\main.c      **** * Copyright (2014), Cypress Semiconductor Corporation. All Rights Reserved.
+  12:.\main.c      **** ********************************************************************************
+  13:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation (Cypress)
+  14:.\main.c      **** * and is protected by and subject to worldwide patent protection (United
+  15:.\main.c      **** * States and foreign), United States copyright laws and international treaty
+  16:.\main.c      **** * provisions. Cypress hereby grants to licensee a personal, non-exclusive,
+  17:.\main.c      **** * non-transferable license to copy, use, modify, create derivative works of,
+  18:.\main.c      **** * and compile the Cypress Source Code and derivative works for the sole
+  19:.\main.c      **** * purpose of creating custom software in support of licensee product to be
+  20:.\main.c      **** * used only in conjunction with a Cypress integrated circuit as specified in
+  21:.\main.c      **** * the applicable agreement. Any reproduction, modification, translation,
+  22:.\main.c      **** * compilation, or representation of this software except as specified above 
+  23:.\main.c      **** * is prohibited without the express written permission of Cypress.
+  24:.\main.c      **** *
+  25:.\main.c      **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH 
+  26:.\main.c      **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  27:.\main.c      **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  28:.\main.c      **** * Cypress reserves the right to make changes without further notice to the 
+  29:.\main.c      **** * materials described herein. Cypress does not assume any liability arising out 
+  30:.\main.c      **** * of the application or use of any product or circuit described herein. Cypress 
+  31:.\main.c      **** * does not authorize its products for use as critical components in life-support 
+  32:.\main.c      **** * systems where a malfunction or failure may reasonably be expected to result in 
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 2
+
+
+  33:.\main.c      **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  34:.\main.c      **** * support systems application implies that the manufacturer assumes all risk of 
+  35:.\main.c      **** * such use and in doing so indemnifies Cypress against all charges. 
+  36:.\main.c      **** *
+  37:.\main.c      **** * Use of this Software may be limited by and subject to the applicable Cypress
+  38:.\main.c      **** * software license agreement. 
+  39:.\main.c      **** *******************************************************************************/
+  40:.\main.c      **** 
+  41:.\main.c      **** /******************************************************************************
+  42:.\main.c      **** *                           THEORY OF OPERATION
+  43:.\main.c      **** * This is a blinking LED project. A PWM component drives the pin to blink the 
+  44:.\main.c      **** * LED at regular intervals. This project contains a bootloadable component so 
+  45:.\main.c      **** * that it can be bootloaded into PSoC 4 which has a bootloader already programmed 
+  46:.\main.c      **** * into it.
+  47:.\main.c      **** * Default UART Port Configuration for bootloading the PSoC 4 in CY8CKIT-049-42xx
+  48:.\main.c      **** * Baud Rate : 115200 bps
+  49:.\main.c      **** * Data Bits : 8
+  50:.\main.c      **** * Stop Bits : 1
+  51:.\main.c      **** * Parity    : None
+  52:.\main.c      **** ******************************************************************************/
+  53:.\main.c      **** #include <project.h>
+  54:.\main.c      **** #include <stdlib.h>
+  55:.\main.c      **** 
+  56:.\main.c      **** 
+  57:.\main.c      **** int main()
+  58:.\main.c      **** {
+  26              		.loc 1 58 0
+  27              		.cfi_startproc
+  28 0000 80B5     		push	{r7, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 7, -8
+  32              		.cfi_offset 14, -4
+  33 0002 82B0     		sub	sp, sp, #8
+  34              	.LCFI1:
+  35              		.cfi_def_cfa_offset 16
+  36 0004 00AF     		add	r7, sp, #0
+  37              	.LCFI2:
+  38              		.cfi_def_cfa_register 7
+  59:.\main.c      ****     PWM_Red_Start();
+  39              		.loc 1 59 0
+  40 0006 FFF7FEFF 		bl	PWM_Red_Start
+  60:.\main.c      ****     PWM_BlueWhite_Start();
+  41              		.loc 1 60 0
+  42 000a FFF7FEFF 		bl	PWM_BlueWhite_Start
+  61:.\main.c      ****     PWM_GreenYellow_Start();
+  43              		.loc 1 61 0
+  44 000e FFF7FEFF 		bl	PWM_GreenYellow_Start
+  62:.\main.c      ****    
+  63:.\main.c      ****     
+  64:.\main.c      ****     uint8 Red_gain=1;
+  45              		.loc 1 64 0
+  46 0012 FB1D     		add	r3, r7, #7
+  47 0014 0122     		mov	r2, #1
+  48 0016 1A70     		strb	r2, [r3]
+  65:.\main.c      ****     uint8 Green_gain=1;
+  49              		.loc 1 65 0
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 3
+
+
+  50 0018 BB1D     		add	r3, r7, #6
+  51 001a 0122     		mov	r2, #1
+  52 001c 1A70     		strb	r2, [r3]
+  66:.\main.c      ****     uint8 Blue_gain=1;
+  53              		.loc 1 66 0
+  54 001e 7B1D     		add	r3, r7, #5
+  55 0020 0122     		mov	r2, #1
+  56 0022 1A70     		strb	r2, [r3]
+  67:.\main.c      ****     uint8 White_gain=1;
+  57              		.loc 1 67 0
+  58 0024 3B1D     		add	r3, r7, #4
+  59 0026 0122     		mov	r2, #1
+  60 0028 1A70     		strb	r2, [r3]
+  68:.\main.c      ****     uint8 Yellow_gain=1;
+  61              		.loc 1 68 0
+  62 002a FB1C     		add	r3, r7, #3
+  63 002c 0122     		mov	r2, #1
+  64 002e 1A70     		strb	r2, [r3]
+  65              	.L2:
+  69:.\main.c      ****     
+  70:.\main.c      **** 	for(;;)
+  71:.\main.c      ****     {
+  72:.\main.c      ****         /* The PSoC 4 is put into Sleep Mode as the PWM component is used to 
+  73:.\main.c      **** 		blink the LED */
+  74:.\main.c      **** 		PWM_Red_WriteCompare(Red_gain*100);
+  66              		.loc 1 74 0 discriminator 1
+  67 0030 FB1D     		add	r3, r7, #7
+  68 0032 1B78     		ldrb	r3, [r3]
+  69 0034 6422     		mov	r2, #100
+  70 0036 5343     		mul	r3, r2
+  71 0038 DBB2     		uxtb	r3, r3
+  72 003a 181C     		mov	r0, r3
+  73 003c FFF7FEFF 		bl	PWM_Red_WriteCompare
+  75:.\main.c      ****         PWM_GreenYellow_WriteCompare1(Green_gain*100);
+  74              		.loc 1 75 0 discriminator 1
+  75 0040 BB1D     		add	r3, r7, #6
+  76 0042 1B78     		ldrb	r3, [r3]
+  77 0044 6422     		mov	r2, #100
+  78 0046 5343     		mul	r3, r2
+  79 0048 DBB2     		uxtb	r3, r3
+  80 004a 181C     		mov	r0, r3
+  81 004c FFF7FEFF 		bl	PWM_GreenYellow_WriteCompare1
+  76:.\main.c      ****         PWM_GreenYellow_WriteCompare2(Yellow_gain*100);
+  82              		.loc 1 76 0 discriminator 1
+  83 0050 FB1C     		add	r3, r7, #3
+  84 0052 1B78     		ldrb	r3, [r3]
+  85 0054 6422     		mov	r2, #100
+  86 0056 5343     		mul	r3, r2
+  87 0058 DBB2     		uxtb	r3, r3
+  88 005a 181C     		mov	r0, r3
+  89 005c FFF7FEFF 		bl	PWM_GreenYellow_WriteCompare2
+  77:.\main.c      ****         PWM_BlueWhite_WriteCompare2(White_gain*100);
+  90              		.loc 1 77 0 discriminator 1
+  91 0060 3B1D     		add	r3, r7, #4
+  92 0062 1B78     		ldrb	r3, [r3]
+  93 0064 6422     		mov	r2, #100
+  94 0066 5343     		mul	r3, r2
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 4
+
+
+  95 0068 DBB2     		uxtb	r3, r3
+  96 006a 181C     		mov	r0, r3
+  97 006c FFF7FEFF 		bl	PWM_BlueWhite_WriteCompare2
+  78:.\main.c      ****         PWM_BlueWhite_WriteCompare1(Blue_gain*100);
+  98              		.loc 1 78 0 discriminator 1
+  99 0070 7B1D     		add	r3, r7, #5
+ 100 0072 1B78     		ldrb	r3, [r3]
+ 101 0074 6422     		mov	r2, #100
+ 102 0076 5343     		mul	r3, r2
+ 103 0078 DBB2     		uxtb	r3, r3
+ 104 007a 181C     		mov	r0, r3
+ 105 007c FFF7FEFF 		bl	PWM_BlueWhite_WriteCompare1
+  79:.\main.c      ****     }
+ 106              		.loc 1 79 0 discriminator 1
+ 107 0080 D6E7     		b	.L2
+ 108              		.cfi_endproc
+ 109              	.LFE33:
+ 110              		.size	main, .-main
+ 111 0082 C046     		.text
+ 112              	.Letext0:
+ 113              		.file 2 "./Generated_Source/PSoC4/cytypes.h"
+ 114              		.section	.debug_info,"",%progbits
+ 115              	.Ldebug_info0:
+ 116 0000 F3000000 		.4byte	0xf3
+ 117 0004 0200     		.2byte	0x2
+ 118 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 119 000a 04       		.byte	0x4
+ 120 000b 01       		.uleb128 0x1
+ 121 000c 2B000000 		.4byte	.LASF18
+ 122 0010 01       		.byte	0x1
+ 123 0011 7C010000 		.4byte	.LASF19
+ 124 0015 D4000000 		.4byte	.LASF20
+ 125 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 126 001d 00000000 		.4byte	0
+ 127 0021 00000000 		.4byte	0
+ 128 0025 00000000 		.4byte	.Ldebug_line0
+ 129 0029 02       		.uleb128 0x2
+ 130 002a 01       		.byte	0x1
+ 131 002b 06       		.byte	0x6
+ 132 002c 5E010000 		.4byte	.LASF0
+ 133 0030 02       		.uleb128 0x2
+ 134 0031 01       		.byte	0x1
+ 135 0032 08       		.byte	0x8
+ 136 0033 B6000000 		.4byte	.LASF1
+ 137 0037 02       		.uleb128 0x2
+ 138 0038 02       		.byte	0x2
+ 139 0039 05       		.byte	0x5
+ 140 003a 8C000000 		.4byte	.LASF2
+ 141 003e 02       		.uleb128 0x2
+ 142 003f 02       		.byte	0x2
+ 143 0040 07       		.byte	0x7
+ 144 0041 4B010000 		.4byte	.LASF3
+ 145 0045 02       		.uleb128 0x2
+ 146 0046 04       		.byte	0x4
+ 147 0047 05       		.byte	0x5
+ 148 0048 31010000 		.4byte	.LASF4
+ 149 004c 02       		.uleb128 0x2
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 5
+
+
+ 150 004d 04       		.byte	0x4
+ 151 004e 07       		.byte	0x7
+ 152 004f 7A000000 		.4byte	.LASF5
+ 153 0053 02       		.uleb128 0x2
+ 154 0054 08       		.byte	0x8
+ 155 0055 05       		.byte	0x5
+ 156 0056 00000000 		.4byte	.LASF6
+ 157 005a 02       		.uleb128 0x2
+ 158 005b 08       		.byte	0x8
+ 159 005c 07       		.byte	0x7
+ 160 005d 96000000 		.4byte	.LASF7
+ 161 0061 03       		.uleb128 0x3
+ 162 0062 04       		.byte	0x4
+ 163 0063 05       		.byte	0x5
+ 164 0064 696E7400 		.ascii	"int\000"
+ 165 0068 02       		.uleb128 0x2
+ 166 0069 04       		.byte	0x4
+ 167 006a 07       		.byte	0x7
+ 168 006b 0E000000 		.4byte	.LASF8
+ 169 006f 04       		.uleb128 0x4
+ 170 0070 74000000 		.4byte	.LASF21
+ 171 0074 02       		.byte	0x2
+ 172 0075 5B       		.byte	0x5b
+ 173 0076 30000000 		.4byte	0x30
+ 174 007a 02       		.uleb128 0x2
+ 175 007b 04       		.byte	0x4
+ 176 007c 04       		.byte	0x4
+ 177 007d 76010000 		.4byte	.LASF9
+ 178 0081 02       		.uleb128 0x2
+ 179 0082 08       		.byte	0x8
+ 180 0083 04       		.byte	0x4
+ 181 0084 3A010000 		.4byte	.LASF10
+ 182 0088 02       		.uleb128 0x2
+ 183 0089 01       		.byte	0x1
+ 184 008a 08       		.byte	0x8
+ 185 008b C4000000 		.4byte	.LASF11
+ 186 008f 02       		.uleb128 0x2
+ 187 0090 04       		.byte	0x4
+ 188 0091 07       		.byte	0x7
+ 189 0092 85010000 		.4byte	.LASF12
+ 190 0096 05       		.uleb128 0x5
+ 191 0097 01       		.byte	0x1
+ 192 0098 1B000000 		.4byte	.LASF22
+ 193 009c 01       		.byte	0x1
+ 194 009d 39       		.byte	0x39
+ 195 009e 61000000 		.4byte	0x61
+ 196 00a2 00000000 		.4byte	.LFB33
+ 197 00a6 82000000 		.4byte	.LFE33
+ 198 00aa 00000000 		.4byte	.LLST0
+ 199 00ae 01       		.byte	0x1
+ 200 00af 06       		.uleb128 0x6
+ 201 00b0 AD000000 		.4byte	.LASF13
+ 202 00b4 01       		.byte	0x1
+ 203 00b5 40       		.byte	0x40
+ 204 00b6 6F000000 		.4byte	0x6f
+ 205 00ba 02       		.byte	0x2
+ 206 00bb 91       		.byte	0x91
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 6
+
+
+ 207 00bc 77       		.sleb128 -9
+ 208 00bd 06       		.uleb128 0x6
+ 209 00be C9000000 		.4byte	.LASF14
+ 210 00c2 01       		.byte	0x1
+ 211 00c3 41       		.byte	0x41
+ 212 00c4 6F000000 		.4byte	0x6f
+ 213 00c8 02       		.byte	0x2
+ 214 00c9 91       		.byte	0x91
+ 215 00ca 76       		.sleb128 -10
+ 216 00cb 06       		.uleb128 0x6
+ 217 00cc 41010000 		.4byte	.LASF15
+ 218 00d0 01       		.byte	0x1
+ 219 00d1 42       		.byte	0x42
+ 220 00d2 6F000000 		.4byte	0x6f
+ 221 00d6 02       		.byte	0x2
+ 222 00d7 91       		.byte	0x91
+ 223 00d8 75       		.sleb128 -11
+ 224 00d9 06       		.uleb128 0x6
+ 225 00da 20000000 		.4byte	.LASF16
+ 226 00de 01       		.byte	0x1
+ 227 00df 43       		.byte	0x43
+ 228 00e0 6F000000 		.4byte	0x6f
+ 229 00e4 02       		.byte	0x2
+ 230 00e5 91       		.byte	0x91
+ 231 00e6 74       		.sleb128 -12
+ 232 00e7 06       		.uleb128 0x6
+ 233 00e8 6A010000 		.4byte	.LASF17
+ 234 00ec 01       		.byte	0x1
+ 235 00ed 44       		.byte	0x44
+ 236 00ee 6F000000 		.4byte	0x6f
+ 237 00f2 02       		.byte	0x2
+ 238 00f3 91       		.byte	0x91
+ 239 00f4 73       		.sleb128 -13
+ 240 00f5 00       		.byte	0
+ 241 00f6 00       		.byte	0
+ 242              		.section	.debug_abbrev,"",%progbits
+ 243              	.Ldebug_abbrev0:
+ 244 0000 01       		.uleb128 0x1
+ 245 0001 11       		.uleb128 0x11
+ 246 0002 01       		.byte	0x1
+ 247 0003 25       		.uleb128 0x25
+ 248 0004 0E       		.uleb128 0xe
+ 249 0005 13       		.uleb128 0x13
+ 250 0006 0B       		.uleb128 0xb
+ 251 0007 03       		.uleb128 0x3
+ 252 0008 0E       		.uleb128 0xe
+ 253 0009 1B       		.uleb128 0x1b
+ 254 000a 0E       		.uleb128 0xe
+ 255 000b 55       		.uleb128 0x55
+ 256 000c 06       		.uleb128 0x6
+ 257 000d 11       		.uleb128 0x11
+ 258 000e 01       		.uleb128 0x1
+ 259 000f 52       		.uleb128 0x52
+ 260 0010 01       		.uleb128 0x1
+ 261 0011 10       		.uleb128 0x10
+ 262 0012 06       		.uleb128 0x6
+ 263 0013 00       		.byte	0
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 7
+
+
+ 264 0014 00       		.byte	0
+ 265 0015 02       		.uleb128 0x2
+ 266 0016 24       		.uleb128 0x24
+ 267 0017 00       		.byte	0
+ 268 0018 0B       		.uleb128 0xb
+ 269 0019 0B       		.uleb128 0xb
+ 270 001a 3E       		.uleb128 0x3e
+ 271 001b 0B       		.uleb128 0xb
+ 272 001c 03       		.uleb128 0x3
+ 273 001d 0E       		.uleb128 0xe
+ 274 001e 00       		.byte	0
+ 275 001f 00       		.byte	0
+ 276 0020 03       		.uleb128 0x3
+ 277 0021 24       		.uleb128 0x24
+ 278 0022 00       		.byte	0
+ 279 0023 0B       		.uleb128 0xb
+ 280 0024 0B       		.uleb128 0xb
+ 281 0025 3E       		.uleb128 0x3e
+ 282 0026 0B       		.uleb128 0xb
+ 283 0027 03       		.uleb128 0x3
+ 284 0028 08       		.uleb128 0x8
+ 285 0029 00       		.byte	0
+ 286 002a 00       		.byte	0
+ 287 002b 04       		.uleb128 0x4
+ 288 002c 16       		.uleb128 0x16
+ 289 002d 00       		.byte	0
+ 290 002e 03       		.uleb128 0x3
+ 291 002f 0E       		.uleb128 0xe
+ 292 0030 3A       		.uleb128 0x3a
+ 293 0031 0B       		.uleb128 0xb
+ 294 0032 3B       		.uleb128 0x3b
+ 295 0033 0B       		.uleb128 0xb
+ 296 0034 49       		.uleb128 0x49
+ 297 0035 13       		.uleb128 0x13
+ 298 0036 00       		.byte	0
+ 299 0037 00       		.byte	0
+ 300 0038 05       		.uleb128 0x5
+ 301 0039 2E       		.uleb128 0x2e
+ 302 003a 01       		.byte	0x1
+ 303 003b 3F       		.uleb128 0x3f
+ 304 003c 0C       		.uleb128 0xc
+ 305 003d 03       		.uleb128 0x3
+ 306 003e 0E       		.uleb128 0xe
+ 307 003f 3A       		.uleb128 0x3a
+ 308 0040 0B       		.uleb128 0xb
+ 309 0041 3B       		.uleb128 0x3b
+ 310 0042 0B       		.uleb128 0xb
+ 311 0043 49       		.uleb128 0x49
+ 312 0044 13       		.uleb128 0x13
+ 313 0045 11       		.uleb128 0x11
+ 314 0046 01       		.uleb128 0x1
+ 315 0047 12       		.uleb128 0x12
+ 316 0048 01       		.uleb128 0x1
+ 317 0049 40       		.uleb128 0x40
+ 318 004a 06       		.uleb128 0x6
+ 319 004b 9642     		.uleb128 0x2116
+ 320 004d 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 8
+
+
+ 321 004e 00       		.byte	0
+ 322 004f 00       		.byte	0
+ 323 0050 06       		.uleb128 0x6
+ 324 0051 34       		.uleb128 0x34
+ 325 0052 00       		.byte	0
+ 326 0053 03       		.uleb128 0x3
+ 327 0054 0E       		.uleb128 0xe
+ 328 0055 3A       		.uleb128 0x3a
+ 329 0056 0B       		.uleb128 0xb
+ 330 0057 3B       		.uleb128 0x3b
+ 331 0058 0B       		.uleb128 0xb
+ 332 0059 49       		.uleb128 0x49
+ 333 005a 13       		.uleb128 0x13
+ 334 005b 02       		.uleb128 0x2
+ 335 005c 0A       		.uleb128 0xa
+ 336 005d 00       		.byte	0
+ 337 005e 00       		.byte	0
+ 338 005f 00       		.byte	0
+ 339              		.section	.debug_loc,"",%progbits
+ 340              	.Ldebug_loc0:
+ 341              	.LLST0:
+ 342 0000 00000000 		.4byte	.LFB33
+ 343 0004 02000000 		.4byte	.LCFI0
+ 344 0008 0200     		.2byte	0x2
+ 345 000a 7D       		.byte	0x7d
+ 346 000b 00       		.sleb128 0
+ 347 000c 02000000 		.4byte	.LCFI0
+ 348 0010 04000000 		.4byte	.LCFI1
+ 349 0014 0200     		.2byte	0x2
+ 350 0016 7D       		.byte	0x7d
+ 351 0017 08       		.sleb128 8
+ 352 0018 04000000 		.4byte	.LCFI1
+ 353 001c 06000000 		.4byte	.LCFI2
+ 354 0020 0200     		.2byte	0x2
+ 355 0022 7D       		.byte	0x7d
+ 356 0023 10       		.sleb128 16
+ 357 0024 06000000 		.4byte	.LCFI2
+ 358 0028 82000000 		.4byte	.LFE33
+ 359 002c 0200     		.2byte	0x2
+ 360 002e 77       		.byte	0x77
+ 361 002f 10       		.sleb128 16
+ 362 0030 00000000 		.4byte	0
+ 363 0034 00000000 		.4byte	0
+ 364              		.section	.debug_aranges,"",%progbits
+ 365 0000 1C000000 		.4byte	0x1c
+ 366 0004 0200     		.2byte	0x2
+ 367 0006 00000000 		.4byte	.Ldebug_info0
+ 368 000a 04       		.byte	0x4
+ 369 000b 00       		.byte	0
+ 370 000c 0000     		.2byte	0
+ 371 000e 0000     		.2byte	0
+ 372 0010 00000000 		.4byte	.LFB33
+ 373 0014 82000000 		.4byte	.LFE33-.LFB33
+ 374 0018 00000000 		.4byte	0
+ 375 001c 00000000 		.4byte	0
+ 376              		.section	.debug_ranges,"",%progbits
+ 377              	.Ldebug_ranges0:
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 9
+
+
+ 378 0000 00000000 		.4byte	.LFB33
+ 379 0004 82000000 		.4byte	.LFE33
+ 380 0008 00000000 		.4byte	0
+ 381 000c 00000000 		.4byte	0
+ 382              		.section	.debug_line,"",%progbits
+ 383              	.Ldebug_line0:
+ 384 0000 80000000 		.section	.debug_str,"MS",%progbits,1
+ 384      02004500 
+ 384      00000201 
+ 384      FB0E0D00 
+ 384      01010101 
+ 385              	.LASF6:
+ 386 0000 6C6F6E67 		.ascii	"long long int\000"
+ 386      206C6F6E 
+ 386      6720696E 
+ 386      7400
+ 387              	.LASF8:
+ 388 000e 756E7369 		.ascii	"unsigned int\000"
+ 388      676E6564 
+ 388      20696E74 
+ 388      00
+ 389              	.LASF22:
+ 390 001b 6D61696E 		.ascii	"main\000"
+ 390      00
+ 391              	.LASF16:
+ 392 0020 57686974 		.ascii	"White_gain\000"
+ 392      655F6761 
+ 392      696E00
+ 393              	.LASF18:
+ 394 002b 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 394      4320342E 
+ 394      372E3320 
+ 394      32303133 
+ 394      30333132 
+ 395 005e 616E6368 		.ascii	"anch revision 196615]\000"
+ 395      20726576 
+ 395      6973696F 
+ 395      6E203139 
+ 395      36363135 
+ 396              	.LASF21:
+ 397 0074 75696E74 		.ascii	"uint8\000"
+ 397      3800
+ 398              	.LASF5:
+ 399 007a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 399      20756E73 
+ 399      69676E65 
+ 399      6420696E 
+ 399      7400
+ 400              	.LASF2:
+ 401 008c 73686F72 		.ascii	"short int\000"
+ 401      7420696E 
+ 401      7400
+ 402              	.LASF7:
+ 403 0096 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 403      206C6F6E 
+ 403      6720756E 
+ 403      7369676E 
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 10
+
+
+ 403      65642069 
+ 404              	.LASF13:
+ 405 00ad 5265645F 		.ascii	"Red_gain\000"
+ 405      6761696E 
+ 405      00
+ 406              	.LASF1:
+ 407 00b6 756E7369 		.ascii	"unsigned char\000"
+ 407      676E6564 
+ 407      20636861 
+ 407      7200
+ 408              	.LASF11:
+ 409 00c4 63686172 		.ascii	"char\000"
+ 409      00
+ 410              	.LASF14:
+ 411 00c9 47726565 		.ascii	"Green_gain\000"
+ 411      6E5F6761 
+ 411      696E00
+ 412              	.LASF20:
+ 413 00d4 433A5C55 		.ascii	"C:\\Users\\Terrance\\Documents\\PSoC Creator\\SCB_B"
+ 413      73657273 
+ 413      5C546572 
+ 413      72616E63 
+ 413      655C446F 
+ 414 0102 6F6F746C 		.ascii	"ootloader_42xx\\Bootloadable Blinking LED.cydsn\000"
+ 414      6F616465 
+ 414      725F3432 
+ 414      78785C42 
+ 414      6F6F746C 
+ 415              	.LASF4:
+ 416 0131 6C6F6E67 		.ascii	"long int\000"
+ 416      20696E74 
+ 416      00
+ 417              	.LASF10:
+ 418 013a 646F7562 		.ascii	"double\000"
+ 418      6C6500
+ 419              	.LASF15:
+ 420 0141 426C7565 		.ascii	"Blue_gain\000"
+ 420      5F676169 
+ 420      6E00
+ 421              	.LASF3:
+ 422 014b 73686F72 		.ascii	"short unsigned int\000"
+ 422      7420756E 
+ 422      7369676E 
+ 422      65642069 
+ 422      6E7400
+ 423              	.LASF0:
+ 424 015e 7369676E 		.ascii	"signed char\000"
+ 424      65642063 
+ 424      68617200 
+ 425              	.LASF17:
+ 426 016a 59656C6C 		.ascii	"Yellow_gain\000"
+ 426      6F775F67 
+ 426      61696E00 
+ 427              	.LASF9:
+ 428 0176 666C6F61 		.ascii	"float\000"
+ 428      7400
+ 429              	.LASF19:
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\ccQRCimf.s 			page 11
+
+
+ 430 017c 2E5C6D61 		.ascii	".\\main.c\000"
+ 430      696E2E63 
+ 430      00
+ 431              	.LASF12:
+ 432 0185 73697A65 		.ascii	"sizetype\000"
+ 432      74797065 
+ 432      00
+ 433              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

@@ -1,0 +1,3212 @@
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"PWM_BlueWhite.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	PWM_BlueWhite_initVar
+  18              		.bss
+  19              		.type	PWM_BlueWhite_initVar, %object
+  20              		.size	PWM_BlueWhite_initVar, 1
+  21              	PWM_BlueWhite_initVar:
+  22 0000 00       		.space	1
+  23              		.section	.text.PWM_BlueWhite_Start,"ax",%progbits
+  24              		.align	2
+  25              		.global	PWM_BlueWhite_Start
+  26              		.code	16
+  27              		.thumb_func
+  28              		.type	PWM_BlueWhite_Start, %function
+  29              	PWM_BlueWhite_Start:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC4\\PWM_BlueWhite.c"
+   1:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * File Name: PWM_BlueWhite.c  
+   3:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Version 3.0
+   4:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+   5:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Description:
+   6:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  The PWM User Module consist of an 8 or 16-bit counter with two 8 or 16-bit
+   7:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  comparitors. Each instance of this user module is capable of generating
+   8:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  two PWM outputs with the same period. The pulse width is selectable between
+   9:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  1 and 255/65535. The period is selectable between 2 and 255/65536 clocks. 
+  10:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  The compare value output may be configured to be active when the present 
+  11:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  counter is less than or less than/equal to the compare value.
+  12:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  A terminal count output is also provided. It generates a pulse one clock
+  13:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  width wide when the counter is equal to zero.
+  14:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  15:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Note:
+  16:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  17:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *******************************************************************************
+  18:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  19:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  20:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  21:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * the software package with which this file was provided.
+  22:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** ********************************************************************************/
+  23:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+  24:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #include "cytypes.h"
+  25:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #include "PWM_BlueWhite.h"
+  26:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 2
+
+
+  27:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** uint8 PWM_BlueWhite_initVar = 0u;
+  28:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+  29:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+  30:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** /*******************************************************************************
+  31:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Function Name: PWM_BlueWhite_Start
+  32:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** ********************************************************************************
+  33:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  34:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Summary:
+  35:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  The start function initializes the pwm with the default values, the 
+  36:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  enables the counter to begin counting.  It does not enable interrupts,
+  37:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  the EnableInt command should be called if interrupt generation is required.
+  38:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  39:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Parameters:  
+  40:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None  
+  41:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  42:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Return: 
+  43:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None
+  44:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  45:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Global variables:
+  46:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  PWM_BlueWhite_initVar: Is modified when this function is called for the 
+  47:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *   first time. Is used to ensure that initialization happens only once.
+  48:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  49:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *******************************************************************************/
+  50:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** void PWM_BlueWhite_Start(void) 
+  51:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** {
+  32              		.loc 1 51 0
+  33              		.cfi_startproc
+  34 0000 80B5     		push	{r7, lr}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 7, -8
+  38              		.cfi_offset 14, -4
+  39 0002 00AF     		add	r7, sp, #0
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_register 7
+  52:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /* If not Initialized then initialize all required hardware and software */
+  53:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     if(PWM_BlueWhite_initVar == 0u)
+  42              		.loc 1 53 0
+  43 0004 064B     		ldr	r3, .L3
+  44 0006 1B78     		ldrb	r3, [r3]
+  45 0008 002B     		cmp	r3, #0
+  46 000a 04D1     		bne	.L2
+  54:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+  55:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_Init();
+  47              		.loc 1 55 0
+  48 000c FFF7FEFF 		bl	PWM_BlueWhite_Init
+  56:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_initVar = 1u;
+  49              		.loc 1 56 0
+  50 0010 034B     		ldr	r3, .L3
+  51 0012 0122     		mov	r2, #1
+  52 0014 1A70     		strb	r2, [r3]
+  53              	.L2:
+  57:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+  58:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     PWM_BlueWhite_Enable();
+  54              		.loc 1 58 0
+  55 0016 FFF7FEFF 		bl	PWM_BlueWhite_Enable
+  59:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 3
+
+
+  60:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** }
+  56              		.loc 1 60 0
+  57 001a BD46     		mov	sp, r7
+  58              		@ sp needed for prologue
+  59 001c 80BD     		pop	{r7, pc}
+  60              	.L4:
+  61 001e C046     		.align	2
+  62              	.L3:
+  63 0020 00000000 		.word	PWM_BlueWhite_initVar
+  64              		.cfi_endproc
+  65              	.LFE0:
+  66              		.size	PWM_BlueWhite_Start, .-PWM_BlueWhite_Start
+  67              		.section	.text.PWM_BlueWhite_Init,"ax",%progbits
+  68              		.align	2
+  69              		.global	PWM_BlueWhite_Init
+  70              		.code	16
+  71              		.thumb_func
+  72              		.type	PWM_BlueWhite_Init, %function
+  73              	PWM_BlueWhite_Init:
+  74              	.LFB1:
+  61:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+  62:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+  63:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** /*******************************************************************************
+  64:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Function Name: PWM_BlueWhite_Init
+  65:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** ********************************************************************************
+  66:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  67:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Summary:
+  68:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  Initialize component's parameters to the parameters set by user in the 
+  69:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  customizer of the component placed onto schematic. Usually called in 
+  70:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  PWM_BlueWhite_Start().
+  71:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  72:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Parameters:  
+  73:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None
+  74:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  75:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Return: 
+  76:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None
+  77:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+  78:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *******************************************************************************/
+  79:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** void PWM_BlueWhite_Init(void) 
+  80:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** {
+  75              		.loc 1 80 0
+  76              		.cfi_startproc
+  77 0000 90B5     		push	{r4, r7, lr}
+  78              	.LCFI2:
+  79              		.cfi_def_cfa_offset 12
+  80              		.cfi_offset 4, -12
+  81              		.cfi_offset 7, -8
+  82              		.cfi_offset 14, -4
+  83 0002 83B0     		sub	sp, sp, #12
+  84              	.LCFI3:
+  85              		.cfi_def_cfa_offset 24
+  86 0004 00AF     		add	r7, sp, #0
+  87              	.LCFI4:
+  88              		.cfi_def_cfa_register 7
+  81:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if (PWM_BlueWhite_UsingFixedFunction || PWM_BlueWhite_UseControl)
+  82:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         uint8 ctrl;
+  83:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UsingFixedFunction || PWM_BlueWhite_UseControl) */
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 4
+
+
+  84:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     
+  85:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if(!PWM_BlueWhite_UsingFixedFunction) 
+  86:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if(PWM_BlueWhite_UseStatus)
+  87:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Interrupt State Backup for Critical Region*/
+  88:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             uint8 PWM_BlueWhite_interruptState;
+  89:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_UseStatus) */
+  90:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (!PWM_BlueWhite_UsingFixedFunction) */
+  91:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     
+  92:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if (PWM_BlueWhite_UsingFixedFunction)
+  93:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* You are allowed to write the compare value (FF only) */
+  94:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_CONTROL |= PWM_BlueWhite_CFG0_MODE;
+  95:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if (PWM_BlueWhite_DeadBand2_4)
+  96:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_CONTROL |= PWM_BlueWhite_CFG0_DB;
+  97:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_DeadBand2_4) */
+  98:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 
+  99:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         ctrl = PWM_BlueWhite_CONTROL3 & ((uint8 )(~PWM_BlueWhite_CTRL_CMPMODE1_MASK));
+ 100:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_CONTROL3 = ctrl | PWM_BlueWhite_DEFAULT_COMPARE1_MODE;
+ 101:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 102:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****          /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+ 103:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_RT1 &= ((uint8)(~PWM_BlueWhite_RT1_MASK));
+ 104:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_RT1 |= PWM_BlueWhite_SYNC;     
+ 105:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 
+ 106:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /*Enable DSI Sync all all inputs of the PWM*/
+ 107:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_RT1 &= ((uint8)(~PWM_BlueWhite_SYNCDSI_MASK));
+ 108:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_RT1 |= PWM_BlueWhite_SYNCDSI_EN;
+ 109:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****        
+ 110:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #elif (PWM_BlueWhite_UseControl)
+ 111:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* Set the default compare mode defined in the parameter */
+ 112:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         ctrl = PWM_BlueWhite_CONTROL & ((uint8)(~PWM_BlueWhite_CTRL_CMPMODE2_MASK)) & ((uint8)(~PWM
+  89              		.loc 1 112 0
+  90 0006 1E4B     		ldr	r3, .L6
+  91 0008 1B78     		ldrb	r3, [r3]
+  92 000a DAB2     		uxtb	r2, r3
+  93 000c FB1D     		add	r3, r7, #7
+  94 000e 3F21     		mov	r1, #63
+  95 0010 8A43     		bic	r2, r1
+  96 0012 1A70     		strb	r2, [r3]
+ 113:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_CONTROL = ctrl | PWM_BlueWhite_DEFAULT_COMPARE2_MODE | 
+  97              		.loc 1 113 0
+  98 0014 1A4B     		ldr	r3, .L6
+  99 0016 FA1D     		add	r2, r7, #7
+ 100 0018 1278     		ldrb	r2, [r2]
+ 101 001a 0921     		mov	r1, #9
+ 102 001c 0A43     		orr	r2, r1
+ 103 001e D2B2     		uxtb	r2, r2
+ 104 0020 1A70     		strb	r2, [r3]
+ 114:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                                    PWM_BlueWhite_DEFAULT_COMPARE1_MODE;
+ 115:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 116:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 117:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if (!PWM_BlueWhite_UsingFixedFunction)
+ 118:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if (PWM_BlueWhite_Resolution == 8)
+ 119:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Set FIFO 0 to 1 byte register for period*/
+ 120:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_AUX_CONTROLDP0 |= (PWM_BlueWhite_AUX_CTRL_FIFO0_CLR);
+ 105              		.loc 1 120 0
+ 106 0022 184B     		ldr	r3, .L6+4
+ 107 0024 174A     		ldr	r2, .L6+4
+ 108 0026 1278     		ldrb	r2, [r2]
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 5
+
+
+ 109 0028 D2B2     		uxtb	r2, r2
+ 110 002a 0121     		mov	r1, #1
+ 111 002c 0A43     		orr	r2, r1
+ 112 002e D2B2     		uxtb	r2, r2
+ 113 0030 1A70     		strb	r2, [r3]
+ 121:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #else /* (PWM_BlueWhite_Resolution == 16)*/
+ 122:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Set FIFO 0 to 1 byte register for period */
+ 123:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_AUX_CONTROLDP0 |= (PWM_BlueWhite_AUX_CTRL_FIFO0_CLR);
+ 124:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_AUX_CONTROLDP1 |= (PWM_BlueWhite_AUX_CTRL_FIFO0_CLR);
+ 125:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_Resolution == 8) */
+ 126:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 127:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_WriteCounter(PWM_BlueWhite_INIT_PERIOD_VALUE);
+ 114              		.loc 1 127 0
+ 115 0032 FF20     		mov	r0, #255
+ 116 0034 FFF7FEFF 		bl	PWM_BlueWhite_WriteCounter
+ 128:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (!PWM_BlueWhite_UsingFixedFunction) */
+ 129:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 130:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     PWM_BlueWhite_WritePeriod(PWM_BlueWhite_INIT_PERIOD_VALUE);
+ 117              		.loc 1 130 0
+ 118 0038 FF20     		mov	r0, #255
+ 119 003a FFF7FEFF 		bl	PWM_BlueWhite_WritePeriod
+ 131:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 132:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if (PWM_BlueWhite_UseOneCompareMode)
+ 133:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_WriteCompare(PWM_BlueWhite_INIT_COMPARE_VALUE1);
+ 134:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #else
+ 135:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_WriteCompare1(PWM_BlueWhite_INIT_COMPARE_VALUE1);
+ 120              		.loc 1 135 0
+ 121 003e 7F20     		mov	r0, #127
+ 122 0040 FFF7FEFF 		bl	PWM_BlueWhite_WriteCompare1
+ 136:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_WriteCompare2(PWM_BlueWhite_INIT_COMPARE_VALUE2);
+ 123              		.loc 1 136 0
+ 124 0044 3F20     		mov	r0, #63
+ 125 0046 FFF7FEFF 		bl	PWM_BlueWhite_WriteCompare2
+ 137:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_UseOneCompareMode) */
+ 138:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 139:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if (PWM_BlueWhite_KillModeMinTime)
+ 140:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_WriteKillTime(PWM_BlueWhite_MinimumKillTime);
+ 141:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_KillModeMinTime) */
+ 142:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 143:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if (PWM_BlueWhite_DeadBandUsed)
+ 144:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_WriteDeadTime(PWM_BlueWhite_INIT_DEAD_TIME);
+ 145:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_DeadBandUsed) */
+ 146:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 147:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if (PWM_BlueWhite_UseStatus || PWM_BlueWhite_UsingFixedFunction)
+ 148:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_SetInterruptMode(PWM_BlueWhite_INIT_INTERRUPTS_MODE);
+ 126              		.loc 1 148 0
+ 127 004a 0020     		mov	r0, #0
+ 128 004c FFF7FEFF 		bl	PWM_BlueWhite_SetInterruptMode
+ 149:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UseStatus || PWM_BlueWhite_UsingFixedFunction) */
+ 150:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 151:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if (PWM_BlueWhite_UsingFixedFunction)
+ 152:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* Globally Enable the Fixed Function Block chosen */
+ 153:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_GLOBAL_ENABLE |= PWM_BlueWhite_BLOCK_EN_MASK;
+ 154:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* Set the Interrupt source to come from the status register */
+ 155:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_CONTROL2 |= PWM_BlueWhite_CTRL2_IRQ_SEL;
+ 156:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #else
+ 157:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if(PWM_BlueWhite_UseStatus)
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 6
+
+
+ 158:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             
+ 159:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region cri
+ 160:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Enter Critical Region*/
+ 161:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_interruptState = CyEnterCriticalSection();
+ 129              		.loc 1 161 0
+ 130 0050 BC1D     		add	r4, r7, #6
+ 131 0052 FFF7FEFF 		bl	CyEnterCriticalSection
+ 132 0056 031C     		mov	r3, r0
+ 133 0058 2370     		strb	r3, [r4]
+ 162:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 163:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_STATUS_AUX_CTRL |= PWM_BlueWhite_STATUS_ACTL_INT_EN_MASK;
+ 134              		.loc 1 163 0
+ 135 005a 0A4B     		ldr	r3, .L6+4
+ 136 005c 094A     		ldr	r2, .L6+4
+ 137 005e 1278     		ldrb	r2, [r2]
+ 138 0060 D2B2     		uxtb	r2, r2
+ 139 0062 1021     		mov	r1, #16
+ 140 0064 0A43     		orr	r2, r1
+ 141 0066 D2B2     		uxtb	r2, r2
+ 142 0068 1A70     		strb	r2, [r3]
+ 164:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             
+ 165:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****              /* Exit Critical Region*/
+ 166:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             CyExitCriticalSection(PWM_BlueWhite_interruptState);
+ 143              		.loc 1 166 0
+ 144 006a BB1D     		add	r3, r7, #6
+ 145 006c 1B78     		ldrb	r3, [r3]
+ 146 006e 181C     		mov	r0, r3
+ 147 0070 FFF7FEFF 		bl	CyExitCriticalSection
+ 167:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             
+ 168:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Clear the FIFO to enable the PWM_BlueWhite_STATUS_FIFOFULL
+ 169:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                    bit to be set on FIFO full. */
+ 170:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_ClearFIFO();
+ 148              		.loc 1 170 0
+ 149 0074 FFF7FEFF 		bl	PWM_BlueWhite_ClearFIFO
+ 171:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_UseStatus) */
+ 172:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 173:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** }
+ 150              		.loc 1 173 0
+ 151 0078 BD46     		mov	sp, r7
+ 152 007a 03B0     		add	sp, sp, #12
+ 153              		@ sp needed for prologue
+ 154 007c 90BD     		pop	{r4, r7, pc}
+ 155              	.L7:
+ 156 007e C046     		.align	2
+ 157              	.L6:
+ 158 0080 70000F40 		.word	1074724976
+ 159 0084 90000F40 		.word	1074725008
+ 160              		.cfi_endproc
+ 161              	.LFE1:
+ 162              		.size	PWM_BlueWhite_Init, .-PWM_BlueWhite_Init
+ 163              		.section	.text.PWM_BlueWhite_Enable,"ax",%progbits
+ 164              		.align	2
+ 165              		.global	PWM_BlueWhite_Enable
+ 166              		.code	16
+ 167              		.thumb_func
+ 168              		.type	PWM_BlueWhite_Enable, %function
+ 169              	PWM_BlueWhite_Enable:
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 7
+
+
+ 170              	.LFB2:
+ 174:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 175:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 176:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** /*******************************************************************************
+ 177:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Function Name: PWM_BlueWhite_Enable
+ 178:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** ********************************************************************************
+ 179:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 180:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Summary: 
+ 181:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  Enables the PWM block operation
+ 182:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 183:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Parameters:  
+ 184:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None
+ 185:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 186:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Return: 
+ 187:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None
+ 188:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 189:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Side Effects: 
+ 190:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  This works only if software enable mode is chosen
+ 191:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 192:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *******************************************************************************/
+ 193:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** void PWM_BlueWhite_Enable(void) 
+ 194:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** {
+ 171              		.loc 1 194 0
+ 172              		.cfi_startproc
+ 173 0000 80B5     		push	{r7, lr}
+ 174              	.LCFI5:
+ 175              		.cfi_def_cfa_offset 8
+ 176              		.cfi_offset 7, -8
+ 177              		.cfi_offset 14, -4
+ 178 0002 00AF     		add	r7, sp, #0
+ 179              	.LCFI6:
+ 180              		.cfi_def_cfa_register 7
+ 195:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 196:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if (PWM_BlueWhite_UsingFixedFunction)
+ 197:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_GLOBAL_ENABLE |= PWM_BlueWhite_BLOCK_EN_MASK;
+ 198:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_GLOBAL_STBY_ENABLE |= PWM_BlueWhite_BLOCK_STBY_EN_MASK;
+ 199:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 200:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     
+ 201:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /* Enable the PWM from the control register  */
+ 202:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if (PWM_BlueWhite_UseControl || PWM_BlueWhite_UsingFixedFunction)
+ 203:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_CONTROL |= PWM_BlueWhite_CTRL_ENABLE;
+ 181              		.loc 1 203 0
+ 182 0004 054B     		ldr	r3, .L9
+ 183 0006 054A     		ldr	r2, .L9
+ 184 0008 1278     		ldrb	r2, [r2]
+ 185 000a D2B2     		uxtb	r2, r2
+ 186 000c 8021     		mov	r1, #128
+ 187 000e 4942     		neg	r1, r1
+ 188 0010 0A43     		orr	r2, r1
+ 189 0012 D2B2     		uxtb	r2, r2
+ 190 0014 1A70     		strb	r2, [r3]
+ 204:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UseControl || PWM_BlueWhite_UsingFixedFunction) */
+ 205:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** }
+ 191              		.loc 1 205 0
+ 192 0016 BD46     		mov	sp, r7
+ 193              		@ sp needed for prologue
+ 194 0018 80BD     		pop	{r7, pc}
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 8
+
+
+ 195              	.L10:
+ 196 001a C046     		.align	2
+ 197              	.L9:
+ 198 001c 70000F40 		.word	1074724976
+ 199              		.cfi_endproc
+ 200              	.LFE2:
+ 201              		.size	PWM_BlueWhite_Enable, .-PWM_BlueWhite_Enable
+ 202              		.section	.text.PWM_BlueWhite_Stop,"ax",%progbits
+ 203              		.align	2
+ 204              		.global	PWM_BlueWhite_Stop
+ 205              		.code	16
+ 206              		.thumb_func
+ 207              		.type	PWM_BlueWhite_Stop, %function
+ 208              	PWM_BlueWhite_Stop:
+ 209              	.LFB3:
+ 206:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 207:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 208:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** /*******************************************************************************
+ 209:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Function Name: PWM_BlueWhite_Stop
+ 210:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** ********************************************************************************
+ 211:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 212:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Summary:
+ 213:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  The stop function halts the PWM, but does not change any modes or disable
+ 214:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  interrupts.
+ 215:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 216:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Parameters:  
+ 217:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None  
+ 218:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 219:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Return: 
+ 220:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None
+ 221:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 222:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Side Effects:
+ 223:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  If the Enable mode is set to Hardware only then this function
+ 224:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  has no effect on the operation of the PWM
+ 225:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 226:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *******************************************************************************/
+ 227:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** void PWM_BlueWhite_Stop(void) 
+ 228:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** {
+ 210              		.loc 1 228 0
+ 211              		.cfi_startproc
+ 212 0000 80B5     		push	{r7, lr}
+ 213              	.LCFI7:
+ 214              		.cfi_def_cfa_offset 8
+ 215              		.cfi_offset 7, -8
+ 216              		.cfi_offset 14, -4
+ 217 0002 00AF     		add	r7, sp, #0
+ 218              	.LCFI8:
+ 219              		.cfi_def_cfa_register 7
+ 229:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if (PWM_BlueWhite_UseControl || PWM_BlueWhite_UsingFixedFunction)
+ 230:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_CONTROL &= ((uint8)(~PWM_BlueWhite_CTRL_ENABLE));
+ 220              		.loc 1 230 0
+ 221 0004 044B     		ldr	r3, .L12
+ 222 0006 044A     		ldr	r2, .L12
+ 223 0008 1278     		ldrb	r2, [r2]
+ 224 000a D1B2     		uxtb	r1, r2
+ 225 000c 7F22     		mov	r2, #127
+ 226 000e 0A40     		and	r2, r1
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 9
+
+
+ 227 0010 D2B2     		uxtb	r2, r2
+ 228 0012 1A70     		strb	r2, [r3]
+ 231:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UseControl || PWM_BlueWhite_UsingFixedFunction) */
+ 232:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     
+ 233:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /* Globally disable the Fixed Function Block chosen */
+ 234:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if (PWM_BlueWhite_UsingFixedFunction)
+ 235:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_GLOBAL_ENABLE &= ((uint8)(~PWM_BlueWhite_BLOCK_EN_MASK));
+ 236:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         PWM_BlueWhite_GLOBAL_STBY_ENABLE &= ((uint8)(~PWM_BlueWhite_BLOCK_STBY_EN_MASK));
+ 237:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 238:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** }
+ 229              		.loc 1 238 0
+ 230 0014 BD46     		mov	sp, r7
+ 231              		@ sp needed for prologue
+ 232 0016 80BD     		pop	{r7, pc}
+ 233              	.L13:
+ 234              		.align	2
+ 235              	.L12:
+ 236 0018 70000F40 		.word	1074724976
+ 237              		.cfi_endproc
+ 238              	.LFE3:
+ 239              		.size	PWM_BlueWhite_Stop, .-PWM_BlueWhite_Stop
+ 240              		.section	.text.PWM_BlueWhite_WriteCounter,"ax",%progbits
+ 241              		.align	2
+ 242              		.global	PWM_BlueWhite_WriteCounter
+ 243              		.code	16
+ 244              		.thumb_func
+ 245              		.type	PWM_BlueWhite_WriteCounter, %function
+ 246              	PWM_BlueWhite_WriteCounter:
+ 247              	.LFB4:
+ 239:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 240:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 241:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #if (PWM_BlueWhite_UseOneCompareMode)
+ 242:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	#if (PWM_BlueWhite_CompareMode1SW)
+ 243:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 244:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 245:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		/*******************************************************************************
+ 246:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* Function Name: PWM_BlueWhite_SetCompareMode
+ 247:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		********************************************************************************
+ 248:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* 
+ 249:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* Summary:
+ 250:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*  This function writes the Compare Mode for the pwm output when in Dither mode,
+ 251:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*  Center Align Mode or One Output Mode.
+ 252:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*
+ 253:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* Parameters:
+ 254:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 255:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*                defined in the H file as input arguments.
+ 256:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*
+ 257:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* Return:
+ 258:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*  None
+ 259:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*
+ 260:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*******************************************************************************/
+ 261:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		void PWM_BlueWhite_SetCompareMode(uint8 comparemode) 
+ 262:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		{
+ 263:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		    #if(PWM_BlueWhite_UsingFixedFunction)
+ 264:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             
+ 265:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 #if(0 != PWM_BlueWhite_CTRL_CMPMODE1_SHIFT)
+ 266:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                     uint8 comparemodemasked = ((uint8)((uint8)comparemode << PWM_BlueWhite_CTRL_CMP
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 10
+
+
+ 267:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 #else
+ 268:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                     uint8 comparemodemasked = comparemode;
+ 269:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 #endif /* (0 != PWM_BlueWhite_CTRL_CMPMODE1_SHIFT) */
+ 270:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             
+ 271:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	            PWM_BlueWhite_CONTROL3 &= ((uint8)(~PWM_BlueWhite_CTRL_CMPMODE1_MASK)); /*Clear Existi
+ 272:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	            PWM_BlueWhite_CONTROL3 |= comparemodemasked;     
+ 273:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		                
+ 274:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		    #elif (PWM_BlueWhite_UseControl)
+ 275:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		        
+ 276:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 #if(0 != PWM_BlueWhite_CTRL_CMPMODE1_SHIFT)
+ 277:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                     uint8 comparemode1masked = ((uint8)((uint8)comparemode << PWM_BlueWhite_CTRL_CM
+ 278:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     		                                    PWM_BlueWhite_CTRL_CMPMODE1_MASK;
+ 279:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 #else
+ 280:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                     uint8 comparemode1masked = comparemode & PWM_BlueWhite_CTRL_CMPMODE1_MASK;     
+ 281:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 #endif /* (0 != PWM_BlueWhite_CTRL_CMPMODE1_SHIFT) */
+ 282:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 
+ 283:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 #if(0 != PWM_BlueWhite_CTRL_CMPMODE2_SHIFT)                            
+ 284:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     		        uint8 comparemode2masked = ((uint8)((uint8)comparemode << PWM_BlueWhite_CTRL_CMPMODE2
+ 285:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     		                                   PWM_BlueWhite_CTRL_CMPMODE2_MASK;
+ 286:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 #else
+ 287:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     		        uint8 comparemode2masked = comparemode & PWM_BlueWhite_CTRL_CMPMODE2_MASK;           
+ 288:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 #endif /* (0 != PWM_BlueWhite_CTRL_CMPMODE2_SHIFT) */
+ 289:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 
+ 290:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		        /*Clear existing mode */
+ 291:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		        PWM_BlueWhite_CONTROL &= ((uint8)(~(PWM_BlueWhite_CTRL_CMPMODE1_MASK | PWM_BlueWhite_CTRL
+ 292:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		        PWM_BlueWhite_CONTROL |= (comparemode1masked | comparemode2masked);
+ 293:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		        
+ 294:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		    #else
+ 295:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		        uint8 temp = comparemode;
+ 296:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		    #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 297:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		}
+ 298:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	#endif /* PWM_BlueWhite_CompareMode1SW */
+ 299:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 300:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #else /* UseOneCompareMode */
+ 301:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 302:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	#if (PWM_BlueWhite_CompareMode1SW)
+ 303:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 304:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 305:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		/*******************************************************************************
+ 306:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* Function Name: PWM_BlueWhite_SetCompareMode1
+ 307:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		********************************************************************************
+ 308:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* 
+ 309:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* Summary:
+ 310:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*  This function writes the Compare Mode for the pwm or pwm1 output
+ 311:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*
+ 312:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* Parameters:  
+ 313:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 314:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*                defined in the H file as input arguments.
+ 315:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*
+ 316:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		* Return: 
+ 317:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*  None
+ 318:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*
+ 319:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		*******************************************************************************/
+ 320:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		void PWM_BlueWhite_SetCompareMode1(uint8 comparemode) 
+ 321:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		{
+ 322:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		    #if(0 != PWM_BlueWhite_CTRL_CMPMODE1_SHIFT)
+ 323:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 uint8 comparemodemasked = ((uint8)((uint8)comparemode << PWM_BlueWhite_CTRL_CMPMODE
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 11
+
+
+ 324:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     		                               PWM_BlueWhite_CTRL_CMPMODE1_MASK;
+ 325:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		    #else
+ 326:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 uint8 comparemodemasked = comparemode & PWM_BlueWhite_CTRL_CMPMODE1_MASK;          
+ 327:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             #endif /* (0 != PWM_BlueWhite_CTRL_CMPMODE1_SHIFT) */
+ 328:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                    
+ 329:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		    #if (PWM_BlueWhite_UseControl)
+ 330:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		        PWM_BlueWhite_CONTROL &= ((uint8)(~PWM_BlueWhite_CTRL_CMPMODE1_MASK)); /*Clear existing m
+ 331:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		        PWM_BlueWhite_CONTROL |= comparemodemasked;
+ 332:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		    #endif /* (PWM_BlueWhite_UseControl) */
+ 333:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		}
+ 334:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	#endif /* PWM_BlueWhite_CompareMode1SW */
+ 335:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 336:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #if (PWM_BlueWhite_CompareMode2SW)
+ 337:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 338:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 339:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 340:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_SetCompareMode2
+ 341:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 342:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 343:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 344:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This function writes the Compare Mode for the pwm or pwm2 output
+ 345:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 346:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 347:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 348:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *                defined in the H file as input arguments.
+ 349:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 350:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 351:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 352:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 353:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 354:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     void PWM_BlueWhite_SetCompareMode2(uint8 comparemode) 
+ 355:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 356:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 357:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if(0 != PWM_BlueWhite_CTRL_CMPMODE2_SHIFT)
+ 358:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             uint8 comparemodemasked = ((uint8)((uint8)comparemode << PWM_BlueWhite_CTRL_CMPMODE2_SH
+ 359:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                                                  PWM_BlueWhite_CTRL_CMPMODE2_MASK;
+ 360:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #else
+ 361:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             uint8 comparemodemasked = comparemode & PWM_BlueWhite_CTRL_CMPMODE2_MASK;            
+ 362:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (0 != PWM_BlueWhite_CTRL_CMPMODE2_SHIFT) */
+ 363:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 364:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if (PWM_BlueWhite_UseControl)
+ 365:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_CONTROL &= ((uint8)(~PWM_BlueWhite_CTRL_CMPMODE2_MASK)); /*Clear existing
+ 366:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_CONTROL |= comparemodemasked;
+ 367:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_UseControl) */
+ 368:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 369:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /*PWM_BlueWhite_CompareMode2SW */
+ 370:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 371:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #endif /* UseOneCompareMode */
+ 372:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 373:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 374:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #if (!PWM_BlueWhite_UsingFixedFunction)
+ 375:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 376:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 377:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 378:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_WriteCounter
+ 379:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 380:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 12
+
+
+ 381:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 382:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Writes a new counter value directly to the counter register. This will be 
+ 383:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  implemented for that currently running period and only that period. This API 
+ 384:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  is valid only for UDB implementation and not available for fixed function 
+ 385:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  PWM implementation.    
+ 386:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 387:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 388:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  counter:  The period new period counter value.
+ 389:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 390:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 391:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 392:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 393:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Side Effects: 
+ 394:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  The PWM Period will be reloaded when a counter value will be a zero
+ 395:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 396:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 397:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     void PWM_BlueWhite_WriteCounter(uint8 counter) \
+ 398:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                                        
+ 399:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 248              		.loc 1 399 0
+ 249              		.cfi_startproc
+ 250 0000 80B5     		push	{r7, lr}
+ 251              	.LCFI9:
+ 252              		.cfi_def_cfa_offset 8
+ 253              		.cfi_offset 7, -8
+ 254              		.cfi_offset 14, -4
+ 255 0002 82B0     		sub	sp, sp, #8
+ 256              	.LCFI10:
+ 257              		.cfi_def_cfa_offset 16
+ 258 0004 00AF     		add	r7, sp, #0
+ 259              	.LCFI11:
+ 260              		.cfi_def_cfa_register 7
+ 261 0006 021C     		mov	r2, r0
+ 262 0008 FB1D     		add	r3, r7, #7
+ 263 000a 1A70     		strb	r2, [r3]
+ 400:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         CY_SET_REG8(PWM_BlueWhite_COUNTER_LSB_PTR, counter);
+ 264              		.loc 1 400 0
+ 265 000c 034B     		ldr	r3, .L15
+ 266 000e FA1D     		add	r2, r7, #7
+ 267 0010 1278     		ldrb	r2, [r2]
+ 268 0012 1A70     		strb	r2, [r3]
+ 401:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 269              		.loc 1 401 0
+ 270 0014 BD46     		mov	sp, r7
+ 271 0016 02B0     		add	sp, sp, #8
+ 272              		@ sp needed for prologue
+ 273 0018 80BD     		pop	{r7, pc}
+ 274              	.L16:
+ 275 001a C046     		.align	2
+ 276              	.L15:
+ 277 001c 00000F40 		.word	1074724864
+ 278              		.cfi_endproc
+ 279              	.LFE4:
+ 280              		.size	PWM_BlueWhite_WriteCounter, .-PWM_BlueWhite_WriteCounter
+ 281              		.section	.text.PWM_BlueWhite_ReadCounter,"ax",%progbits
+ 282              		.align	2
+ 283              		.global	PWM_BlueWhite_ReadCounter
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 13
+
+
+ 284              		.code	16
+ 285              		.thumb_func
+ 286              		.type	PWM_BlueWhite_ReadCounter, %function
+ 287              	PWM_BlueWhite_ReadCounter:
+ 288              	.LFB5:
+ 402:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 403:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 404:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 405:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_ReadCounter
+ 406:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 407:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 408:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 409:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This function returns the current value of the counter.  It doesn't matter
+ 410:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  if the counter is enabled or running.
+ 411:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 412:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 413:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None  
+ 414:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 415:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 416:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  The current value of the counter.
+ 417:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 418:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 419:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     uint8 PWM_BlueWhite_ReadCounter(void) 
+ 420:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 289              		.loc 1 420 0
+ 290              		.cfi_startproc
+ 291 0000 80B5     		push	{r7, lr}
+ 292              	.LCFI12:
+ 293              		.cfi_def_cfa_offset 8
+ 294              		.cfi_offset 7, -8
+ 295              		.cfi_offset 14, -4
+ 296 0002 00AF     		add	r7, sp, #0
+ 297              	.LCFI13:
+ 298              		.cfi_def_cfa_register 7
+ 421:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* Force capture by reading Accumulator */
+ 422:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* Must first do a software capture to be able to read the counter */
+ 423:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 424:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         (void)PWM_BlueWhite_COUNTERCAP_LSB;
+ 299              		.loc 1 424 0
+ 300 0004 034B     		ldr	r3, .L19
+ 301 0006 1B78     		ldrb	r3, [r3]
+ 425:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 426:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* Read the data from the FIFO (or capture register for Fixed Function)*/
+ 427:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         return (CY_GET_REG8(PWM_BlueWhite_CAPTURE_LSB_PTR));
+ 302              		.loc 1 427 0
+ 303 0008 034B     		ldr	r3, .L19+4
+ 304 000a 1B78     		ldrb	r3, [r3]
+ 305 000c DBB2     		uxtb	r3, r3
+ 428:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 306              		.loc 1 428 0
+ 307 000e 181C     		mov	r0, r3
+ 308 0010 BD46     		mov	sp, r7
+ 309              		@ sp needed for prologue
+ 310 0012 80BD     		pop	{r7, pc}
+ 311              	.L20:
+ 312              		.align	2
+ 313              	.L19:
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 14
+
+
+ 314 0014 10000F40 		.word	1074724880
+ 315 0018 50000F40 		.word	1074724944
+ 316              		.cfi_endproc
+ 317              	.LFE5:
+ 318              		.size	PWM_BlueWhite_ReadCounter, .-PWM_BlueWhite_ReadCounter
+ 319              		.section	.text.PWM_BlueWhite_ClearFIFO,"ax",%progbits
+ 320              		.align	2
+ 321              		.global	PWM_BlueWhite_ClearFIFO
+ 322              		.code	16
+ 323              		.thumb_func
+ 324              		.type	PWM_BlueWhite_ClearFIFO, %function
+ 325              	PWM_BlueWhite_ClearFIFO:
+ 326              	.LFB6:
+ 429:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 430:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if (PWM_BlueWhite_UseStatus)
+ 431:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 432:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 433:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /*******************************************************************************
+ 434:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             * Function Name: PWM_BlueWhite_ClearFIFO
+ 435:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             ********************************************************************************
+ 436:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             * 
+ 437:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             * Summary:
+ 438:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             *  This function clears all capture data from the capture FIFO
+ 439:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             *
+ 440:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             * Parameters:  
+ 441:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             *  None
+ 442:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             *
+ 443:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             * Return: 
+ 444:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             *  None
+ 445:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             *
+ 446:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             *******************************************************************************/
+ 447:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             void PWM_BlueWhite_ClearFIFO(void) 
+ 448:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             {
+ 327              		.loc 1 448 0
+ 328              		.cfi_startproc
+ 329 0000 80B5     		push	{r7, lr}
+ 330              	.LCFI14:
+ 331              		.cfi_def_cfa_offset 8
+ 332              		.cfi_offset 7, -8
+ 333              		.cfi_offset 14, -4
+ 334 0002 00AF     		add	r7, sp, #0
+ 335              	.LCFI15:
+ 336              		.cfi_def_cfa_register 7
+ 449:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 while(0u != (PWM_BlueWhite_ReadStatusRegister() & PWM_BlueWhite_STATUS_FIFONEMPTY))
+ 337              		.loc 1 449 0
+ 338 0004 01E0     		b	.L22
+ 339              	.L23:
+ 450:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 {
+ 451:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                     (void)PWM_BlueWhite_ReadCapture();
+ 340              		.loc 1 451 0
+ 341 0006 FFF7FEFF 		bl	PWM_BlueWhite_ReadCapture
+ 342              	.L22:
+ 449:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 while(0u != (PWM_BlueWhite_ReadStatusRegister() & PWM_BlueWhite_STATUS_FIFONEMPTY))
+ 343              		.loc 1 449 0 discriminator 1
+ 344 000a FFF7FEFF 		bl	PWM_BlueWhite_ReadStatusRegister
+ 345 000e 031C     		mov	r3, r0
+ 346 0010 1A1C     		mov	r2, r3
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 15
+
+
+ 347 0012 1023     		mov	r3, #16
+ 348 0014 1340     		and	r3, r2
+ 349 0016 F6D1     		bne	.L23
+ 452:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 }
+ 453:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             }
+ 350              		.loc 1 453 0
+ 351 0018 BD46     		mov	sp, r7
+ 352              		@ sp needed for prologue
+ 353 001a 80BD     		pop	{r7, pc}
+ 354              		.cfi_endproc
+ 355              	.LFE6:
+ 356              		.size	PWM_BlueWhite_ClearFIFO, .-PWM_BlueWhite_ClearFIFO
+ 357              		.section	.text.PWM_BlueWhite_WritePeriod,"ax",%progbits
+ 358              		.align	2
+ 359              		.global	PWM_BlueWhite_WritePeriod
+ 360              		.code	16
+ 361              		.thumb_func
+ 362              		.type	PWM_BlueWhite_WritePeriod, %function
+ 363              	PWM_BlueWhite_WritePeriod:
+ 364              	.LFB7:
+ 454:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 455:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* PWM_BlueWhite_UseStatus */
+ 456:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 457:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #endif /* !PWM_BlueWhite_UsingFixedFunction */
+ 458:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 459:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 460:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** /*******************************************************************************
+ 461:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Function Name: PWM_BlueWhite_WritePeriod
+ 462:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** ********************************************************************************
+ 463:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * 
+ 464:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Summary:
+ 465:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  This function is used to change the period of the counter.  The new period 
+ 466:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  will be loaded the next time terminal count is detected.
+ 467:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 468:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Parameters:  
+ 469:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  period:  Period value. May be between 1 and (2^Resolution)-1.  A value of 0 
+ 470:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *           will result in the counter remaining at zero.
+ 471:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 472:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Return: 
+ 473:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None
+ 474:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 475:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *******************************************************************************/
+ 476:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** void PWM_BlueWhite_WritePeriod(uint8 period) 
+ 477:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** {
+ 365              		.loc 1 477 0
+ 366              		.cfi_startproc
+ 367 0000 80B5     		push	{r7, lr}
+ 368              	.LCFI16:
+ 369              		.cfi_def_cfa_offset 8
+ 370              		.cfi_offset 7, -8
+ 371              		.cfi_offset 14, -4
+ 372 0002 82B0     		sub	sp, sp, #8
+ 373              	.LCFI17:
+ 374              		.cfi_def_cfa_offset 16
+ 375 0004 00AF     		add	r7, sp, #0
+ 376              	.LCFI18:
+ 377              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 16
+
+
+ 378 0006 021C     		mov	r2, r0
+ 379 0008 FB1D     		add	r3, r7, #7
+ 380 000a 1A70     		strb	r2, [r3]
+ 478:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #if(PWM_BlueWhite_UsingFixedFunction)
+ 479:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         CY_SET_REG16(PWM_BlueWhite_PERIOD_LSB_PTR, (uint16)period);
+ 480:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #else
+ 481:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         CY_SET_REG8(PWM_BlueWhite_PERIOD_LSB_PTR, period);
+ 381              		.loc 1 481 0
+ 382 000c 034B     		ldr	r3, .L25
+ 383 000e FA1D     		add	r2, r7, #7
+ 384 0010 1278     		ldrb	r2, [r2]
+ 385 0012 1A70     		strb	r2, [r3]
+ 482:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 483:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** }
+ 386              		.loc 1 483 0
+ 387 0014 BD46     		mov	sp, r7
+ 388 0016 02B0     		add	sp, sp, #8
+ 389              		@ sp needed for prologue
+ 390 0018 80BD     		pop	{r7, pc}
+ 391              	.L26:
+ 392 001a C046     		.align	2
+ 393              	.L25:
+ 394 001c 40000F40 		.word	1074724928
+ 395              		.cfi_endproc
+ 396              	.LFE7:
+ 397              		.size	PWM_BlueWhite_WritePeriod, .-PWM_BlueWhite_WritePeriod
+ 398              		.section	.text.PWM_BlueWhite_WriteCompare1,"ax",%progbits
+ 399              		.align	2
+ 400              		.global	PWM_BlueWhite_WriteCompare1
+ 401              		.code	16
+ 402              		.thumb_func
+ 403              		.type	PWM_BlueWhite_WriteCompare1, %function
+ 404              	PWM_BlueWhite_WriteCompare1:
+ 405              	.LFB8:
+ 484:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 485:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #if (PWM_BlueWhite_UseOneCompareMode)
+ 486:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 487:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 488:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 489:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_WriteCompare
+ 490:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 491:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 492:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 493:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This funtion is used to change the compare1 value when the PWM is in Dither
+ 494:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  mode. The compare output will reflect the new value on the next UDB clock. 
+ 495:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  The compare output will be driven high when the present counter value is 
+ 496:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  compared to the compare value based on the compare mode defined in 
+ 497:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Dither Mode.
+ 498:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 499:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 500:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  compare:  New compare value.  
+ 501:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 502:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 503:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 504:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 505:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Side Effects:
+ 506:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This function is only available if the PWM mode parameter is set to
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 17
+
+
+ 507:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Dither Mode, Center Aligned Mode or One Output Mode
+ 508:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 509:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 510:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     void PWM_BlueWhite_WriteCompare(uint8 compare) \
+ 511:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                                        
+ 512:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {	
+ 513:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		#if(PWM_BlueWhite_UsingFixedFunction)
+ 514:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 			CY_SET_REG16(PWM_BlueWhite_COMPARE1_LSB_PTR, (uint16)compare);
+ 515:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		#else
+ 516:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	        CY_SET_REG8(PWM_BlueWhite_COMPARE1_LSB_PTR, compare);	
+ 517:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		#endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 518:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 519:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if (PWM_BlueWhite_PWMMode == PWM_BlueWhite__B_PWM__DITHER)
+ 520:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             #if(PWM_BlueWhite_UsingFixedFunction)
+ 521:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     			CY_SET_REG16(PWM_BlueWhite_COMPARE2_LSB_PTR, (uint16)(compare + 1u));
+ 522:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     		#else
+ 523:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	        CY_SET_REG8(PWM_BlueWhite_COMPARE2_LSB_PTR, (compare + 1u));	
+ 524:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     		#endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 525:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_PWMMode == PWM_BlueWhite__B_PWM__DITHER) */
+ 526:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 527:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 528:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 529:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #else
+ 530:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 531:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 532:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 533:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_WriteCompare1
+ 534:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 535:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 536:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 537:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This funtion is used to change the compare1 value.  The compare output will 
+ 538:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  reflect the new value on the next UDB clock.  The compare output will be 
+ 539:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  driven high when the present counter value is less than or less than or 
+ 540:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  equal to the compare register, depending on the mode.
+ 541:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 542:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 543:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  compare:  New compare value.  
+ 544:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 545:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 546:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 547:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 548:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 549:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     void PWM_BlueWhite_WriteCompare1(uint8 compare) \
+ 550:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                                         
+ 551:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 406              		.loc 1 551 0
+ 407              		.cfi_startproc
+ 408 0000 80B5     		push	{r7, lr}
+ 409              	.LCFI19:
+ 410              		.cfi_def_cfa_offset 8
+ 411              		.cfi_offset 7, -8
+ 412              		.cfi_offset 14, -4
+ 413 0002 82B0     		sub	sp, sp, #8
+ 414              	.LCFI20:
+ 415              		.cfi_def_cfa_offset 16
+ 416 0004 00AF     		add	r7, sp, #0
+ 417              	.LCFI21:
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 18
+
+
+ 418              		.cfi_def_cfa_register 7
+ 419 0006 021C     		mov	r2, r0
+ 420 0008 FB1D     		add	r3, r7, #7
+ 421 000a 1A70     		strb	r2, [r3]
+ 552:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if(PWM_BlueWhite_UsingFixedFunction)
+ 553:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             CY_SET_REG16(PWM_BlueWhite_COMPARE1_LSB_PTR, (uint16)compare);
+ 554:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #else
+ 555:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             CY_SET_REG8(PWM_BlueWhite_COMPARE1_LSB_PTR, compare);
+ 422              		.loc 1 555 0
+ 423 000c 034B     		ldr	r3, .L28
+ 424 000e FA1D     		add	r2, r7, #7
+ 425 0010 1278     		ldrb	r2, [r2]
+ 426 0012 1A70     		strb	r2, [r3]
+ 556:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 557:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 427              		.loc 1 557 0
+ 428 0014 BD46     		mov	sp, r7
+ 429 0016 02B0     		add	sp, sp, #8
+ 430              		@ sp needed for prologue
+ 431 0018 80BD     		pop	{r7, pc}
+ 432              	.L29:
+ 433 001a C046     		.align	2
+ 434              	.L28:
+ 435 001c 20000F40 		.word	1074724896
+ 436              		.cfi_endproc
+ 437              	.LFE8:
+ 438              		.size	PWM_BlueWhite_WriteCompare1, .-PWM_BlueWhite_WriteCompare1
+ 439              		.section	.text.PWM_BlueWhite_WriteCompare2,"ax",%progbits
+ 440              		.align	2
+ 441              		.global	PWM_BlueWhite_WriteCompare2
+ 442              		.code	16
+ 443              		.thumb_func
+ 444              		.type	PWM_BlueWhite_WriteCompare2, %function
+ 445              	PWM_BlueWhite_WriteCompare2:
+ 446              	.LFB9:
+ 558:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 559:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 560:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 561:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_WriteCompare2
+ 562:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 563:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 564:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 565:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This funtion is used to change the compare value, for compare1 output.  
+ 566:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  The compare output will reflect the new value on the next UDB clock.  
+ 567:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  The compare output will be driven high when the present counter value is 
+ 568:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  less than or less than or equal to the compare register, depending on the 
+ 569:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  mode.
+ 570:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 571:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 572:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  compare:  New compare value.  
+ 573:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 574:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 575:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 576:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 577:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 578:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     void PWM_BlueWhite_WriteCompare2(uint8 compare) \
+ 579:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                                         
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 19
+
+
+ 580:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 447              		.loc 1 580 0
+ 448              		.cfi_startproc
+ 449 0000 80B5     		push	{r7, lr}
+ 450              	.LCFI22:
+ 451              		.cfi_def_cfa_offset 8
+ 452              		.cfi_offset 7, -8
+ 453              		.cfi_offset 14, -4
+ 454 0002 82B0     		sub	sp, sp, #8
+ 455              	.LCFI23:
+ 456              		.cfi_def_cfa_offset 16
+ 457 0004 00AF     		add	r7, sp, #0
+ 458              	.LCFI24:
+ 459              		.cfi_def_cfa_register 7
+ 460 0006 021C     		mov	r2, r0
+ 461 0008 FB1D     		add	r3, r7, #7
+ 462 000a 1A70     		strb	r2, [r3]
+ 581:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if(PWM_BlueWhite_UsingFixedFunction)
+ 582:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             CY_SET_REG16(PWM_BlueWhite_COMPARE2_LSB_PTR, compare);
+ 583:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #else
+ 584:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             CY_SET_REG8(PWM_BlueWhite_COMPARE2_LSB_PTR, compare);
+ 463              		.loc 1 584 0
+ 464 000c 034B     		ldr	r3, .L31
+ 465 000e FA1D     		add	r2, r7, #7
+ 466 0010 1278     		ldrb	r2, [r2]
+ 467 0012 1A70     		strb	r2, [r3]
+ 585:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 586:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 468              		.loc 1 586 0
+ 469 0014 BD46     		mov	sp, r7
+ 470 0016 02B0     		add	sp, sp, #8
+ 471              		@ sp needed for prologue
+ 472 0018 80BD     		pop	{r7, pc}
+ 473              	.L32:
+ 474 001a C046     		.align	2
+ 475              	.L31:
+ 476 001c 30000F40 		.word	1074724912
+ 477              		.cfi_endproc
+ 478              	.LFE9:
+ 479              		.size	PWM_BlueWhite_WriteCompare2, .-PWM_BlueWhite_WriteCompare2
+ 480              		.section	.text.PWM_BlueWhite_SetInterruptMode,"ax",%progbits
+ 481              		.align	2
+ 482              		.global	PWM_BlueWhite_SetInterruptMode
+ 483              		.code	16
+ 484              		.thumb_func
+ 485              		.type	PWM_BlueWhite_SetInterruptMode, %function
+ 486              	PWM_BlueWhite_SetInterruptMode:
+ 487              	.LFB10:
+ 587:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #endif /* UseOneCompareMode */
+ 588:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 589:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #if (PWM_BlueWhite_DeadBandUsed)
+ 590:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 591:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 592:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 593:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_WriteDeadTime
+ 594:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 595:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 20
+
+
+ 596:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 597:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This function writes the dead-band counts to the corresponding register
+ 598:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 599:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 600:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  deadtime:  Number of counts for dead time 
+ 601:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 602:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 603:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 604:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 605:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 606:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     void PWM_BlueWhite_WriteDeadTime(uint8 deadtime) 
+ 607:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 608:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* If using the Dead Band 1-255 mode then just write the register */
+ 609:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if(!PWM_BlueWhite_DeadBand2_4)
+ 610:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             CY_SET_REG8(PWM_BlueWhite_DEADBAND_COUNT_PTR, deadtime);
+ 611:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #else
+ 612:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Otherwise the data has to be masked and offset */        
+ 613:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Clear existing data */
+ 614:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             PWM_BlueWhite_DEADBAND_COUNT &= ((uint8)(~PWM_BlueWhite_DEADBAND_COUNT_MASK));
+ 615:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             
+ 616:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Set new dead time */
+ 617:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             #if(PWM_BlueWhite_DEADBAND_COUNT_SHIFT)        
+ 618:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 PWM_BlueWhite_DEADBAND_COUNT |= ((uint8)((uint8)deadtime << PWM_BlueWhite_DEADBAND_
+ 619:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                                                     PWM_BlueWhite_DEADBAND_COUNT_MASK;
+ 620:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             #else
+ 621:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 PWM_BlueWhite_DEADBAND_COUNT |= deadtime & PWM_BlueWhite_DEADBAND_COUNT_MASK;      
+ 622:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             #endif /* (PWM_BlueWhite_DEADBAND_COUNT_SHIFT) */
+ 623:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 624:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (!PWM_BlueWhite_DeadBand2_4) */
+ 625:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 626:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 627:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 628:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 629:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_ReadDeadTime
+ 630:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 631:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 632:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 633:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This function reads the dead-band counts from the corresponding register
+ 634:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 635:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 636:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 637:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 638:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 639:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Dead Band Counts
+ 640:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 641:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 642:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     uint8 PWM_BlueWhite_ReadDeadTime(void) 
+ 643:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 644:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         /* If using the Dead Band 1-255 mode then just read the register */
+ 645:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #if(!PWM_BlueWhite_DeadBand2_4)
+ 646:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             return (CY_GET_REG8(PWM_BlueWhite_DEADBAND_COUNT_PTR));
+ 647:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #else
+ 648:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         
+ 649:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             /* Otherwise the data has to be masked and offset */
+ 650:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             #if(PWM_BlueWhite_DEADBAND_COUNT_SHIFT)      
+ 651:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 return ((uint8)(((uint8)(PWM_BlueWhite_DEADBAND_COUNT & PWM_BlueWhite_DEADBAND_COUN
+ 652:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                                                                            PWM_BlueWhite_DEADBAND_C
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 21
+
+
+ 653:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             #else
+ 654:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****                 return (PWM_BlueWhite_DEADBAND_COUNT & PWM_BlueWhite_DEADBAND_COUNT_MASK);
+ 655:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             #endif /* (PWM_BlueWhite_DEADBAND_COUNT_SHIFT) */
+ 656:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (!PWM_BlueWhite_DeadBand2_4) */
+ 657:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 658:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #endif /* DeadBandUsed */
+ 659:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 660:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #if (PWM_BlueWhite_UseStatus || PWM_BlueWhite_UsingFixedFunction)
+ 661:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 662:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 663:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 664:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_SetInterruptMode
+ 665:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 666:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 667:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 668:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This function configures the interrupts mask control of theinterrupt 
+ 669:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  source status register.
+ 670:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 671:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 672:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  uint8 interruptMode: Bit field containing the interrupt sources enabled 
+ 673:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 674:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 675:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 676:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 677:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 678:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     void PWM_BlueWhite_SetInterruptMode(uint8 interruptMode)  
+ 679:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 488              		.loc 1 679 0
+ 489              		.cfi_startproc
+ 490 0000 80B5     		push	{r7, lr}
+ 491              	.LCFI25:
+ 492              		.cfi_def_cfa_offset 8
+ 493              		.cfi_offset 7, -8
+ 494              		.cfi_offset 14, -4
+ 495 0002 82B0     		sub	sp, sp, #8
+ 496              	.LCFI26:
+ 497              		.cfi_def_cfa_offset 16
+ 498 0004 00AF     		add	r7, sp, #0
+ 499              	.LCFI27:
+ 500              		.cfi_def_cfa_register 7
+ 501 0006 021C     		mov	r2, r0
+ 502 0008 FB1D     		add	r3, r7, #7
+ 503 000a 1A70     		strb	r2, [r3]
+ 680:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	CY_SET_REG8(PWM_BlueWhite_STATUS_MASK_PTR, interruptMode);
+ 504              		.loc 1 680 0
+ 505 000c 034B     		ldr	r3, .L34
+ 506 000e FA1D     		add	r2, r7, #7
+ 507 0010 1278     		ldrb	r2, [r2]
+ 508 0012 1A70     		strb	r2, [r3]
+ 681:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 509              		.loc 1 681 0
+ 510 0014 BD46     		mov	sp, r7
+ 511 0016 02B0     		add	sp, sp, #8
+ 512              		@ sp needed for prologue
+ 513 0018 80BD     		pop	{r7, pc}
+ 514              	.L35:
+ 515 001a C046     		.align	2
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 22
+
+
+ 516              	.L34:
+ 517 001c 80000F40 		.word	1074724992
+ 518              		.cfi_endproc
+ 519              	.LFE10:
+ 520              		.size	PWM_BlueWhite_SetInterruptMode, .-PWM_BlueWhite_SetInterruptMode
+ 521              		.section	.text.PWM_BlueWhite_ReadStatusRegister,"ax",%progbits
+ 522              		.align	2
+ 523              		.global	PWM_BlueWhite_ReadStatusRegister
+ 524              		.code	16
+ 525              		.thumb_func
+ 526              		.type	PWM_BlueWhite_ReadStatusRegister, %function
+ 527              	PWM_BlueWhite_ReadStatusRegister:
+ 528              	.LFB11:
+ 682:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 683:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 684:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 685:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_ReadStatusRegister
+ 686:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 687:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 688:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 689:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  This function returns the current state of the status register. 
+ 690:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 691:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 692:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 693:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 694:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 695:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  uint8 : Current status register value. The status register bits are:
+ 696:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [7:6] : Unused(0)
+ 697:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [5]   : Kill event output
+ 698:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [4]   : FIFO not empty
+ 699:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [3]   : FIFO full
+ 700:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [2]   : Terminal count
+ 701:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [1]   : Compare output 2
+ 702:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [0]   : Compare output 1
+ 703:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 704:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/
+ 705:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     uint8 PWM_BlueWhite_ReadStatusRegister(void)   
+ 706:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 529              		.loc 1 706 0
+ 530              		.cfi_startproc
+ 531 0000 80B5     		push	{r7, lr}
+ 532              	.LCFI28:
+ 533              		.cfi_def_cfa_offset 8
+ 534              		.cfi_offset 7, -8
+ 535              		.cfi_offset 14, -4
+ 536 0002 82B0     		sub	sp, sp, #8
+ 537              	.LCFI29:
+ 538              		.cfi_def_cfa_offset 16
+ 539 0004 00AF     		add	r7, sp, #0
+ 540              	.LCFI30:
+ 541              		.cfi_def_cfa_register 7
+ 707:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	uint8 result;
+ 708:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	
+ 709:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	result = CY_GET_REG8(PWM_BlueWhite_STATUS_PTR);
+ 542              		.loc 1 709 0
+ 543 0006 054A     		ldr	r2, .L38
+ 544 0008 FB1D     		add	r3, r7, #7
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 23
+
+
+ 545 000a 1278     		ldrb	r2, [r2]
+ 546 000c 1A70     		strb	r2, [r3]
+ 710:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	return (result);
+ 547              		.loc 1 710 0
+ 548 000e FB1D     		add	r3, r7, #7
+ 549 0010 1B78     		ldrb	r3, [r3]
+ 711:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 550              		.loc 1 711 0
+ 551 0012 181C     		mov	r0, r3
+ 552 0014 BD46     		mov	sp, r7
+ 553 0016 02B0     		add	sp, sp, #8
+ 554              		@ sp needed for prologue
+ 555 0018 80BD     		pop	{r7, pc}
+ 556              	.L39:
+ 557 001a C046     		.align	2
+ 558              	.L38:
+ 559 001c 60000F40 		.word	1074724960
+ 560              		.cfi_endproc
+ 561              	.LFE11:
+ 562              		.size	PWM_BlueWhite_ReadStatusRegister, .-PWM_BlueWhite_ReadStatusRegister
+ 563              		.section	.text.PWM_BlueWhite_ReadControlRegister,"ax",%progbits
+ 564              		.align	2
+ 565              		.global	PWM_BlueWhite_ReadControlRegister
+ 566              		.code	16
+ 567              		.thumb_func
+ 568              		.type	PWM_BlueWhite_ReadControlRegister, %function
+ 569              	PWM_BlueWhite_ReadControlRegister:
+ 570              	.LFB12:
+ 712:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 713:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #endif /* (PWM_BlueWhite_UseStatus || PWM_BlueWhite_UsingFixedFunction) */
+ 714:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 715:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 716:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #if (PWM_BlueWhite_UseControl)
+ 717:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 718:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 719:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 720:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_ReadControlRegister
+ 721:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 722:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 723:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 724:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Returns the current state of the control register. This API is available 
+ 725:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  only if the control register is not removed.
+ 726:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 727:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 728:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None 
+ 729:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 730:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 731:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  uint8 : Current control register value
+ 732:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 733:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/    
+ 734:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     uint8 PWM_BlueWhite_ReadControlRegister(void) 
+ 735:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 571              		.loc 1 735 0
+ 572              		.cfi_startproc
+ 573 0000 80B5     		push	{r7, lr}
+ 574              	.LCFI31:
+ 575              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 24
+
+
+ 576              		.cfi_offset 7, -8
+ 577              		.cfi_offset 14, -4
+ 578 0002 82B0     		sub	sp, sp, #8
+ 579              	.LCFI32:
+ 580              		.cfi_def_cfa_offset 16
+ 581 0004 00AF     		add	r7, sp, #0
+ 582              	.LCFI33:
+ 583              		.cfi_def_cfa_register 7
+ 736:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	uint8 result;
+ 737:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	
+ 738:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	result = CY_GET_REG8(PWM_BlueWhite_CONTROL_PTR);
+ 584              		.loc 1 738 0
+ 585 0006 054A     		ldr	r2, .L42
+ 586 0008 FB1D     		add	r3, r7, #7
+ 587 000a 1278     		ldrb	r2, [r2]
+ 588 000c 1A70     		strb	r2, [r3]
+ 739:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	return (result);
+ 589              		.loc 1 739 0
+ 590 000e FB1D     		add	r3, r7, #7
+ 591 0010 1B78     		ldrb	r3, [r3]
+ 740:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 592              		.loc 1 740 0
+ 593 0012 181C     		mov	r0, r3
+ 594 0014 BD46     		mov	sp, r7
+ 595 0016 02B0     		add	sp, sp, #8
+ 596              		@ sp needed for prologue
+ 597 0018 80BD     		pop	{r7, pc}
+ 598              	.L43:
+ 599 001a C046     		.align	2
+ 600              	.L42:
+ 601 001c 70000F40 		.word	1074724976
+ 602              		.cfi_endproc
+ 603              	.LFE12:
+ 604              		.size	PWM_BlueWhite_ReadControlRegister, .-PWM_BlueWhite_ReadControlRegister
+ 605              		.section	.text.PWM_BlueWhite_WriteControlRegister,"ax",%progbits
+ 606              		.align	2
+ 607              		.global	PWM_BlueWhite_WriteControlRegister
+ 608              		.code	16
+ 609              		.thumb_func
+ 610              		.type	PWM_BlueWhite_WriteControlRegister, %function
+ 611              	PWM_BlueWhite_WriteControlRegister:
+ 612              	.LFB13:
+ 741:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 742:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 743:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 744:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_WriteControlRegister
+ 745:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 746:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 747:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 748:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Sets the bit field of the control register. This API is available only if 
+ 749:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  the control register is not removed.
+ 750:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 751:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 752:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  uint8 control: Control register bit field, The status register bits are:
+ 753:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [7]   : PWM Enable
+ 754:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [6]   : Reset
+ 755:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [5:3] : Compare Mode2
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 25
+
+
+ 756:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  [2:0] : Compare Mode2
+ 757:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 758:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 759:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 760:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 761:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/  
+ 762:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     void PWM_BlueWhite_WriteControlRegister(uint8 control) 
+ 763:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 613              		.loc 1 763 0
+ 614              		.cfi_startproc
+ 615 0000 80B5     		push	{r7, lr}
+ 616              	.LCFI34:
+ 617              		.cfi_def_cfa_offset 8
+ 618              		.cfi_offset 7, -8
+ 619              		.cfi_offset 14, -4
+ 620 0002 82B0     		sub	sp, sp, #8
+ 621              	.LCFI35:
+ 622              		.cfi_def_cfa_offset 16
+ 623 0004 00AF     		add	r7, sp, #0
+ 624              	.LCFI36:
+ 625              		.cfi_def_cfa_register 7
+ 626 0006 021C     		mov	r2, r0
+ 627 0008 FB1D     		add	r3, r7, #7
+ 628 000a 1A70     		strb	r2, [r3]
+ 764:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	CY_SET_REG8(PWM_BlueWhite_CONTROL_PTR, control);
+ 629              		.loc 1 764 0
+ 630 000c 034B     		ldr	r3, .L45
+ 631 000e FA1D     		add	r2, r7, #7
+ 632 0010 1278     		ldrb	r2, [r2]
+ 633 0012 1A70     		strb	r2, [r3]
+ 765:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 634              		.loc 1 765 0
+ 635 0014 BD46     		mov	sp, r7
+ 636 0016 02B0     		add	sp, sp, #8
+ 637              		@ sp needed for prologue
+ 638 0018 80BD     		pop	{r7, pc}
+ 639              	.L46:
+ 640 001a C046     		.align	2
+ 641              	.L45:
+ 642 001c 70000F40 		.word	1074724976
+ 643              		.cfi_endproc
+ 644              	.LFE13:
+ 645              		.size	PWM_BlueWhite_WriteControlRegister, .-PWM_BlueWhite_WriteControlRegister
+ 646              		.section	.text.PWM_BlueWhite_ReadCapture,"ax",%progbits
+ 647              		.align	2
+ 648              		.global	PWM_BlueWhite_ReadCapture
+ 649              		.code	16
+ 650              		.thumb_func
+ 651              		.type	PWM_BlueWhite_ReadCapture, %function
+ 652              	PWM_BlueWhite_ReadCapture:
+ 653              	.LFB14:
+ 766:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	
+ 767:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #endif /* (PWM_BlueWhite_UseControl) */
+ 768:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 769:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 770:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #if (!PWM_BlueWhite_UsingFixedFunction)
+ 771:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 26
+
+
+ 772:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 773:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 774:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_ReadCapture
+ 775:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 776:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 777:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 778:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Reads the capture value from the capture FIFO.
+ 779:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 780:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 781:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 782:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 783:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 784:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  uint8/uint16: The current capture value
+ 785:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 786:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/  
+ 787:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     uint8 PWM_BlueWhite_ReadCapture(void)  
+ 788:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 654              		.loc 1 788 0
+ 655              		.cfi_startproc
+ 656 0000 80B5     		push	{r7, lr}
+ 657              	.LCFI37:
+ 658              		.cfi_def_cfa_offset 8
+ 659              		.cfi_offset 7, -8
+ 660              		.cfi_offset 14, -4
+ 661 0002 00AF     		add	r7, sp, #0
+ 662              	.LCFI38:
+ 663              		.cfi_def_cfa_register 7
+ 789:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     	return (CY_GET_REG8(PWM_BlueWhite_CAPTURE_LSB_PTR));
+ 664              		.loc 1 789 0
+ 665 0004 024B     		ldr	r3, .L49
+ 666 0006 1B78     		ldrb	r3, [r3]
+ 667 0008 DBB2     		uxtb	r3, r3
+ 790:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 668              		.loc 1 790 0
+ 669 000a 181C     		mov	r0, r3
+ 670 000c BD46     		mov	sp, r7
+ 671              		@ sp needed for prologue
+ 672 000e 80BD     		pop	{r7, pc}
+ 673              	.L50:
+ 674              		.align	2
+ 675              	.L49:
+ 676 0010 50000F40 		.word	1074724944
+ 677              		.cfi_endproc
+ 678              	.LFE14:
+ 679              		.size	PWM_BlueWhite_ReadCapture, .-PWM_BlueWhite_ReadCapture
+ 680              		.section	.text.PWM_BlueWhite_ReadCompare1,"ax",%progbits
+ 681              		.align	2
+ 682              		.global	PWM_BlueWhite_ReadCompare1
+ 683              		.code	16
+ 684              		.thumb_func
+ 685              		.type	PWM_BlueWhite_ReadCompare1, %function
+ 686              	PWM_BlueWhite_ReadCompare1:
+ 687              	.LFB15:
+ 791:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	
+ 792:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #endif /* (!PWM_BlueWhite_UsingFixedFunction) */
+ 793:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 794:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 27
+
+
+ 795:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #if (PWM_BlueWhite_UseOneCompareMode)
+ 796:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 797:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 798:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 799:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_ReadCompare
+ 800:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 801:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 802:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 803:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Reads the compare value for the compare output when the PWM Mode parameter is 
+ 804:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  set to Dither mode, Center Aligned mode, or One Output mode.
+ 805:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 806:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 807:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 808:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 809:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 810:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  uint8/uint16: Current compare value
+ 811:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 812:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/  
+ 813:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     uint8 PWM_BlueWhite_ReadCompare(void)  
+ 814:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 815:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		#if(PWM_BlueWhite_UsingFixedFunction)
+ 816:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             return ((uint8)CY_GET_REG16(PWM_BlueWhite_COMPARE1_LSB_PTR));
+ 817:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #else
+ 818:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****             return (CY_GET_REG8(PWM_BlueWhite_COMPARE1_LSB_PTR));
+ 819:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 820:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 821:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 822:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #else
+ 823:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 824:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 825:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 826:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_ReadCompare1
+ 827:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 828:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 829:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 830:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Reads the compare value for the compare1 output.
+ 831:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 832:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 833:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 834:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 835:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 836:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  uint8/uint16: Current compare value.
+ 837:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 838:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/  
+ 839:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     uint8 PWM_BlueWhite_ReadCompare1(void) 
+ 840:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 688              		.loc 1 840 0
+ 689              		.cfi_startproc
+ 690 0000 80B5     		push	{r7, lr}
+ 691              	.LCFI39:
+ 692              		.cfi_def_cfa_offset 8
+ 693              		.cfi_offset 7, -8
+ 694              		.cfi_offset 14, -4
+ 695 0002 00AF     		add	r7, sp, #0
+ 696              	.LCFI40:
+ 697              		.cfi_def_cfa_register 7
+ 841:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		return (CY_GET_REG8(PWM_BlueWhite_COMPARE1_LSB_PTR));
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 28
+
+
+ 698              		.loc 1 841 0
+ 699 0004 024B     		ldr	r3, .L53
+ 700 0006 1B78     		ldrb	r3, [r3]
+ 701 0008 DBB2     		uxtb	r3, r3
+ 842:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 702              		.loc 1 842 0
+ 703 000a 181C     		mov	r0, r3
+ 704 000c BD46     		mov	sp, r7
+ 705              		@ sp needed for prologue
+ 706 000e 80BD     		pop	{r7, pc}
+ 707              	.L54:
+ 708              		.align	2
+ 709              	.L53:
+ 710 0010 20000F40 		.word	1074724896
+ 711              		.cfi_endproc
+ 712              	.LFE15:
+ 713              		.size	PWM_BlueWhite_ReadCompare1, .-PWM_BlueWhite_ReadCompare1
+ 714              		.section	.text.PWM_BlueWhite_ReadCompare2,"ax",%progbits
+ 715              		.align	2
+ 716              		.global	PWM_BlueWhite_ReadCompare2
+ 717              		.code	16
+ 718              		.thumb_func
+ 719              		.type	PWM_BlueWhite_ReadCompare2, %function
+ 720              	PWM_BlueWhite_ReadCompare2:
+ 721              	.LFB16:
+ 843:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 844:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 845:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     /*******************************************************************************
+ 846:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Function Name: PWM_BlueWhite_ReadCompare2
+ 847:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     ********************************************************************************
+ 848:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * 
+ 849:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Summary:
+ 850:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  Reads the compare value for the compare2 output.
+ 851:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 852:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Parameters:  
+ 853:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  None
+ 854:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 855:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     * Return: 
+ 856:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *  uint8/uint16: Current compare value.
+ 857:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *
+ 858:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     *******************************************************************************/  
+ 859:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     uint8 PWM_BlueWhite_ReadCompare2(void)  
+ 860:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     {
+ 722              		.loc 1 860 0
+ 723              		.cfi_startproc
+ 724 0000 80B5     		push	{r7, lr}
+ 725              	.LCFI41:
+ 726              		.cfi_def_cfa_offset 8
+ 727              		.cfi_offset 7, -8
+ 728              		.cfi_offset 14, -4
+ 729 0002 00AF     		add	r7, sp, #0
+ 730              	.LCFI42:
+ 731              		.cfi_def_cfa_register 7
+ 861:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 		return (CY_GET_REG8(PWM_BlueWhite_COMPARE2_LSB_PTR));
+ 732              		.loc 1 861 0
+ 733 0004 024B     		ldr	r3, .L57
+ 734 0006 1B78     		ldrb	r3, [r3]
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 29
+
+
+ 735 0008 DBB2     		uxtb	r3, r3
+ 862:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     }
+ 736              		.loc 1 862 0
+ 737 000a 181C     		mov	r0, r3
+ 738 000c BD46     		mov	sp, r7
+ 739              		@ sp needed for prologue
+ 740 000e 80BD     		pop	{r7, pc}
+ 741              	.L58:
+ 742              		.align	2
+ 743              	.L57:
+ 744 0010 30000F40 		.word	1074724912
+ 745              		.cfi_endproc
+ 746              	.LFE16:
+ 747              		.size	PWM_BlueWhite_ReadCompare2, .-PWM_BlueWhite_ReadCompare2
+ 748              		.section	.text.PWM_BlueWhite_ReadPeriod,"ax",%progbits
+ 749              		.align	2
+ 750              		.global	PWM_BlueWhite_ReadPeriod
+ 751              		.code	16
+ 752              		.thumb_func
+ 753              		.type	PWM_BlueWhite_ReadPeriod, %function
+ 754              	PWM_BlueWhite_ReadPeriod:
+ 755              	.LFB17:
+ 863:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 864:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** #endif /* (PWM_BlueWhite_UseOneCompareMode) */
+ 865:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 866:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 
+ 867:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** /*******************************************************************************
+ 868:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Function Name: PWM_BlueWhite_ReadPeriod
+ 869:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** ********************************************************************************
+ 870:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * 
+ 871:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Summary:
+ 872:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  Reads the period value used by the PWM hardware.
+ 873:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 874:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Parameters:  
+ 875:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  None
+ 876:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 877:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** * Return: 
+ 878:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *  uint8/16: Period value
+ 879:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *
+ 880:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** *******************************************************************************/ 
+ 881:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** uint8 PWM_BlueWhite_ReadPeriod(void) 
+ 882:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** {
+ 756              		.loc 1 882 0
+ 757              		.cfi_startproc
+ 758 0000 80B5     		push	{r7, lr}
+ 759              	.LCFI43:
+ 760              		.cfi_def_cfa_offset 8
+ 761              		.cfi_offset 7, -8
+ 762              		.cfi_offset 14, -4
+ 763 0002 00AF     		add	r7, sp, #0
+ 764              	.LCFI44:
+ 765              		.cfi_def_cfa_register 7
+ 883:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** 	#if(PWM_BlueWhite_UsingFixedFunction)
+ 884:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         return ((uint8)CY_GET_REG16(PWM_BlueWhite_PERIOD_LSB_PTR));
+ 885:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #else
+ 886:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****         return (CY_GET_REG8(PWM_BlueWhite_PERIOD_LSB_PTR));
+ 766              		.loc 1 886 0
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 30
+
+
+ 767 0004 024B     		ldr	r3, .L61
+ 768 0006 1B78     		ldrb	r3, [r3]
+ 769 0008 DBB2     		uxtb	r3, r3
+ 887:.\Generated_Source\PSoC4/PWM_BlueWhite.c ****     #endif /* (PWM_BlueWhite_UsingFixedFunction) */
+ 888:.\Generated_Source\PSoC4/PWM_BlueWhite.c **** }
+ 770              		.loc 1 888 0
+ 771 000a 181C     		mov	r0, r3
+ 772 000c BD46     		mov	sp, r7
+ 773              		@ sp needed for prologue
+ 774 000e 80BD     		pop	{r7, pc}
+ 775              	.L62:
+ 776              		.align	2
+ 777              	.L61:
+ 778 0010 40000F40 		.word	1074724928
+ 779              		.cfi_endproc
+ 780              	.LFE17:
+ 781              		.size	PWM_BlueWhite_ReadPeriod, .-PWM_BlueWhite_ReadPeriod
+ 782              		.text
+ 783              	.Letext0:
+ 784              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 785              		.section	.debug_info,"",%progbits
+ 786              	.Ldebug_info0:
+ 787 0000 2C030000 		.4byte	0x32c
+ 788 0004 0200     		.2byte	0x2
+ 789 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 790 000a 04       		.byte	0x4
+ 791 000b 01       		.uleb128 0x1
+ 792 000c 0E030000 		.4byte	.LASF41
+ 793 0010 01       		.byte	0x1
+ 794 0011 4B020000 		.4byte	.LASF42
+ 795 0015 05000000 		.4byte	.LASF43
+ 796 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 797 001d 00000000 		.4byte	0
+ 798 0021 00000000 		.4byte	0
+ 799 0025 00000000 		.4byte	.Ldebug_line0
+ 800 0029 02       		.uleb128 0x2
+ 801 002a 01       		.byte	0x1
+ 802 002b 06       		.byte	0x6
+ 803 002c 95030000 		.4byte	.LASF0
+ 804 0030 02       		.uleb128 0x2
+ 805 0031 01       		.byte	0x1
+ 806 0032 08       		.byte	0x8
+ 807 0033 49010000 		.4byte	.LASF1
+ 808 0037 02       		.uleb128 0x2
+ 809 0038 02       		.byte	0x2
+ 810 0039 05       		.byte	0x5
+ 811 003a 04030000 		.4byte	.LASF2
+ 812 003e 02       		.uleb128 0x2
+ 813 003f 02       		.byte	0x2
+ 814 0040 07       		.byte	0x7
+ 815 0041 B9000000 		.4byte	.LASF3
+ 816 0045 02       		.uleb128 0x2
+ 817 0046 04       		.byte	0x4
+ 818 0047 05       		.byte	0x5
+ 819 0048 57030000 		.4byte	.LASF4
+ 820 004c 02       		.uleb128 0x2
+ 821 004d 04       		.byte	0x4
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 31
+
+
+ 822 004e 07       		.byte	0x7
+ 823 004f 5C010000 		.4byte	.LASF5
+ 824 0053 02       		.uleb128 0x2
+ 825 0054 08       		.byte	0x8
+ 826 0055 05       		.byte	0x5
+ 827 0056 A8020000 		.4byte	.LASF6
+ 828 005a 02       		.uleb128 0x2
+ 829 005b 08       		.byte	0x8
+ 830 005c 07       		.byte	0x7
+ 831 005d 2D020000 		.4byte	.LASF7
+ 832 0061 03       		.uleb128 0x3
+ 833 0062 04       		.byte	0x4
+ 834 0063 05       		.byte	0x5
+ 835 0064 696E7400 		.ascii	"int\000"
+ 836 0068 02       		.uleb128 0x2
+ 837 0069 04       		.byte	0x4
+ 838 006a 07       		.byte	0x7
+ 839 006b 20020000 		.4byte	.LASF8
+ 840 006f 04       		.uleb128 0x4
+ 841 0070 6E010000 		.4byte	.LASF12
+ 842 0074 02       		.byte	0x2
+ 843 0075 5B       		.byte	0x5b
+ 844 0076 30000000 		.4byte	0x30
+ 845 007a 02       		.uleb128 0x2
+ 846 007b 04       		.byte	0x4
+ 847 007c 04       		.byte	0x4
+ 848 007d 3B010000 		.4byte	.LASF9
+ 849 0081 02       		.uleb128 0x2
+ 850 0082 08       		.byte	0x8
+ 851 0083 04       		.byte	0x4
+ 852 0084 96010000 		.4byte	.LASF10
+ 853 0088 02       		.uleb128 0x2
+ 854 0089 01       		.byte	0x1
+ 855 008a 08       		.byte	0x8
+ 856 008b 00000000 		.4byte	.LASF11
+ 857 008f 04       		.uleb128 0x4
+ 858 0090 57010000 		.4byte	.LASF13
+ 859 0094 02       		.byte	0x2
+ 860 0095 F0       		.byte	0xf0
+ 861 0096 9A000000 		.4byte	0x9a
+ 862 009a 05       		.uleb128 0x5
+ 863 009b 6F000000 		.4byte	0x6f
+ 864 009f 02       		.uleb128 0x2
+ 865 00a0 04       		.byte	0x4
+ 866 00a1 07       		.byte	0x7
+ 867 00a2 9F020000 		.4byte	.LASF14
+ 868 00a6 06       		.uleb128 0x6
+ 869 00a7 01       		.byte	0x1
+ 870 00a8 EB000000 		.4byte	.LASF17
+ 871 00ac 01       		.byte	0x1
+ 872 00ad 32       		.byte	0x32
+ 873 00ae 01       		.byte	0x1
+ 874 00af 00000000 		.4byte	.LFB0
+ 875 00b3 24000000 		.4byte	.LFE0
+ 876 00b7 00000000 		.4byte	.LLST0
+ 877 00bb 01       		.byte	0x1
+ 878 00bc 07       		.uleb128 0x7
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 32
+
+
+ 879 00bd 01       		.byte	0x1
+ 880 00be 74020000 		.4byte	.LASF20
+ 881 00c2 01       		.byte	0x1
+ 882 00c3 4F       		.byte	0x4f
+ 883 00c4 01       		.byte	0x1
+ 884 00c5 00000000 		.4byte	.LFB1
+ 885 00c9 88000000 		.4byte	.LFE1
+ 886 00cd 2C000000 		.4byte	.LLST1
+ 887 00d1 01       		.byte	0x1
+ 888 00d2 F3000000 		.4byte	0xf3
+ 889 00d6 08       		.uleb128 0x8
+ 890 00d7 9A020000 		.4byte	.LASF15
+ 891 00db 01       		.byte	0x1
+ 892 00dc 52       		.byte	0x52
+ 893 00dd 6F000000 		.4byte	0x6f
+ 894 00e1 02       		.byte	0x2
+ 895 00e2 91       		.byte	0x91
+ 896 00e3 6F       		.sleb128 -17
+ 897 00e4 08       		.uleb128 0x8
+ 898 00e5 C4020000 		.4byte	.LASF16
+ 899 00e9 01       		.byte	0x1
+ 900 00ea 58       		.byte	0x58
+ 901 00eb 6F000000 		.4byte	0x6f
+ 902 00ef 02       		.byte	0x2
+ 903 00f0 91       		.byte	0x91
+ 904 00f1 6E       		.sleb128 -18
+ 905 00f2 00       		.byte	0
+ 906 00f3 09       		.uleb128 0x9
+ 907 00f4 01       		.byte	0x1
+ 908 00f5 0B020000 		.4byte	.LASF18
+ 909 00f9 01       		.byte	0x1
+ 910 00fa C1       		.byte	0xc1
+ 911 00fb 01       		.byte	0x1
+ 912 00fc 00000000 		.4byte	.LFB2
+ 913 0100 20000000 		.4byte	.LFE2
+ 914 0104 64000000 		.4byte	.LLST2
+ 915 0108 01       		.byte	0x1
+ 916 0109 09       		.uleb128 0x9
+ 917 010a 01       		.byte	0x1
+ 918 010b 87020000 		.4byte	.LASF19
+ 919 010f 01       		.byte	0x1
+ 920 0110 E3       		.byte	0xe3
+ 921 0111 01       		.byte	0x1
+ 922 0112 00000000 		.4byte	.LFB3
+ 923 0116 1C000000 		.4byte	.LFE3
+ 924 011a 90000000 		.4byte	.LLST3
+ 925 011e 01       		.byte	0x1
+ 926 011f 0A       		.uleb128 0xa
+ 927 0120 01       		.byte	0x1
+ 928 0121 62000000 		.4byte	.LASF21
+ 929 0125 01       		.byte	0x1
+ 930 0126 8D01     		.2byte	0x18d
+ 931 0128 01       		.byte	0x1
+ 932 0129 00000000 		.4byte	.LFB4
+ 933 012d 20000000 		.4byte	.LFE4
+ 934 0131 BC000000 		.4byte	.LLST4
+ 935 0135 01       		.byte	0x1
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 33
+
+
+ 936 0136 4A010000 		.4byte	0x14a
+ 937 013a 0B       		.uleb128 0xb
+ 938 013b 41010000 		.4byte	.LASF24
+ 939 013f 01       		.byte	0x1
+ 940 0140 8D01     		.2byte	0x18d
+ 941 0142 6F000000 		.4byte	0x6f
+ 942 0146 02       		.byte	0x2
+ 943 0147 91       		.byte	0x91
+ 944 0148 77       		.sleb128 -9
+ 945 0149 00       		.byte	0
+ 946 014a 0C       		.uleb128 0xc
+ 947 014b 01       		.byte	0x1
+ 948 014c 7C010000 		.4byte	.LASF36
+ 949 0150 01       		.byte	0x1
+ 950 0151 A301     		.2byte	0x1a3
+ 951 0153 01       		.byte	0x1
+ 952 0154 6F000000 		.4byte	0x6f
+ 953 0158 00000000 		.4byte	.LFB5
+ 954 015c 1C000000 		.4byte	.LFE5
+ 955 0160 F4000000 		.4byte	.LLST5
+ 956 0164 01       		.byte	0x1
+ 957 0165 0D       		.uleb128 0xd
+ 958 0166 01       		.byte	0x1
+ 959 0167 A9030000 		.4byte	.LASF22
+ 960 016b 01       		.byte	0x1
+ 961 016c BF01     		.2byte	0x1bf
+ 962 016e 01       		.byte	0x1
+ 963 016f 00000000 		.4byte	.LFB6
+ 964 0173 1C000000 		.4byte	.LFE6
+ 965 0177 20010000 		.4byte	.LLST6
+ 966 017b 01       		.byte	0x1
+ 967 017c 0A       		.uleb128 0xa
+ 968 017d 01       		.byte	0x1
+ 969 017e 7D000000 		.4byte	.LASF23
+ 970 0182 01       		.byte	0x1
+ 971 0183 DC01     		.2byte	0x1dc
+ 972 0185 01       		.byte	0x1
+ 973 0186 00000000 		.4byte	.LFB7
+ 974 018a 20000000 		.4byte	.LFE7
+ 975 018e 4C010000 		.4byte	.LLST7
+ 976 0192 01       		.byte	0x1
+ 977 0193 A7010000 		.4byte	0x1a7
+ 978 0197 0B       		.uleb128 0xb
+ 979 0198 97000000 		.4byte	.LASF25
+ 980 019c 01       		.byte	0x1
+ 981 019d DC01     		.2byte	0x1dc
+ 982 019f 6F000000 		.4byte	0x6f
+ 983 01a3 02       		.byte	0x2
+ 984 01a4 91       		.byte	0x91
+ 985 01a5 77       		.sleb128 -9
+ 986 01a6 00       		.byte	0
+ 987 01a7 0A       		.uleb128 0xa
+ 988 01a8 01       		.byte	0x1
+ 989 01a9 60030000 		.4byte	.LASF26
+ 990 01ad 01       		.byte	0x1
+ 991 01ae 2502     		.2byte	0x225
+ 992 01b0 01       		.byte	0x1
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 34
+
+
+ 993 01b1 00000000 		.4byte	.LFB8
+ 994 01b5 20000000 		.4byte	.LFE8
+ 995 01b9 84010000 		.4byte	.LLST8
+ 996 01bd 01       		.byte	0x1
+ 997 01be D2010000 		.4byte	0x1d2
+ 998 01c2 0B       		.uleb128 0xb
+ 999 01c3 A1030000 		.4byte	.LASF27
+ 1000 01c7 01       		.byte	0x1
+ 1001 01c8 2502     		.2byte	0x225
+ 1002 01ca 6F000000 		.4byte	0x6f
+ 1003 01ce 02       		.byte	0x2
+ 1004 01cf 91       		.byte	0x91
+ 1005 01d0 77       		.sleb128 -9
+ 1006 01d1 00       		.byte	0
+ 1007 01d2 0A       		.uleb128 0xa
+ 1008 01d3 01       		.byte	0x1
+ 1009 01d4 D9010000 		.4byte	.LASF28
+ 1010 01d8 01       		.byte	0x1
+ 1011 01d9 4202     		.2byte	0x242
+ 1012 01db 01       		.byte	0x1
+ 1013 01dc 00000000 		.4byte	.LFB9
+ 1014 01e0 20000000 		.4byte	.LFE9
+ 1015 01e4 BC010000 		.4byte	.LLST9
+ 1016 01e8 01       		.byte	0x1
+ 1017 01e9 FD010000 		.4byte	0x1fd
+ 1018 01ed 0B       		.uleb128 0xb
+ 1019 01ee A1030000 		.4byte	.LASF27
+ 1020 01f2 01       		.byte	0x1
+ 1021 01f3 4202     		.2byte	0x242
+ 1022 01f5 6F000000 		.4byte	0x6f
+ 1023 01f9 02       		.byte	0x2
+ 1024 01fa 91       		.byte	0x91
+ 1025 01fb 77       		.sleb128 -9
+ 1026 01fc 00       		.byte	0
+ 1027 01fd 0A       		.uleb128 0xa
+ 1028 01fe 01       		.byte	0x1
+ 1029 01ff CC000000 		.4byte	.LASF29
+ 1030 0203 01       		.byte	0x1
+ 1031 0204 A602     		.2byte	0x2a6
+ 1032 0206 01       		.byte	0x1
+ 1033 0207 00000000 		.4byte	.LFB10
+ 1034 020b 20000000 		.4byte	.LFE10
+ 1035 020f F4010000 		.4byte	.LLST10
+ 1036 0213 01       		.byte	0x1
+ 1037 0214 28020000 		.4byte	0x228
+ 1038 0218 0B       		.uleb128 0xb
+ 1039 0219 B6020000 		.4byte	.LASF30
+ 1040 021d 01       		.byte	0x1
+ 1041 021e A602     		.2byte	0x2a6
+ 1042 0220 6F000000 		.4byte	0x6f
+ 1043 0224 02       		.byte	0x2
+ 1044 0225 91       		.byte	0x91
+ 1045 0226 77       		.sleb128 -9
+ 1046 0227 00       		.byte	0
+ 1047 0228 0E       		.uleb128 0xe
+ 1048 0229 01       		.byte	0x1
+ 1049 022a B8010000 		.4byte	.LASF32
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 35
+
+
+ 1050 022e 01       		.byte	0x1
+ 1051 022f C102     		.2byte	0x2c1
+ 1052 0231 01       		.byte	0x1
+ 1053 0232 6F000000 		.4byte	0x6f
+ 1054 0236 00000000 		.4byte	.LFB11
+ 1055 023a 20000000 		.4byte	.LFE11
+ 1056 023e 2C020000 		.4byte	.LLST11
+ 1057 0242 01       		.byte	0x1
+ 1058 0243 57020000 		.4byte	0x257
+ 1059 0247 0F       		.uleb128 0xf
+ 1060 0248 44020000 		.4byte	.LASF31
+ 1061 024c 01       		.byte	0x1
+ 1062 024d C302     		.2byte	0x2c3
+ 1063 024f 6F000000 		.4byte	0x6f
+ 1064 0253 02       		.byte	0x2
+ 1065 0254 91       		.byte	0x91
+ 1066 0255 77       		.sleb128 -9
+ 1067 0256 00       		.byte	0
+ 1068 0257 0E       		.uleb128 0xe
+ 1069 0258 01       		.byte	0x1
+ 1070 0259 FF000000 		.4byte	.LASF33
+ 1071 025d 01       		.byte	0x1
+ 1072 025e DE02     		.2byte	0x2de
+ 1073 0260 01       		.byte	0x1
+ 1074 0261 6F000000 		.4byte	0x6f
+ 1075 0265 00000000 		.4byte	.LFB12
+ 1076 0269 20000000 		.4byte	.LFE12
+ 1077 026d 64020000 		.4byte	.LLST12
+ 1078 0271 01       		.byte	0x1
+ 1079 0272 86020000 		.4byte	0x286
+ 1080 0276 0F       		.uleb128 0xf
+ 1081 0277 44020000 		.4byte	.LASF31
+ 1082 027b 01       		.byte	0x1
+ 1083 027c E002     		.2byte	0x2e0
+ 1084 027e 6F000000 		.4byte	0x6f
+ 1085 0282 02       		.byte	0x2
+ 1086 0283 91       		.byte	0x91
+ 1087 0284 77       		.sleb128 -9
+ 1088 0285 00       		.byte	0
+ 1089 0286 0A       		.uleb128 0xa
+ 1090 0287 01       		.byte	0x1
+ 1091 0288 E1020000 		.4byte	.LASF34
+ 1092 028c 01       		.byte	0x1
+ 1093 028d FA02     		.2byte	0x2fa
+ 1094 028f 01       		.byte	0x1
+ 1095 0290 00000000 		.4byte	.LFB13
+ 1096 0294 20000000 		.4byte	.LFE13
+ 1097 0298 9C020000 		.4byte	.LLST13
+ 1098 029c 01       		.byte	0x1
+ 1099 029d B1020000 		.4byte	0x2b1
+ 1100 02a1 0B       		.uleb128 0xb
+ 1101 02a2 74010000 		.4byte	.LASF35
+ 1102 02a6 01       		.byte	0x1
+ 1103 02a7 FA02     		.2byte	0x2fa
+ 1104 02a9 6F000000 		.4byte	0x6f
+ 1105 02ad 02       		.byte	0x2
+ 1106 02ae 91       		.byte	0x91
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 36
+
+
+ 1107 02af 77       		.sleb128 -9
+ 1108 02b0 00       		.byte	0
+ 1109 02b1 0C       		.uleb128 0xc
+ 1110 02b2 01       		.byte	0x1
+ 1111 02b3 21010000 		.4byte	.LASF37
+ 1112 02b7 01       		.byte	0x1
+ 1113 02b8 1303     		.2byte	0x313
+ 1114 02ba 01       		.byte	0x1
+ 1115 02bb 6F000000 		.4byte	0x6f
+ 1116 02bf 00000000 		.4byte	.LFB14
+ 1117 02c3 14000000 		.4byte	.LFE14
+ 1118 02c7 D4020000 		.4byte	.LLST14
+ 1119 02cb 01       		.byte	0x1
+ 1120 02cc 0C       		.uleb128 0xc
+ 1121 02cd 01       		.byte	0x1
+ 1122 02ce 9E000000 		.4byte	.LASF38
+ 1123 02d2 01       		.byte	0x1
+ 1124 02d3 4703     		.2byte	0x347
+ 1125 02d5 01       		.byte	0x1
+ 1126 02d6 6F000000 		.4byte	0x6f
+ 1127 02da 00000000 		.4byte	.LFB15
+ 1128 02de 14000000 		.4byte	.LFE15
+ 1129 02e2 00030000 		.4byte	.LLST15
+ 1130 02e6 01       		.byte	0x1
+ 1131 02e7 0C       		.uleb128 0xc
+ 1132 02e8 01       		.byte	0x1
+ 1133 02e9 9D010000 		.4byte	.LASF39
+ 1134 02ed 01       		.byte	0x1
+ 1135 02ee 5B03     		.2byte	0x35b
+ 1136 02f0 01       		.byte	0x1
+ 1137 02f1 6F000000 		.4byte	0x6f
+ 1138 02f5 00000000 		.4byte	.LFB16
+ 1139 02f9 14000000 		.4byte	.LFE16
+ 1140 02fd 2C030000 		.4byte	.LLST16
+ 1141 0301 01       		.byte	0x1
+ 1142 0302 0C       		.uleb128 0xc
+ 1143 0303 01       		.byte	0x1
+ 1144 0304 7C030000 		.4byte	.LASF40
+ 1145 0308 01       		.byte	0x1
+ 1146 0309 7103     		.2byte	0x371
+ 1147 030b 01       		.byte	0x1
+ 1148 030c 6F000000 		.4byte	0x6f
+ 1149 0310 00000000 		.4byte	.LFB17
+ 1150 0314 14000000 		.4byte	.LFE17
+ 1151 0318 58030000 		.4byte	.LLST17
+ 1152 031c 01       		.byte	0x1
+ 1153 031d 10       		.uleb128 0x10
+ 1154 031e F5010000 		.4byte	.LASF44
+ 1155 0322 01       		.byte	0x1
+ 1156 0323 1B       		.byte	0x1b
+ 1157 0324 6F000000 		.4byte	0x6f
+ 1158 0328 01       		.byte	0x1
+ 1159 0329 05       		.byte	0x5
+ 1160 032a 03       		.byte	0x3
+ 1161 032b 00000000 		.4byte	PWM_BlueWhite_initVar
+ 1162 032f 00       		.byte	0
+ 1163              		.section	.debug_abbrev,"",%progbits
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 37
+
+
+ 1164              	.Ldebug_abbrev0:
+ 1165 0000 01       		.uleb128 0x1
+ 1166 0001 11       		.uleb128 0x11
+ 1167 0002 01       		.byte	0x1
+ 1168 0003 25       		.uleb128 0x25
+ 1169 0004 0E       		.uleb128 0xe
+ 1170 0005 13       		.uleb128 0x13
+ 1171 0006 0B       		.uleb128 0xb
+ 1172 0007 03       		.uleb128 0x3
+ 1173 0008 0E       		.uleb128 0xe
+ 1174 0009 1B       		.uleb128 0x1b
+ 1175 000a 0E       		.uleb128 0xe
+ 1176 000b 55       		.uleb128 0x55
+ 1177 000c 06       		.uleb128 0x6
+ 1178 000d 11       		.uleb128 0x11
+ 1179 000e 01       		.uleb128 0x1
+ 1180 000f 52       		.uleb128 0x52
+ 1181 0010 01       		.uleb128 0x1
+ 1182 0011 10       		.uleb128 0x10
+ 1183 0012 06       		.uleb128 0x6
+ 1184 0013 00       		.byte	0
+ 1185 0014 00       		.byte	0
+ 1186 0015 02       		.uleb128 0x2
+ 1187 0016 24       		.uleb128 0x24
+ 1188 0017 00       		.byte	0
+ 1189 0018 0B       		.uleb128 0xb
+ 1190 0019 0B       		.uleb128 0xb
+ 1191 001a 3E       		.uleb128 0x3e
+ 1192 001b 0B       		.uleb128 0xb
+ 1193 001c 03       		.uleb128 0x3
+ 1194 001d 0E       		.uleb128 0xe
+ 1195 001e 00       		.byte	0
+ 1196 001f 00       		.byte	0
+ 1197 0020 03       		.uleb128 0x3
+ 1198 0021 24       		.uleb128 0x24
+ 1199 0022 00       		.byte	0
+ 1200 0023 0B       		.uleb128 0xb
+ 1201 0024 0B       		.uleb128 0xb
+ 1202 0025 3E       		.uleb128 0x3e
+ 1203 0026 0B       		.uleb128 0xb
+ 1204 0027 03       		.uleb128 0x3
+ 1205 0028 08       		.uleb128 0x8
+ 1206 0029 00       		.byte	0
+ 1207 002a 00       		.byte	0
+ 1208 002b 04       		.uleb128 0x4
+ 1209 002c 16       		.uleb128 0x16
+ 1210 002d 00       		.byte	0
+ 1211 002e 03       		.uleb128 0x3
+ 1212 002f 0E       		.uleb128 0xe
+ 1213 0030 3A       		.uleb128 0x3a
+ 1214 0031 0B       		.uleb128 0xb
+ 1215 0032 3B       		.uleb128 0x3b
+ 1216 0033 0B       		.uleb128 0xb
+ 1217 0034 49       		.uleb128 0x49
+ 1218 0035 13       		.uleb128 0x13
+ 1219 0036 00       		.byte	0
+ 1220 0037 00       		.byte	0
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 38
+
+
+ 1221 0038 05       		.uleb128 0x5
+ 1222 0039 35       		.uleb128 0x35
+ 1223 003a 00       		.byte	0
+ 1224 003b 49       		.uleb128 0x49
+ 1225 003c 13       		.uleb128 0x13
+ 1226 003d 00       		.byte	0
+ 1227 003e 00       		.byte	0
+ 1228 003f 06       		.uleb128 0x6
+ 1229 0040 2E       		.uleb128 0x2e
+ 1230 0041 00       		.byte	0
+ 1231 0042 3F       		.uleb128 0x3f
+ 1232 0043 0C       		.uleb128 0xc
+ 1233 0044 03       		.uleb128 0x3
+ 1234 0045 0E       		.uleb128 0xe
+ 1235 0046 3A       		.uleb128 0x3a
+ 1236 0047 0B       		.uleb128 0xb
+ 1237 0048 3B       		.uleb128 0x3b
+ 1238 0049 0B       		.uleb128 0xb
+ 1239 004a 27       		.uleb128 0x27
+ 1240 004b 0C       		.uleb128 0xc
+ 1241 004c 11       		.uleb128 0x11
+ 1242 004d 01       		.uleb128 0x1
+ 1243 004e 12       		.uleb128 0x12
+ 1244 004f 01       		.uleb128 0x1
+ 1245 0050 40       		.uleb128 0x40
+ 1246 0051 06       		.uleb128 0x6
+ 1247 0052 9642     		.uleb128 0x2116
+ 1248 0054 0C       		.uleb128 0xc
+ 1249 0055 00       		.byte	0
+ 1250 0056 00       		.byte	0
+ 1251 0057 07       		.uleb128 0x7
+ 1252 0058 2E       		.uleb128 0x2e
+ 1253 0059 01       		.byte	0x1
+ 1254 005a 3F       		.uleb128 0x3f
+ 1255 005b 0C       		.uleb128 0xc
+ 1256 005c 03       		.uleb128 0x3
+ 1257 005d 0E       		.uleb128 0xe
+ 1258 005e 3A       		.uleb128 0x3a
+ 1259 005f 0B       		.uleb128 0xb
+ 1260 0060 3B       		.uleb128 0x3b
+ 1261 0061 0B       		.uleb128 0xb
+ 1262 0062 27       		.uleb128 0x27
+ 1263 0063 0C       		.uleb128 0xc
+ 1264 0064 11       		.uleb128 0x11
+ 1265 0065 01       		.uleb128 0x1
+ 1266 0066 12       		.uleb128 0x12
+ 1267 0067 01       		.uleb128 0x1
+ 1268 0068 40       		.uleb128 0x40
+ 1269 0069 06       		.uleb128 0x6
+ 1270 006a 9642     		.uleb128 0x2116
+ 1271 006c 0C       		.uleb128 0xc
+ 1272 006d 01       		.uleb128 0x1
+ 1273 006e 13       		.uleb128 0x13
+ 1274 006f 00       		.byte	0
+ 1275 0070 00       		.byte	0
+ 1276 0071 08       		.uleb128 0x8
+ 1277 0072 34       		.uleb128 0x34
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 39
+
+
+ 1278 0073 00       		.byte	0
+ 1279 0074 03       		.uleb128 0x3
+ 1280 0075 0E       		.uleb128 0xe
+ 1281 0076 3A       		.uleb128 0x3a
+ 1282 0077 0B       		.uleb128 0xb
+ 1283 0078 3B       		.uleb128 0x3b
+ 1284 0079 0B       		.uleb128 0xb
+ 1285 007a 49       		.uleb128 0x49
+ 1286 007b 13       		.uleb128 0x13
+ 1287 007c 02       		.uleb128 0x2
+ 1288 007d 0A       		.uleb128 0xa
+ 1289 007e 00       		.byte	0
+ 1290 007f 00       		.byte	0
+ 1291 0080 09       		.uleb128 0x9
+ 1292 0081 2E       		.uleb128 0x2e
+ 1293 0082 00       		.byte	0
+ 1294 0083 3F       		.uleb128 0x3f
+ 1295 0084 0C       		.uleb128 0xc
+ 1296 0085 03       		.uleb128 0x3
+ 1297 0086 0E       		.uleb128 0xe
+ 1298 0087 3A       		.uleb128 0x3a
+ 1299 0088 0B       		.uleb128 0xb
+ 1300 0089 3B       		.uleb128 0x3b
+ 1301 008a 0B       		.uleb128 0xb
+ 1302 008b 27       		.uleb128 0x27
+ 1303 008c 0C       		.uleb128 0xc
+ 1304 008d 11       		.uleb128 0x11
+ 1305 008e 01       		.uleb128 0x1
+ 1306 008f 12       		.uleb128 0x12
+ 1307 0090 01       		.uleb128 0x1
+ 1308 0091 40       		.uleb128 0x40
+ 1309 0092 06       		.uleb128 0x6
+ 1310 0093 9742     		.uleb128 0x2117
+ 1311 0095 0C       		.uleb128 0xc
+ 1312 0096 00       		.byte	0
+ 1313 0097 00       		.byte	0
+ 1314 0098 0A       		.uleb128 0xa
+ 1315 0099 2E       		.uleb128 0x2e
+ 1316 009a 01       		.byte	0x1
+ 1317 009b 3F       		.uleb128 0x3f
+ 1318 009c 0C       		.uleb128 0xc
+ 1319 009d 03       		.uleb128 0x3
+ 1320 009e 0E       		.uleb128 0xe
+ 1321 009f 3A       		.uleb128 0x3a
+ 1322 00a0 0B       		.uleb128 0xb
+ 1323 00a1 3B       		.uleb128 0x3b
+ 1324 00a2 05       		.uleb128 0x5
+ 1325 00a3 27       		.uleb128 0x27
+ 1326 00a4 0C       		.uleb128 0xc
+ 1327 00a5 11       		.uleb128 0x11
+ 1328 00a6 01       		.uleb128 0x1
+ 1329 00a7 12       		.uleb128 0x12
+ 1330 00a8 01       		.uleb128 0x1
+ 1331 00a9 40       		.uleb128 0x40
+ 1332 00aa 06       		.uleb128 0x6
+ 1333 00ab 9742     		.uleb128 0x2117
+ 1334 00ad 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 40
+
+
+ 1335 00ae 01       		.uleb128 0x1
+ 1336 00af 13       		.uleb128 0x13
+ 1337 00b0 00       		.byte	0
+ 1338 00b1 00       		.byte	0
+ 1339 00b2 0B       		.uleb128 0xb
+ 1340 00b3 05       		.uleb128 0x5
+ 1341 00b4 00       		.byte	0
+ 1342 00b5 03       		.uleb128 0x3
+ 1343 00b6 0E       		.uleb128 0xe
+ 1344 00b7 3A       		.uleb128 0x3a
+ 1345 00b8 0B       		.uleb128 0xb
+ 1346 00b9 3B       		.uleb128 0x3b
+ 1347 00ba 05       		.uleb128 0x5
+ 1348 00bb 49       		.uleb128 0x49
+ 1349 00bc 13       		.uleb128 0x13
+ 1350 00bd 02       		.uleb128 0x2
+ 1351 00be 0A       		.uleb128 0xa
+ 1352 00bf 00       		.byte	0
+ 1353 00c0 00       		.byte	0
+ 1354 00c1 0C       		.uleb128 0xc
+ 1355 00c2 2E       		.uleb128 0x2e
+ 1356 00c3 00       		.byte	0
+ 1357 00c4 3F       		.uleb128 0x3f
+ 1358 00c5 0C       		.uleb128 0xc
+ 1359 00c6 03       		.uleb128 0x3
+ 1360 00c7 0E       		.uleb128 0xe
+ 1361 00c8 3A       		.uleb128 0x3a
+ 1362 00c9 0B       		.uleb128 0xb
+ 1363 00ca 3B       		.uleb128 0x3b
+ 1364 00cb 05       		.uleb128 0x5
+ 1365 00cc 27       		.uleb128 0x27
+ 1366 00cd 0C       		.uleb128 0xc
+ 1367 00ce 49       		.uleb128 0x49
+ 1368 00cf 13       		.uleb128 0x13
+ 1369 00d0 11       		.uleb128 0x11
+ 1370 00d1 01       		.uleb128 0x1
+ 1371 00d2 12       		.uleb128 0x12
+ 1372 00d3 01       		.uleb128 0x1
+ 1373 00d4 40       		.uleb128 0x40
+ 1374 00d5 06       		.uleb128 0x6
+ 1375 00d6 9742     		.uleb128 0x2117
+ 1376 00d8 0C       		.uleb128 0xc
+ 1377 00d9 00       		.byte	0
+ 1378 00da 00       		.byte	0
+ 1379 00db 0D       		.uleb128 0xd
+ 1380 00dc 2E       		.uleb128 0x2e
+ 1381 00dd 00       		.byte	0
+ 1382 00de 3F       		.uleb128 0x3f
+ 1383 00df 0C       		.uleb128 0xc
+ 1384 00e0 03       		.uleb128 0x3
+ 1385 00e1 0E       		.uleb128 0xe
+ 1386 00e2 3A       		.uleb128 0x3a
+ 1387 00e3 0B       		.uleb128 0xb
+ 1388 00e4 3B       		.uleb128 0x3b
+ 1389 00e5 05       		.uleb128 0x5
+ 1390 00e6 27       		.uleb128 0x27
+ 1391 00e7 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 41
+
+
+ 1392 00e8 11       		.uleb128 0x11
+ 1393 00e9 01       		.uleb128 0x1
+ 1394 00ea 12       		.uleb128 0x12
+ 1395 00eb 01       		.uleb128 0x1
+ 1396 00ec 40       		.uleb128 0x40
+ 1397 00ed 06       		.uleb128 0x6
+ 1398 00ee 9642     		.uleb128 0x2116
+ 1399 00f0 0C       		.uleb128 0xc
+ 1400 00f1 00       		.byte	0
+ 1401 00f2 00       		.byte	0
+ 1402 00f3 0E       		.uleb128 0xe
+ 1403 00f4 2E       		.uleb128 0x2e
+ 1404 00f5 01       		.byte	0x1
+ 1405 00f6 3F       		.uleb128 0x3f
+ 1406 00f7 0C       		.uleb128 0xc
+ 1407 00f8 03       		.uleb128 0x3
+ 1408 00f9 0E       		.uleb128 0xe
+ 1409 00fa 3A       		.uleb128 0x3a
+ 1410 00fb 0B       		.uleb128 0xb
+ 1411 00fc 3B       		.uleb128 0x3b
+ 1412 00fd 05       		.uleb128 0x5
+ 1413 00fe 27       		.uleb128 0x27
+ 1414 00ff 0C       		.uleb128 0xc
+ 1415 0100 49       		.uleb128 0x49
+ 1416 0101 13       		.uleb128 0x13
+ 1417 0102 11       		.uleb128 0x11
+ 1418 0103 01       		.uleb128 0x1
+ 1419 0104 12       		.uleb128 0x12
+ 1420 0105 01       		.uleb128 0x1
+ 1421 0106 40       		.uleb128 0x40
+ 1422 0107 06       		.uleb128 0x6
+ 1423 0108 9742     		.uleb128 0x2117
+ 1424 010a 0C       		.uleb128 0xc
+ 1425 010b 01       		.uleb128 0x1
+ 1426 010c 13       		.uleb128 0x13
+ 1427 010d 00       		.byte	0
+ 1428 010e 00       		.byte	0
+ 1429 010f 0F       		.uleb128 0xf
+ 1430 0110 34       		.uleb128 0x34
+ 1431 0111 00       		.byte	0
+ 1432 0112 03       		.uleb128 0x3
+ 1433 0113 0E       		.uleb128 0xe
+ 1434 0114 3A       		.uleb128 0x3a
+ 1435 0115 0B       		.uleb128 0xb
+ 1436 0116 3B       		.uleb128 0x3b
+ 1437 0117 05       		.uleb128 0x5
+ 1438 0118 49       		.uleb128 0x49
+ 1439 0119 13       		.uleb128 0x13
+ 1440 011a 02       		.uleb128 0x2
+ 1441 011b 0A       		.uleb128 0xa
+ 1442 011c 00       		.byte	0
+ 1443 011d 00       		.byte	0
+ 1444 011e 10       		.uleb128 0x10
+ 1445 011f 34       		.uleb128 0x34
+ 1446 0120 00       		.byte	0
+ 1447 0121 03       		.uleb128 0x3
+ 1448 0122 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 42
+
+
+ 1449 0123 3A       		.uleb128 0x3a
+ 1450 0124 0B       		.uleb128 0xb
+ 1451 0125 3B       		.uleb128 0x3b
+ 1452 0126 0B       		.uleb128 0xb
+ 1453 0127 49       		.uleb128 0x49
+ 1454 0128 13       		.uleb128 0x13
+ 1455 0129 3F       		.uleb128 0x3f
+ 1456 012a 0C       		.uleb128 0xc
+ 1457 012b 02       		.uleb128 0x2
+ 1458 012c 0A       		.uleb128 0xa
+ 1459 012d 00       		.byte	0
+ 1460 012e 00       		.byte	0
+ 1461 012f 00       		.byte	0
+ 1462              		.section	.debug_loc,"",%progbits
+ 1463              	.Ldebug_loc0:
+ 1464              	.LLST0:
+ 1465 0000 00000000 		.4byte	.LFB0
+ 1466 0004 02000000 		.4byte	.LCFI0
+ 1467 0008 0200     		.2byte	0x2
+ 1468 000a 7D       		.byte	0x7d
+ 1469 000b 00       		.sleb128 0
+ 1470 000c 02000000 		.4byte	.LCFI0
+ 1471 0010 04000000 		.4byte	.LCFI1
+ 1472 0014 0200     		.2byte	0x2
+ 1473 0016 7D       		.byte	0x7d
+ 1474 0017 08       		.sleb128 8
+ 1475 0018 04000000 		.4byte	.LCFI1
+ 1476 001c 24000000 		.4byte	.LFE0
+ 1477 0020 0200     		.2byte	0x2
+ 1478 0022 77       		.byte	0x77
+ 1479 0023 08       		.sleb128 8
+ 1480 0024 00000000 		.4byte	0
+ 1481 0028 00000000 		.4byte	0
+ 1482              	.LLST1:
+ 1483 002c 00000000 		.4byte	.LFB1
+ 1484 0030 02000000 		.4byte	.LCFI2
+ 1485 0034 0200     		.2byte	0x2
+ 1486 0036 7D       		.byte	0x7d
+ 1487 0037 00       		.sleb128 0
+ 1488 0038 02000000 		.4byte	.LCFI2
+ 1489 003c 04000000 		.4byte	.LCFI3
+ 1490 0040 0200     		.2byte	0x2
+ 1491 0042 7D       		.byte	0x7d
+ 1492 0043 0C       		.sleb128 12
+ 1493 0044 04000000 		.4byte	.LCFI3
+ 1494 0048 06000000 		.4byte	.LCFI4
+ 1495 004c 0200     		.2byte	0x2
+ 1496 004e 7D       		.byte	0x7d
+ 1497 004f 18       		.sleb128 24
+ 1498 0050 06000000 		.4byte	.LCFI4
+ 1499 0054 88000000 		.4byte	.LFE1
+ 1500 0058 0200     		.2byte	0x2
+ 1501 005a 77       		.byte	0x77
+ 1502 005b 18       		.sleb128 24
+ 1503 005c 00000000 		.4byte	0
+ 1504 0060 00000000 		.4byte	0
+ 1505              	.LLST2:
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 43
+
+
+ 1506 0064 00000000 		.4byte	.LFB2
+ 1507 0068 02000000 		.4byte	.LCFI5
+ 1508 006c 0200     		.2byte	0x2
+ 1509 006e 7D       		.byte	0x7d
+ 1510 006f 00       		.sleb128 0
+ 1511 0070 02000000 		.4byte	.LCFI5
+ 1512 0074 04000000 		.4byte	.LCFI6
+ 1513 0078 0200     		.2byte	0x2
+ 1514 007a 7D       		.byte	0x7d
+ 1515 007b 08       		.sleb128 8
+ 1516 007c 04000000 		.4byte	.LCFI6
+ 1517 0080 20000000 		.4byte	.LFE2
+ 1518 0084 0200     		.2byte	0x2
+ 1519 0086 77       		.byte	0x77
+ 1520 0087 08       		.sleb128 8
+ 1521 0088 00000000 		.4byte	0
+ 1522 008c 00000000 		.4byte	0
+ 1523              	.LLST3:
+ 1524 0090 00000000 		.4byte	.LFB3
+ 1525 0094 02000000 		.4byte	.LCFI7
+ 1526 0098 0200     		.2byte	0x2
+ 1527 009a 7D       		.byte	0x7d
+ 1528 009b 00       		.sleb128 0
+ 1529 009c 02000000 		.4byte	.LCFI7
+ 1530 00a0 04000000 		.4byte	.LCFI8
+ 1531 00a4 0200     		.2byte	0x2
+ 1532 00a6 7D       		.byte	0x7d
+ 1533 00a7 08       		.sleb128 8
+ 1534 00a8 04000000 		.4byte	.LCFI8
+ 1535 00ac 1C000000 		.4byte	.LFE3
+ 1536 00b0 0200     		.2byte	0x2
+ 1537 00b2 77       		.byte	0x77
+ 1538 00b3 08       		.sleb128 8
+ 1539 00b4 00000000 		.4byte	0
+ 1540 00b8 00000000 		.4byte	0
+ 1541              	.LLST4:
+ 1542 00bc 00000000 		.4byte	.LFB4
+ 1543 00c0 02000000 		.4byte	.LCFI9
+ 1544 00c4 0200     		.2byte	0x2
+ 1545 00c6 7D       		.byte	0x7d
+ 1546 00c7 00       		.sleb128 0
+ 1547 00c8 02000000 		.4byte	.LCFI9
+ 1548 00cc 04000000 		.4byte	.LCFI10
+ 1549 00d0 0200     		.2byte	0x2
+ 1550 00d2 7D       		.byte	0x7d
+ 1551 00d3 08       		.sleb128 8
+ 1552 00d4 04000000 		.4byte	.LCFI10
+ 1553 00d8 06000000 		.4byte	.LCFI11
+ 1554 00dc 0200     		.2byte	0x2
+ 1555 00de 7D       		.byte	0x7d
+ 1556 00df 10       		.sleb128 16
+ 1557 00e0 06000000 		.4byte	.LCFI11
+ 1558 00e4 20000000 		.4byte	.LFE4
+ 1559 00e8 0200     		.2byte	0x2
+ 1560 00ea 77       		.byte	0x77
+ 1561 00eb 10       		.sleb128 16
+ 1562 00ec 00000000 		.4byte	0
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 44
+
+
+ 1563 00f0 00000000 		.4byte	0
+ 1564              	.LLST5:
+ 1565 00f4 00000000 		.4byte	.LFB5
+ 1566 00f8 02000000 		.4byte	.LCFI12
+ 1567 00fc 0200     		.2byte	0x2
+ 1568 00fe 7D       		.byte	0x7d
+ 1569 00ff 00       		.sleb128 0
+ 1570 0100 02000000 		.4byte	.LCFI12
+ 1571 0104 04000000 		.4byte	.LCFI13
+ 1572 0108 0200     		.2byte	0x2
+ 1573 010a 7D       		.byte	0x7d
+ 1574 010b 08       		.sleb128 8
+ 1575 010c 04000000 		.4byte	.LCFI13
+ 1576 0110 1C000000 		.4byte	.LFE5
+ 1577 0114 0200     		.2byte	0x2
+ 1578 0116 77       		.byte	0x77
+ 1579 0117 08       		.sleb128 8
+ 1580 0118 00000000 		.4byte	0
+ 1581 011c 00000000 		.4byte	0
+ 1582              	.LLST6:
+ 1583 0120 00000000 		.4byte	.LFB6
+ 1584 0124 02000000 		.4byte	.LCFI14
+ 1585 0128 0200     		.2byte	0x2
+ 1586 012a 7D       		.byte	0x7d
+ 1587 012b 00       		.sleb128 0
+ 1588 012c 02000000 		.4byte	.LCFI14
+ 1589 0130 04000000 		.4byte	.LCFI15
+ 1590 0134 0200     		.2byte	0x2
+ 1591 0136 7D       		.byte	0x7d
+ 1592 0137 08       		.sleb128 8
+ 1593 0138 04000000 		.4byte	.LCFI15
+ 1594 013c 1C000000 		.4byte	.LFE6
+ 1595 0140 0200     		.2byte	0x2
+ 1596 0142 77       		.byte	0x77
+ 1597 0143 08       		.sleb128 8
+ 1598 0144 00000000 		.4byte	0
+ 1599 0148 00000000 		.4byte	0
+ 1600              	.LLST7:
+ 1601 014c 00000000 		.4byte	.LFB7
+ 1602 0150 02000000 		.4byte	.LCFI16
+ 1603 0154 0200     		.2byte	0x2
+ 1604 0156 7D       		.byte	0x7d
+ 1605 0157 00       		.sleb128 0
+ 1606 0158 02000000 		.4byte	.LCFI16
+ 1607 015c 04000000 		.4byte	.LCFI17
+ 1608 0160 0200     		.2byte	0x2
+ 1609 0162 7D       		.byte	0x7d
+ 1610 0163 08       		.sleb128 8
+ 1611 0164 04000000 		.4byte	.LCFI17
+ 1612 0168 06000000 		.4byte	.LCFI18
+ 1613 016c 0200     		.2byte	0x2
+ 1614 016e 7D       		.byte	0x7d
+ 1615 016f 10       		.sleb128 16
+ 1616 0170 06000000 		.4byte	.LCFI18
+ 1617 0174 20000000 		.4byte	.LFE7
+ 1618 0178 0200     		.2byte	0x2
+ 1619 017a 77       		.byte	0x77
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 45
+
+
+ 1620 017b 10       		.sleb128 16
+ 1621 017c 00000000 		.4byte	0
+ 1622 0180 00000000 		.4byte	0
+ 1623              	.LLST8:
+ 1624 0184 00000000 		.4byte	.LFB8
+ 1625 0188 02000000 		.4byte	.LCFI19
+ 1626 018c 0200     		.2byte	0x2
+ 1627 018e 7D       		.byte	0x7d
+ 1628 018f 00       		.sleb128 0
+ 1629 0190 02000000 		.4byte	.LCFI19
+ 1630 0194 04000000 		.4byte	.LCFI20
+ 1631 0198 0200     		.2byte	0x2
+ 1632 019a 7D       		.byte	0x7d
+ 1633 019b 08       		.sleb128 8
+ 1634 019c 04000000 		.4byte	.LCFI20
+ 1635 01a0 06000000 		.4byte	.LCFI21
+ 1636 01a4 0200     		.2byte	0x2
+ 1637 01a6 7D       		.byte	0x7d
+ 1638 01a7 10       		.sleb128 16
+ 1639 01a8 06000000 		.4byte	.LCFI21
+ 1640 01ac 20000000 		.4byte	.LFE8
+ 1641 01b0 0200     		.2byte	0x2
+ 1642 01b2 77       		.byte	0x77
+ 1643 01b3 10       		.sleb128 16
+ 1644 01b4 00000000 		.4byte	0
+ 1645 01b8 00000000 		.4byte	0
+ 1646              	.LLST9:
+ 1647 01bc 00000000 		.4byte	.LFB9
+ 1648 01c0 02000000 		.4byte	.LCFI22
+ 1649 01c4 0200     		.2byte	0x2
+ 1650 01c6 7D       		.byte	0x7d
+ 1651 01c7 00       		.sleb128 0
+ 1652 01c8 02000000 		.4byte	.LCFI22
+ 1653 01cc 04000000 		.4byte	.LCFI23
+ 1654 01d0 0200     		.2byte	0x2
+ 1655 01d2 7D       		.byte	0x7d
+ 1656 01d3 08       		.sleb128 8
+ 1657 01d4 04000000 		.4byte	.LCFI23
+ 1658 01d8 06000000 		.4byte	.LCFI24
+ 1659 01dc 0200     		.2byte	0x2
+ 1660 01de 7D       		.byte	0x7d
+ 1661 01df 10       		.sleb128 16
+ 1662 01e0 06000000 		.4byte	.LCFI24
+ 1663 01e4 20000000 		.4byte	.LFE9
+ 1664 01e8 0200     		.2byte	0x2
+ 1665 01ea 77       		.byte	0x77
+ 1666 01eb 10       		.sleb128 16
+ 1667 01ec 00000000 		.4byte	0
+ 1668 01f0 00000000 		.4byte	0
+ 1669              	.LLST10:
+ 1670 01f4 00000000 		.4byte	.LFB10
+ 1671 01f8 02000000 		.4byte	.LCFI25
+ 1672 01fc 0200     		.2byte	0x2
+ 1673 01fe 7D       		.byte	0x7d
+ 1674 01ff 00       		.sleb128 0
+ 1675 0200 02000000 		.4byte	.LCFI25
+ 1676 0204 04000000 		.4byte	.LCFI26
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 46
+
+
+ 1677 0208 0200     		.2byte	0x2
+ 1678 020a 7D       		.byte	0x7d
+ 1679 020b 08       		.sleb128 8
+ 1680 020c 04000000 		.4byte	.LCFI26
+ 1681 0210 06000000 		.4byte	.LCFI27
+ 1682 0214 0200     		.2byte	0x2
+ 1683 0216 7D       		.byte	0x7d
+ 1684 0217 10       		.sleb128 16
+ 1685 0218 06000000 		.4byte	.LCFI27
+ 1686 021c 20000000 		.4byte	.LFE10
+ 1687 0220 0200     		.2byte	0x2
+ 1688 0222 77       		.byte	0x77
+ 1689 0223 10       		.sleb128 16
+ 1690 0224 00000000 		.4byte	0
+ 1691 0228 00000000 		.4byte	0
+ 1692              	.LLST11:
+ 1693 022c 00000000 		.4byte	.LFB11
+ 1694 0230 02000000 		.4byte	.LCFI28
+ 1695 0234 0200     		.2byte	0x2
+ 1696 0236 7D       		.byte	0x7d
+ 1697 0237 00       		.sleb128 0
+ 1698 0238 02000000 		.4byte	.LCFI28
+ 1699 023c 04000000 		.4byte	.LCFI29
+ 1700 0240 0200     		.2byte	0x2
+ 1701 0242 7D       		.byte	0x7d
+ 1702 0243 08       		.sleb128 8
+ 1703 0244 04000000 		.4byte	.LCFI29
+ 1704 0248 06000000 		.4byte	.LCFI30
+ 1705 024c 0200     		.2byte	0x2
+ 1706 024e 7D       		.byte	0x7d
+ 1707 024f 10       		.sleb128 16
+ 1708 0250 06000000 		.4byte	.LCFI30
+ 1709 0254 20000000 		.4byte	.LFE11
+ 1710 0258 0200     		.2byte	0x2
+ 1711 025a 77       		.byte	0x77
+ 1712 025b 10       		.sleb128 16
+ 1713 025c 00000000 		.4byte	0
+ 1714 0260 00000000 		.4byte	0
+ 1715              	.LLST12:
+ 1716 0264 00000000 		.4byte	.LFB12
+ 1717 0268 02000000 		.4byte	.LCFI31
+ 1718 026c 0200     		.2byte	0x2
+ 1719 026e 7D       		.byte	0x7d
+ 1720 026f 00       		.sleb128 0
+ 1721 0270 02000000 		.4byte	.LCFI31
+ 1722 0274 04000000 		.4byte	.LCFI32
+ 1723 0278 0200     		.2byte	0x2
+ 1724 027a 7D       		.byte	0x7d
+ 1725 027b 08       		.sleb128 8
+ 1726 027c 04000000 		.4byte	.LCFI32
+ 1727 0280 06000000 		.4byte	.LCFI33
+ 1728 0284 0200     		.2byte	0x2
+ 1729 0286 7D       		.byte	0x7d
+ 1730 0287 10       		.sleb128 16
+ 1731 0288 06000000 		.4byte	.LCFI33
+ 1732 028c 20000000 		.4byte	.LFE12
+ 1733 0290 0200     		.2byte	0x2
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 47
+
+
+ 1734 0292 77       		.byte	0x77
+ 1735 0293 10       		.sleb128 16
+ 1736 0294 00000000 		.4byte	0
+ 1737 0298 00000000 		.4byte	0
+ 1738              	.LLST13:
+ 1739 029c 00000000 		.4byte	.LFB13
+ 1740 02a0 02000000 		.4byte	.LCFI34
+ 1741 02a4 0200     		.2byte	0x2
+ 1742 02a6 7D       		.byte	0x7d
+ 1743 02a7 00       		.sleb128 0
+ 1744 02a8 02000000 		.4byte	.LCFI34
+ 1745 02ac 04000000 		.4byte	.LCFI35
+ 1746 02b0 0200     		.2byte	0x2
+ 1747 02b2 7D       		.byte	0x7d
+ 1748 02b3 08       		.sleb128 8
+ 1749 02b4 04000000 		.4byte	.LCFI35
+ 1750 02b8 06000000 		.4byte	.LCFI36
+ 1751 02bc 0200     		.2byte	0x2
+ 1752 02be 7D       		.byte	0x7d
+ 1753 02bf 10       		.sleb128 16
+ 1754 02c0 06000000 		.4byte	.LCFI36
+ 1755 02c4 20000000 		.4byte	.LFE13
+ 1756 02c8 0200     		.2byte	0x2
+ 1757 02ca 77       		.byte	0x77
+ 1758 02cb 10       		.sleb128 16
+ 1759 02cc 00000000 		.4byte	0
+ 1760 02d0 00000000 		.4byte	0
+ 1761              	.LLST14:
+ 1762 02d4 00000000 		.4byte	.LFB14
+ 1763 02d8 02000000 		.4byte	.LCFI37
+ 1764 02dc 0200     		.2byte	0x2
+ 1765 02de 7D       		.byte	0x7d
+ 1766 02df 00       		.sleb128 0
+ 1767 02e0 02000000 		.4byte	.LCFI37
+ 1768 02e4 04000000 		.4byte	.LCFI38
+ 1769 02e8 0200     		.2byte	0x2
+ 1770 02ea 7D       		.byte	0x7d
+ 1771 02eb 08       		.sleb128 8
+ 1772 02ec 04000000 		.4byte	.LCFI38
+ 1773 02f0 14000000 		.4byte	.LFE14
+ 1774 02f4 0200     		.2byte	0x2
+ 1775 02f6 77       		.byte	0x77
+ 1776 02f7 08       		.sleb128 8
+ 1777 02f8 00000000 		.4byte	0
+ 1778 02fc 00000000 		.4byte	0
+ 1779              	.LLST15:
+ 1780 0300 00000000 		.4byte	.LFB15
+ 1781 0304 02000000 		.4byte	.LCFI39
+ 1782 0308 0200     		.2byte	0x2
+ 1783 030a 7D       		.byte	0x7d
+ 1784 030b 00       		.sleb128 0
+ 1785 030c 02000000 		.4byte	.LCFI39
+ 1786 0310 04000000 		.4byte	.LCFI40
+ 1787 0314 0200     		.2byte	0x2
+ 1788 0316 7D       		.byte	0x7d
+ 1789 0317 08       		.sleb128 8
+ 1790 0318 04000000 		.4byte	.LCFI40
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 48
+
+
+ 1791 031c 14000000 		.4byte	.LFE15
+ 1792 0320 0200     		.2byte	0x2
+ 1793 0322 77       		.byte	0x77
+ 1794 0323 08       		.sleb128 8
+ 1795 0324 00000000 		.4byte	0
+ 1796 0328 00000000 		.4byte	0
+ 1797              	.LLST16:
+ 1798 032c 00000000 		.4byte	.LFB16
+ 1799 0330 02000000 		.4byte	.LCFI41
+ 1800 0334 0200     		.2byte	0x2
+ 1801 0336 7D       		.byte	0x7d
+ 1802 0337 00       		.sleb128 0
+ 1803 0338 02000000 		.4byte	.LCFI41
+ 1804 033c 04000000 		.4byte	.LCFI42
+ 1805 0340 0200     		.2byte	0x2
+ 1806 0342 7D       		.byte	0x7d
+ 1807 0343 08       		.sleb128 8
+ 1808 0344 04000000 		.4byte	.LCFI42
+ 1809 0348 14000000 		.4byte	.LFE16
+ 1810 034c 0200     		.2byte	0x2
+ 1811 034e 77       		.byte	0x77
+ 1812 034f 08       		.sleb128 8
+ 1813 0350 00000000 		.4byte	0
+ 1814 0354 00000000 		.4byte	0
+ 1815              	.LLST17:
+ 1816 0358 00000000 		.4byte	.LFB17
+ 1817 035c 02000000 		.4byte	.LCFI43
+ 1818 0360 0200     		.2byte	0x2
+ 1819 0362 7D       		.byte	0x7d
+ 1820 0363 00       		.sleb128 0
+ 1821 0364 02000000 		.4byte	.LCFI43
+ 1822 0368 04000000 		.4byte	.LCFI44
+ 1823 036c 0200     		.2byte	0x2
+ 1824 036e 7D       		.byte	0x7d
+ 1825 036f 08       		.sleb128 8
+ 1826 0370 04000000 		.4byte	.LCFI44
+ 1827 0374 14000000 		.4byte	.LFE17
+ 1828 0378 0200     		.2byte	0x2
+ 1829 037a 77       		.byte	0x77
+ 1830 037b 08       		.sleb128 8
+ 1831 037c 00000000 		.4byte	0
+ 1832 0380 00000000 		.4byte	0
+ 1833              		.section	.debug_aranges,"",%progbits
+ 1834 0000 A4000000 		.4byte	0xa4
+ 1835 0004 0200     		.2byte	0x2
+ 1836 0006 00000000 		.4byte	.Ldebug_info0
+ 1837 000a 04       		.byte	0x4
+ 1838 000b 00       		.byte	0
+ 1839 000c 0000     		.2byte	0
+ 1840 000e 0000     		.2byte	0
+ 1841 0010 00000000 		.4byte	.LFB0
+ 1842 0014 24000000 		.4byte	.LFE0-.LFB0
+ 1843 0018 00000000 		.4byte	.LFB1
+ 1844 001c 88000000 		.4byte	.LFE1-.LFB1
+ 1845 0020 00000000 		.4byte	.LFB2
+ 1846 0024 20000000 		.4byte	.LFE2-.LFB2
+ 1847 0028 00000000 		.4byte	.LFB3
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 49
+
+
+ 1848 002c 1C000000 		.4byte	.LFE3-.LFB3
+ 1849 0030 00000000 		.4byte	.LFB4
+ 1850 0034 20000000 		.4byte	.LFE4-.LFB4
+ 1851 0038 00000000 		.4byte	.LFB5
+ 1852 003c 1C000000 		.4byte	.LFE5-.LFB5
+ 1853 0040 00000000 		.4byte	.LFB6
+ 1854 0044 1C000000 		.4byte	.LFE6-.LFB6
+ 1855 0048 00000000 		.4byte	.LFB7
+ 1856 004c 20000000 		.4byte	.LFE7-.LFB7
+ 1857 0050 00000000 		.4byte	.LFB8
+ 1858 0054 20000000 		.4byte	.LFE8-.LFB8
+ 1859 0058 00000000 		.4byte	.LFB9
+ 1860 005c 20000000 		.4byte	.LFE9-.LFB9
+ 1861 0060 00000000 		.4byte	.LFB10
+ 1862 0064 20000000 		.4byte	.LFE10-.LFB10
+ 1863 0068 00000000 		.4byte	.LFB11
+ 1864 006c 20000000 		.4byte	.LFE11-.LFB11
+ 1865 0070 00000000 		.4byte	.LFB12
+ 1866 0074 20000000 		.4byte	.LFE12-.LFB12
+ 1867 0078 00000000 		.4byte	.LFB13
+ 1868 007c 20000000 		.4byte	.LFE13-.LFB13
+ 1869 0080 00000000 		.4byte	.LFB14
+ 1870 0084 14000000 		.4byte	.LFE14-.LFB14
+ 1871 0088 00000000 		.4byte	.LFB15
+ 1872 008c 14000000 		.4byte	.LFE15-.LFB15
+ 1873 0090 00000000 		.4byte	.LFB16
+ 1874 0094 14000000 		.4byte	.LFE16-.LFB16
+ 1875 0098 00000000 		.4byte	.LFB17
+ 1876 009c 14000000 		.4byte	.LFE17-.LFB17
+ 1877 00a0 00000000 		.4byte	0
+ 1878 00a4 00000000 		.4byte	0
+ 1879              		.section	.debug_ranges,"",%progbits
+ 1880              	.Ldebug_ranges0:
+ 1881 0000 00000000 		.4byte	.LFB0
+ 1882 0004 24000000 		.4byte	.LFE0
+ 1883 0008 00000000 		.4byte	.LFB1
+ 1884 000c 88000000 		.4byte	.LFE1
+ 1885 0010 00000000 		.4byte	.LFB2
+ 1886 0014 20000000 		.4byte	.LFE2
+ 1887 0018 00000000 		.4byte	.LFB3
+ 1888 001c 1C000000 		.4byte	.LFE3
+ 1889 0020 00000000 		.4byte	.LFB4
+ 1890 0024 20000000 		.4byte	.LFE4
+ 1891 0028 00000000 		.4byte	.LFB5
+ 1892 002c 1C000000 		.4byte	.LFE5
+ 1893 0030 00000000 		.4byte	.LFB6
+ 1894 0034 1C000000 		.4byte	.LFE6
+ 1895 0038 00000000 		.4byte	.LFB7
+ 1896 003c 20000000 		.4byte	.LFE7
+ 1897 0040 00000000 		.4byte	.LFB8
+ 1898 0044 20000000 		.4byte	.LFE8
+ 1899 0048 00000000 		.4byte	.LFB9
+ 1900 004c 20000000 		.4byte	.LFE9
+ 1901 0050 00000000 		.4byte	.LFB10
+ 1902 0054 20000000 		.4byte	.LFE10
+ 1903 0058 00000000 		.4byte	.LFB11
+ 1904 005c 20000000 		.4byte	.LFE11
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 50
+
+
+ 1905 0060 00000000 		.4byte	.LFB12
+ 1906 0064 20000000 		.4byte	.LFE12
+ 1907 0068 00000000 		.4byte	.LFB13
+ 1908 006c 20000000 		.4byte	.LFE13
+ 1909 0070 00000000 		.4byte	.LFB14
+ 1910 0074 14000000 		.4byte	.LFE14
+ 1911 0078 00000000 		.4byte	.LFB15
+ 1912 007c 14000000 		.4byte	.LFE15
+ 1913 0080 00000000 		.4byte	.LFB16
+ 1914 0084 14000000 		.4byte	.LFE16
+ 1915 0088 00000000 		.4byte	.LFB17
+ 1916 008c 14000000 		.4byte	.LFE17
+ 1917 0090 00000000 		.4byte	0
+ 1918 0094 00000000 		.4byte	0
+ 1919              		.section	.debug_line,"",%progbits
+ 1920              	.Ldebug_line0:
+ 1921 0000 B4010000 		.section	.debug_str,"MS",%progbits,1
+ 1921      02004C00 
+ 1921      00000201 
+ 1921      FB0E0D00 
+ 1921      01010101 
+ 1922              	.LASF11:
+ 1923 0000 63686172 		.ascii	"char\000"
+ 1923      00
+ 1924              	.LASF43:
+ 1925 0005 433A5C55 		.ascii	"C:\\Users\\Terrance\\Documents\\PSoC Creator\\SCB_B"
+ 1925      73657273 
+ 1925      5C546572 
+ 1925      72616E63 
+ 1925      655C446F 
+ 1926 0033 6F6F746C 		.ascii	"ootloader_42xx\\Bootloadable Blinking LED.cydsn\000"
+ 1926      6F616465 
+ 1926      725F3432 
+ 1926      78785C42 
+ 1926      6F6F746C 
+ 1927              	.LASF21:
+ 1928 0062 50574D5F 		.ascii	"PWM_BlueWhite_WriteCounter\000"
+ 1928      426C7565 
+ 1928      57686974 
+ 1928      655F5772 
+ 1928      69746543 
+ 1929              	.LASF23:
+ 1930 007d 50574D5F 		.ascii	"PWM_BlueWhite_WritePeriod\000"
+ 1930      426C7565 
+ 1930      57686974 
+ 1930      655F5772 
+ 1930      69746550 
+ 1931              	.LASF25:
+ 1932 0097 70657269 		.ascii	"period\000"
+ 1932      6F6400
+ 1933              	.LASF38:
+ 1934 009e 50574D5F 		.ascii	"PWM_BlueWhite_ReadCompare1\000"
+ 1934      426C7565 
+ 1934      57686974 
+ 1934      655F5265 
+ 1934      6164436F 
+ 1935              	.LASF3:
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 51
+
+
+ 1936 00b9 73686F72 		.ascii	"short unsigned int\000"
+ 1936      7420756E 
+ 1936      7369676E 
+ 1936      65642069 
+ 1936      6E7400
+ 1937              	.LASF29:
+ 1938 00cc 50574D5F 		.ascii	"PWM_BlueWhite_SetInterruptMode\000"
+ 1938      426C7565 
+ 1938      57686974 
+ 1938      655F5365 
+ 1938      74496E74 
+ 1939              	.LASF17:
+ 1940 00eb 50574D5F 		.ascii	"PWM_BlueWhite_Start\000"
+ 1940      426C7565 
+ 1940      57686974 
+ 1940      655F5374 
+ 1940      61727400 
+ 1941              	.LASF33:
+ 1942 00ff 50574D5F 		.ascii	"PWM_BlueWhite_ReadControlRegister\000"
+ 1942      426C7565 
+ 1942      57686974 
+ 1942      655F5265 
+ 1942      6164436F 
+ 1943              	.LASF37:
+ 1944 0121 50574D5F 		.ascii	"PWM_BlueWhite_ReadCapture\000"
+ 1944      426C7565 
+ 1944      57686974 
+ 1944      655F5265 
+ 1944      61644361 
+ 1945              	.LASF9:
+ 1946 013b 666C6F61 		.ascii	"float\000"
+ 1946      7400
+ 1947              	.LASF24:
+ 1948 0141 636F756E 		.ascii	"counter\000"
+ 1948      74657200 
+ 1949              	.LASF1:
+ 1950 0149 756E7369 		.ascii	"unsigned char\000"
+ 1950      676E6564 
+ 1950      20636861 
+ 1950      7200
+ 1951              	.LASF13:
+ 1952 0157 72656738 		.ascii	"reg8\000"
+ 1952      00
+ 1953              	.LASF5:
+ 1954 015c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1954      20756E73 
+ 1954      69676E65 
+ 1954      6420696E 
+ 1954      7400
+ 1955              	.LASF12:
+ 1956 016e 75696E74 		.ascii	"uint8\000"
+ 1956      3800
+ 1957              	.LASF35:
+ 1958 0174 636F6E74 		.ascii	"control\000"
+ 1958      726F6C00 
+ 1959              	.LASF36:
+ 1960 017c 50574D5F 		.ascii	"PWM_BlueWhite_ReadCounter\000"
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 52
+
+
+ 1960      426C7565 
+ 1960      57686974 
+ 1960      655F5265 
+ 1960      6164436F 
+ 1961              	.LASF10:
+ 1962 0196 646F7562 		.ascii	"double\000"
+ 1962      6C6500
+ 1963              	.LASF39:
+ 1964 019d 50574D5F 		.ascii	"PWM_BlueWhite_ReadCompare2\000"
+ 1964      426C7565 
+ 1964      57686974 
+ 1964      655F5265 
+ 1964      6164436F 
+ 1965              	.LASF32:
+ 1966 01b8 50574D5F 		.ascii	"PWM_BlueWhite_ReadStatusRegister\000"
+ 1966      426C7565 
+ 1966      57686974 
+ 1966      655F5265 
+ 1966      61645374 
+ 1967              	.LASF28:
+ 1968 01d9 50574D5F 		.ascii	"PWM_BlueWhite_WriteCompare2\000"
+ 1968      426C7565 
+ 1968      57686974 
+ 1968      655F5772 
+ 1968      69746543 
+ 1969              	.LASF44:
+ 1970 01f5 50574D5F 		.ascii	"PWM_BlueWhite_initVar\000"
+ 1970      426C7565 
+ 1970      57686974 
+ 1970      655F696E 
+ 1970      69745661 
+ 1971              	.LASF18:
+ 1972 020b 50574D5F 		.ascii	"PWM_BlueWhite_Enable\000"
+ 1972      426C7565 
+ 1972      57686974 
+ 1972      655F456E 
+ 1972      61626C65 
+ 1973              	.LASF8:
+ 1974 0220 756E7369 		.ascii	"unsigned int\000"
+ 1974      676E6564 
+ 1974      20696E74 
+ 1974      00
+ 1975              	.LASF7:
+ 1976 022d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1976      206C6F6E 
+ 1976      6720756E 
+ 1976      7369676E 
+ 1976      65642069 
+ 1977              	.LASF31:
+ 1978 0244 72657375 		.ascii	"result\000"
+ 1978      6C7400
+ 1979              	.LASF42:
+ 1980 024b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\PWM_BlueWhite.c\000"
+ 1980      6E657261 
+ 1980      7465645F 
+ 1980      536F7572 
+ 1980      63655C50 
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 53
+
+
+ 1981              	.LASF20:
+ 1982 0274 50574D5F 		.ascii	"PWM_BlueWhite_Init\000"
+ 1982      426C7565 
+ 1982      57686974 
+ 1982      655F496E 
+ 1982      697400
+ 1983              	.LASF19:
+ 1984 0287 50574D5F 		.ascii	"PWM_BlueWhite_Stop\000"
+ 1984      426C7565 
+ 1984      57686974 
+ 1984      655F5374 
+ 1984      6F7000
+ 1985              	.LASF15:
+ 1986 029a 6374726C 		.ascii	"ctrl\000"
+ 1986      00
+ 1987              	.LASF14:
+ 1988 029f 73697A65 		.ascii	"sizetype\000"
+ 1988      74797065 
+ 1988      00
+ 1989              	.LASF6:
+ 1990 02a8 6C6F6E67 		.ascii	"long long int\000"
+ 1990      206C6F6E 
+ 1990      6720696E 
+ 1990      7400
+ 1991              	.LASF30:
+ 1992 02b6 696E7465 		.ascii	"interruptMode\000"
+ 1992      72727570 
+ 1992      744D6F64 
+ 1992      6500
+ 1993              	.LASF16:
+ 1994 02c4 50574D5F 		.ascii	"PWM_BlueWhite_interruptState\000"
+ 1994      426C7565 
+ 1994      57686974 
+ 1994      655F696E 
+ 1994      74657272 
+ 1995              	.LASF34:
+ 1996 02e1 50574D5F 		.ascii	"PWM_BlueWhite_WriteControlRegister\000"
+ 1996      426C7565 
+ 1996      57686974 
+ 1996      655F5772 
+ 1996      69746543 
+ 1997              	.LASF2:
+ 1998 0304 73686F72 		.ascii	"short int\000"
+ 1998      7420696E 
+ 1998      7400
+ 1999              	.LASF41:
+ 2000 030e 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 2000      4320342E 
+ 2000      372E3320 
+ 2000      32303133 
+ 2000      30333132 
+ 2001 0341 616E6368 		.ascii	"anch revision 196615]\000"
+ 2001      20726576 
+ 2001      6973696F 
+ 2001      6E203139 
+ 2001      36363135 
+ 2002              	.LASF4:
+ARM GAS  C:\Users\Terrance\AppData\Local\Temp\cc1z2eSE.s 			page 54
+
+
+ 2003 0357 6C6F6E67 		.ascii	"long int\000"
+ 2003      20696E74 
+ 2003      00
+ 2004              	.LASF26:
+ 2005 0360 50574D5F 		.ascii	"PWM_BlueWhite_WriteCompare1\000"
+ 2005      426C7565 
+ 2005      57686974 
+ 2005      655F5772 
+ 2005      69746543 
+ 2006              	.LASF40:
+ 2007 037c 50574D5F 		.ascii	"PWM_BlueWhite_ReadPeriod\000"
+ 2007      426C7565 
+ 2007      57686974 
+ 2007      655F5265 
+ 2007      61645065 
+ 2008              	.LASF0:
+ 2009 0395 7369676E 		.ascii	"signed char\000"
+ 2009      65642063 
+ 2009      68617200 
+ 2010              	.LASF27:
+ 2011 03a1 636F6D70 		.ascii	"compare\000"
+ 2011      61726500 
+ 2012              	.LASF22:
+ 2013 03a9 50574D5F 		.ascii	"PWM_BlueWhite_ClearFIFO\000"
+ 2013      426C7565 
+ 2013      57686974 
+ 2013      655F436C 
+ 2013      65617246 
+ 2014              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
